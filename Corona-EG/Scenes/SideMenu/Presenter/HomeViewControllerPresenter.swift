@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HomeTableView: class {
-    var presenter: HomeViewControllerPresenter? { get set }
+    var presenter: MenuListControllerPresenter? { get set }
 }
 
 protocol HomeCellView {
@@ -18,7 +18,7 @@ protocol HomeCellView {
 }
 
 
-class HomeViewControllerPresenter {
+class MenuListControllerPresenter {
     private weak var view: HomeTableView?
     private let items = SideMenuItems().items
     

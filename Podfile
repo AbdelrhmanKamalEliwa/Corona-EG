@@ -7,5 +7,7 @@ target 'Corona-EG' do
 
   # Pods for Corona-EG
   pod 'SideMenu'
+  pod 'Kingfisher', '~> 5.0'
+  pod 'SKActivityIndicatorView', '~> 1.0.0'
 
 end

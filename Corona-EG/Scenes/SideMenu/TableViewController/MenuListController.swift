@@ -9,19 +9,19 @@
 import UIKit
 import SideMenu
 
-class MenuListController: UITableViewController, HomeTableView {
+class MenuListController: UITableViewController, MenuTableView {
     
     enum Constants {
         static let nibName = "SideMenuCell"
         static let cellIdentifier = "SideMenuCell"
     }
     
-    var presenter: HomeViewControllerPresenter?
+    var presenter: MenuListControllerPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        presenter = HomeViewControllerPresenter(view: self)
+        presenter = MenuListControllerPresenter(view: self)
         tableView.register(
             UINib(nibName: Constants.nibName, bundle: nil),
             forCellReuseIdentifier: Constants.cellIdentifier)

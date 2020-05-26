@@ -7,18 +7,40 @@
 //
 
 import UIKit
+import Kingfisher
 
-class NewsCell: UITableViewCell {
-
+class NewsCell: UITableViewCell, NewsCellView {
+    
+    @IBOutlet weak var articleImage: UIImageView!
+    @IBOutlet weak var articleTitle: UILabel!
+    @IBOutlet weak var articleDescription: UILabel!
+    
+    func displayArticleImage(_ imageUrl: String?) {
+        if imageUrl != nil {
+            guard let url = URL(string: imageUrl!) else { return }
+            articleImage.kf.indicatorType = .activity
+            articleImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (result) in
+                switch result {
+                case .success(let image):
+                    self.articleImage.image = image.image
+                case .failure:
+                    self.articleImage.image = UIImage(named: "default-article-image")?.imageFlippedForRightToLeftLayoutDirection()
+                    return
+                }
+            }
+        }
+    }
+    
+    func displayArticleTitle(_ title: String) {
+        articleTitle.text = title
+    }
+    
+    func displayArticleDescription(_ description: String) {
+        articleDescription.text = description
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
