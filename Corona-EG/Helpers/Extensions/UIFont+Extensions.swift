@@ -10,6 +10,6 @@ import UIKit
 
 extension UIFont {
     class func defaultFont(_ size: CGFloat = 12) -> UIFont {
-        return UIFont(name:"Cairo", size: size)!
+        return UIFont(name: "Cairo", size: size)!
     }
 }

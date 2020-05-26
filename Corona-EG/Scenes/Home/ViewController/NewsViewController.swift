@@ -26,8 +26,8 @@ class NewsViewController: BaseViewController {
 // MARK: - SetupTableView
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     enum Constants {
-        static let nibName = ""
-        static let cellIdentifier = ""
+        static let nibName = "NewsCell"
+        static let cellIdentifier = "NewsCell"
     }
     
     func setupTableView() {
@@ -42,7 +42,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! NewsCell
         return cell
     }
 

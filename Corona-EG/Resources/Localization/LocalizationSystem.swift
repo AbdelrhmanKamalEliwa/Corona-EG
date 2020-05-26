@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LocalizationSystem:NSObject {
+class LocalizationSystem: NSObject {
     
     var bundle: Bundle!
     
@@ -25,42 +25,42 @@ class LocalizationSystem:NSObject {
         bundle = Bundle.main
     }
     
-    func localizedStringForKey(key:String, comment:String) -> String {
+    func localizedStringForKey(key: String, comment: String) -> String {
         return bundle.localizedString(forKey: key, value: comment, table: nil)
     }
     
-    func localizedImagePathForImg(imagename:String, type:String) -> String {
+    func localizedImagePathForImg(imagename: String, type: String) -> String {
         guard let imagePath =  bundle.path(forResource: imagename, ofType: type) else {
             return ""
         }
         return imagePath
     }
     
-    //MARK:- setLanguage
+    // MARK: - setLanguage
     // Sets the desired language of the ones you have.
     // If this function is not called it will use the default OS language.
     // If the language does not exists y returns the default OS language.
-    func setLanguage(languageCode:String) {
+    func setLanguage(languageCode: String) {
         var appleLanguages = UserDefaults.standard.object(forKey: "AppleLanguages") as! [String]
         appleLanguages.remove(at: 0)
         appleLanguages.insert(languageCode, at: 0)
         UserDefaults.standard.set(appleLanguages, forKey: "AppleLanguages")
         UserDefaults.standard.synchronize() //needs restrat
         
-        if let languageDirectoryPath = Bundle.main.path(forResource: languageCode, ofType: "lproj")  {
+        if let languageDirectoryPath = Bundle.main.path(forResource: languageCode, ofType: "lproj") {
             bundle = Bundle.init(path: languageDirectoryPath)
         } else {
             resetLocalization()
         }
     }
     
-    //MARK:- resetLocalization
+    // MARK: - resetLocalization
     //Resets the localization system, so it uses the OS default language.
     func resetLocalization() {
         bundle = Bundle.main
     }
     
-    //MARK:- getLanguage
+    // MARK: - getLanguage
     // Just gets the current setted up language.
     func getLanguage() -> String {
         let appleLanguages = UserDefaults.standard.object(forKey: "AppleLanguages") as! [String]
@@ -73,10 +73,3 @@ class LocalizationSystem:NSObject {
     }
     
 }
-
-
-
-
-
-
-

@@ -9,14 +9,14 @@
 import UIKit
 import SideMenu
 
-//MARK: - Properities
+// MARK: - Properities
 class BaseViewController: UIViewController {
     var menu: SideMenuNavigationController?
     let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
 }
 
 
-//MARK: - SideMenu
+// MARK: - SideMenu
 extension BaseViewController {
     func setupSideMenu() {
         menu = SideMenuNavigationController(rootViewController: MenuListController())
@@ -31,7 +31,7 @@ extension BaseViewController {
 }
 
 
-//MARK: - NavigationBar
+// MARK: - NavigationBar
 extension BaseViewController {
     func setupNavigationBar() {
         let nav = self.navigationController?.navigationBar
@@ -58,9 +58,9 @@ extension BaseViewController {
 }
 
 
-//MARK: - ChangeLanguage
+// MARK: - ChangeLanguage
 extension BaseViewController {
-    func checkForEnglishLanguage(_ currentLanguage: String) -> Bool{
+    func checkForEnglishLanguage(_ currentLanguage: String) -> Bool {
         if currentLanguage == "en" { return true } else { return false }
     }
     

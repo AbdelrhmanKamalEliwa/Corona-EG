@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F4BD11E2247A466E00740150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11E1247A466E00740150 /* AppDelegate.swift */; };
-		F4BD11E6247A466E00740150 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11E5247A466E00740150 /* HomeViewController.swift */; };
+		F4BD11E6247A466E00740150 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11E5247A466E00740150 /* NewsViewController.swift */; };
 		F4BD11E9247A466E00740150 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BD11E7247A466E00740150 /* Main.storyboard */; };
 		F4BD11EE247A467000740150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BD11EC247A467000740150 /* LaunchScreen.storyboard */; };
 		F4BD11FB247BBF0300740150 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4BD11FD247BBF0300740150 /* Localizable.strings */; };
@@ -23,6 +23,9 @@
 		F4C2BA72247CF66D00844D4E /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA70247CF66D00844D4E /* SideMenuCell.swift */; };
 		F4C2BA73247CF66D00844D4E /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C2BA71247CF66D00844D4E /* SideMenuCell.xib */; };
 		F4C2BA77247D100B00844D4E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA76247D100B00844D4E /* UIViewExtension.swift */; };
+		F4C2BA82247D3E4D00844D4E /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA80247D3E4D00844D4E /* NewsCell.swift */; };
+		F4C2BA83247D3E4D00844D4E /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C2BA81247D3E4D00844D4E /* NewsCell.xib */; };
+		F4C2BA86247D3FA100844D4E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F4C2BA85247D3FA100844D4E /* .swiftlint.yml */; };
 		F4EEFBC0247CB23300B1FA31 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBA247CB23300B1FA31 /* Cairo-Black.ttf */; };
 		F4EEFBC1247CB23300B1FA31 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBB247CB23300B1FA31 /* Cairo-Regular.ttf */; };
 		F4EEFBC2247CB23300B1FA31 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBC247CB23300B1FA31 /* Cairo-SemiBold.ttf */; };
@@ -38,7 +41,7 @@
 		87C22201B692E8B20702E32C /* Pods-Corona-EG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona-EG.release.xcconfig"; path = "Target Support Files/Pods-Corona-EG/Pods-Corona-EG.release.xcconfig"; sourceTree = "<group>"; };
 		F4BD11DE247A466E00740150 /* Corona-EG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona-EG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BD11E1247A466E00740150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4BD11E5247A466E00740150 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F4BD11E5247A466E00740150 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		F4BD11E8247A466E00740150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4BD11ED247A467000740150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4BD11EF247A467000740150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +60,9 @@
 		F4C2BA70247CF66D00844D4E /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		F4C2BA71247CF66D00844D4E /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
 		F4C2BA76247D100B00844D4E /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		F4C2BA80247D3E4D00844D4E /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		F4C2BA81247D3E4D00844D4E /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		F4C2BA85247D3FA100844D4E /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		F4EEFBBA247CB23300B1FA31 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
 		F4EEFBBB247CB23300B1FA31 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
 		F4EEFBBC247CB23300B1FA31 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 		F4BD11D5247A466D00740150 = {
 			isa = PBXGroup;
 			children = (
+				F4C2BA85247D3FA100844D4E /* .swiftlint.yml */,
 				F4BD11E0247A466E00740150 /* Corona-EG */,
 				F4BD11DF247A466E00740150 /* Products */,
 				017FDA4869D1FC61AD20D624 /* Pods */,
@@ -193,7 +200,7 @@
 		F4BD1208247BC7C000740150 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F4BD11E5247A466E00740150 /* HomeViewController.swift */,
+				F4BD11E5247A466E00740150 /* NewsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -284,6 +291,8 @@
 		F4C2BA78247D3A2600844D4E /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				F4C2BA80247D3E4D00844D4E /* NewsCell.swift */,
+				F4C2BA81247D3E4D00844D4E /* NewsCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -338,6 +347,7 @@
 				F4BD11DB247A466E00740150 /* Frameworks */,
 				F4BD11DC247A466E00740150 /* Resources */,
 				D7BC3FA88122E9C6D0D7123E /* [CP] Embed Pods Frameworks */,
+				F4C2BA84247D3F6800844D4E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -396,6 +406,8 @@
 				F4BD11E9247A466E00740150 /* Main.storyboard in Resources */,
 				F4BD121C247CA9C600740150 /* Assets.xcassets in Resources */,
 				F4BD1220247CAA5400740150 /* Colors.xcassets in Resources */,
+				F4C2BA83247D3E4D00844D4E /* NewsCell.xib in Resources */,
+				F4C2BA86247D3FA100844D4E /* .swiftlint.yml in Resources */,
 				F4EEFBC5247CB23300B1FA31 /* Cairo-Light.ttf in Resources */,
 				F4EEFBC0247CB23300B1FA31 /* Cairo-Black.ttf in Resources */,
 				F4C2BA73247CF66D00844D4E /* SideMenuCell.xib in Resources */,
@@ -444,6 +456,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Corona-EG/Pods-Corona-EG-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F4C2BA84247D3F6800844D4E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -452,7 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4C2BA77247D100B00844D4E /* UIViewExtension.swift in Sources */,
-				F4BD11E6247A466E00740150 /* HomeViewController.swift in Sources */,
+				F4BD11E6247A466E00740150 /* NewsViewController.swift in Sources */,
 				F4BD1200247BBFEB00740150 /* LocalizationSystem.swift in Sources */,
 				F4BD1210247BCE4A00740150 /* UIFont+Extensions.swift in Sources */,
 				F4C2BA6C247CE33000844D4E /* SideMenuItems.swift in Sources */,
@@ -461,6 +490,7 @@
 				F4BD11E2247A466E00740150 /* AppDelegate.swift in Sources */,
 				F4C2BA63247CC4DD00844D4E /* MenuListController.swift in Sources */,
 				F4C2BA69247CDAA000844D4E /* BaseViewController.swift in Sources */,
+				F4C2BA82247D3E4D00844D4E /* NewsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
