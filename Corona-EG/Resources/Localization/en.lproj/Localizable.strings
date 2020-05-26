@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Corona-EG
+
+  Created by Abdelrhman Eliwa on 5/25/20.
+  Copyright © 2020 Abdelrhman Eliwa. All rights reserved.
+*/
+
+"navbar_title" = "Home";
+"change_language" = "Change Language";
+
+
+"side_menu_item_1" = "News";
+"side_menu_item_2" = "Numbers Updates";
+"side_menu_item_3" = "Infection Methods";
+"side_menu_item_4" = "Prevention Tips";
+"side_menu_item_5" = "COVID-19 Test";
+"side_menu_item_5" = "Emergency Numbers";
+"side_menu_item_6" = "About Us";

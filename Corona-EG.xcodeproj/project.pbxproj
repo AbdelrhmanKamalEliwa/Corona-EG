@@ -3,27 +3,66 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F4BD11E2247A466E00740150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11E1247A466E00740150 /* AppDelegate.swift */; };
-		F4BD11E4247A466E00740150 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11E3247A466E00740150 /* SceneDelegate.swift */; };
-		F4BD11E6247A466E00740150 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11E5247A466E00740150 /* ViewController.swift */; };
+		F4BD11E6247A466E00740150 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11E5247A466E00740150 /* HomeViewController.swift */; };
 		F4BD11E9247A466E00740150 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BD11E7247A466E00740150 /* Main.storyboard */; };
-		F4BD11EB247A467000740150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BD11EA247A467000740150 /* Assets.xcassets */; };
 		F4BD11EE247A467000740150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BD11EC247A467000740150 /* LaunchScreen.storyboard */; };
+		F4BD11FB247BBF0300740150 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4BD11FD247BBF0300740150 /* Localizable.strings */; };
+		F4BD1200247BBFEB00740150 /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11FF247BBFEB00740150 /* LocalizationSystem.swift */; };
+		F4BD1210247BCE4A00740150 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD120F247BCE4A00740150 /* UIFont+Extensions.swift */; };
+		F4BD121C247CA9C600740150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BD121B247CA9C600740150 /* Assets.xcassets */; };
+		F4BD1220247CAA5400740150 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BD121F247CAA5400740150 /* Colors.xcassets */; };
+		F4C2BA63247CC4DD00844D4E /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA62247CC4DD00844D4E /* MenuListController.swift */; };
+		F4C2BA69247CDAA000844D4E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA68247CDAA000844D4E /* BaseViewController.swift */; };
+		F4C2BA6C247CE33000844D4E /* SideMenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA6B247CE33000844D4E /* SideMenuItems.swift */; };
+		F4C2BA6E247CF43C00844D4E /* HomeViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA6D247CF43C00844D4E /* HomeViewControllerPresenter.swift */; };
+		F4C2BA72247CF66D00844D4E /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA70247CF66D00844D4E /* SideMenuCell.swift */; };
+		F4C2BA73247CF66D00844D4E /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C2BA71247CF66D00844D4E /* SideMenuCell.xib */; };
+		F4C2BA77247D100B00844D4E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA76247D100B00844D4E /* UIViewExtension.swift */; };
+		F4EEFBC0247CB23300B1FA31 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBA247CB23300B1FA31 /* Cairo-Black.ttf */; };
+		F4EEFBC1247CB23300B1FA31 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBB247CB23300B1FA31 /* Cairo-Regular.ttf */; };
+		F4EEFBC2247CB23300B1FA31 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBC247CB23300B1FA31 /* Cairo-SemiBold.ttf */; };
+		F4EEFBC3247CB23300B1FA31 /* Cairo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBD247CB23300B1FA31 /* Cairo-ExtraLight.ttf */; };
+		F4EEFBC4247CB23300B1FA31 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBE247CB23300B1FA31 /* Cairo-Bold.ttf */; };
+		F4EEFBC5247CB23300B1FA31 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBF247CB23300B1FA31 /* Cairo-Light.ttf */; };
+		F59A99E2897959C0EFB4BA5B /* Pods_Corona_EG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC6EBBAFDB0F301A31E45A6 /* Pods_Corona_EG.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CC6EBBAFDB0F301A31E45A6 /* Pods_Corona_EG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Corona_EG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80F1B199FC02FFE0D54E692E /* Pods-Corona-EG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona-EG.debug.xcconfig"; path = "Target Support Files/Pods-Corona-EG/Pods-Corona-EG.debug.xcconfig"; sourceTree = "<group>"; };
+		87C22201B692E8B20702E32C /* Pods-Corona-EG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona-EG.release.xcconfig"; path = "Target Support Files/Pods-Corona-EG/Pods-Corona-EG.release.xcconfig"; sourceTree = "<group>"; };
 		F4BD11DE247A466E00740150 /* Corona-EG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona-EG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BD11E1247A466E00740150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4BD11E3247A466E00740150 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F4BD11E5247A466E00740150 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F4BD11E5247A466E00740150 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F4BD11E8247A466E00740150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F4BD11EA247A467000740150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4BD11ED247A467000740150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4BD11EF247A467000740150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4BD11F7247BBE9500740150 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		F4BD11F8247BBE9500740150 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F4BD11FC247BBF0300740150 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F4BD11FE247BBF0A00740150 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F4BD11FF247BBFEB00740150 /* LocalizationSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
+		F4BD120F247BCE4A00740150 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		F4BD121B247CA9C600740150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4BD121F247CAA5400740150 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		F4C2BA62247CC4DD00844D4E /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
+		F4C2BA68247CDAA000844D4E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F4C2BA6B247CE33000844D4E /* SideMenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItems.swift; sourceTree = "<group>"; };
+		F4C2BA6D247CF43C00844D4E /* HomeViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerPresenter.swift; sourceTree = "<group>"; };
+		F4C2BA70247CF66D00844D4E /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		F4C2BA71247CF66D00844D4E /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
+		F4C2BA76247D100B00844D4E /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		F4EEFBBA247CB23300B1FA31 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
+		F4EEFBBB247CB23300B1FA31 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
+		F4EEFBBC247CB23300B1FA31 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
+		F4EEFBBD247CB23300B1FA31 /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F4EEFBBE247CB23300B1FA31 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		F4EEFBBF247CB23300B1FA31 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +70,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F59A99E2897959C0EFB4BA5B /* Pods_Corona_EG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		017FDA4869D1FC61AD20D624 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80F1B199FC02FFE0D54E692E /* Pods-Corona-EG.debug.xcconfig */,
+				87C22201B692E8B20702E32C /* Pods-Corona-EG.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DAD7E4EE212074100276F7FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CC6EBBAFDB0F301A31E45A6 /* Pods_Corona_EG.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F4BD11D5247A466D00740150 = {
 			isa = PBXGroup;
 			children = (
 				F4BD11E0247A466E00740150 /* Corona-EG */,
 				F4BD11DF247A466E00740150 /* Products */,
+				017FDA4869D1FC61AD20D624 /* Pods */,
+				DAD7E4EE212074100276F7FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +115,215 @@
 		F4BD11E0247A466E00740150 /* Corona-EG */ = {
 			isa = PBXGroup;
 			children = (
-				F4BD11E1247A466E00740150 /* AppDelegate.swift */,
-				F4BD11E3247A466E00740150 /* SceneDelegate.swift */,
-				F4BD11E5247A466E00740150 /* ViewController.swift */,
-				F4BD11E7247A466E00740150 /* Main.storyboard */,
-				F4BD11EA247A467000740150 /* Assets.xcassets */,
-				F4BD11EC247A467000740150 /* LaunchScreen.storyboard */,
-				F4BD11EF247A467000740150 /* Info.plist */,
+				F4BD120E247BCE2A00740150 /* Helpers */,
+				F4BD1206247BC6F200740150 /* Storyboards */,
+				F4BD1204247BC6D200740150 /* Models */,
+				F4BD1205247BC6DF00740150 /* Scenes */,
+				F4BD120A247BC81A00740150 /* Resources */,
+				F4BD1203247BC6C900740150 /* Configuration */,
 			);
 			path = "Corona-EG";
+			sourceTree = "<group>";
+		};
+		F4BD1201247BC66200740150 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD11FF247BBFEB00740150 /* LocalizationSystem.swift */,
+				F4BD11FD247BBF0300740150 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		F4BD1202247BC6C200740150 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F4EEFBC6247CB76800B1FA31 /* Fonts */,
+				F4BD121B247CA9C600740150 /* Assets.xcassets */,
+				F4BD121F247CAA5400740150 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F4BD1203247BC6C900740150 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD11EF247A467000740150 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		F4BD1204247BC6D200740150 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2BA6B247CE33000844D4E /* SideMenuItems.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4BD1205247BC6DF00740150 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2BA6A247CE2DA00844D4E /* Base */,
+				F4C2BA74247D0AE100844D4E /* SideMenu */,
+				F4BD1207247BC7BD00740150 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F4BD1206247BC6F200740150 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD11E7247A466E00740150 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F4BD1207247BC7BD00740150 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2BA7B247D3A6000844D4E /* Router */,
+				F4C2BA79247D3A4B00844D4E /* Interactor */,
+				F4C2BA7A247D3A5700844D4E /* Presenter */,
+				F4C2BA78247D3A2600844D4E /* TableViewCell */,
+				F4BD1208247BC7C000740150 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F4BD1208247BC7C000740150 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD11E5247A466E00740150 /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F4BD1209247BC7C800740150 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2BA6D247CF43C00844D4E /* HomeViewControllerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F4BD120A247BC81A00740150 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD1201247BC66200740150 /* Localization */,
+				F4EEFBC7247CB79600B1FA31 /* Application */,
+				F4BD1202247BC6C200740150 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F4BD120B247BCBA200740150 /* Cairo */ = {
+			isa = PBXGroup;
+			children = (
+				F4EEFBBA247CB23300B1FA31 /* Cairo-Black.ttf */,
+				F4EEFBBE247CB23300B1FA31 /* Cairo-Bold.ttf */,
+				F4EEFBBD247CB23300B1FA31 /* Cairo-ExtraLight.ttf */,
+				F4EEFBBF247CB23300B1FA31 /* Cairo-Light.ttf */,
+				F4EEFBBB247CB23300B1FA31 /* Cairo-Regular.ttf */,
+				F4EEFBBC247CB23300B1FA31 /* Cairo-SemiBold.ttf */,
+			);
+			path = Cairo;
+			sourceTree = "<group>";
+		};
+		F4BD120E247BCE2A00740150 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD1211247BCECE00740150 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F4BD1211247BCECE00740150 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2BA76247D100B00844D4E /* UIViewExtension.swift */,
+				F4BD120F247BCE4A00740150 /* UIFont+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F4C2BA61247CC4AE00844D4E /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2BA62247CC4DD00844D4E /* MenuListController.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		F4C2BA6A247CE2DA00844D4E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2BA68247CDAA000844D4E /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F4C2BA6F247CF65200844D4E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2BA70247CF66D00844D4E /* SideMenuCell.swift */,
+				F4C2BA71247CF66D00844D4E /* SideMenuCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		F4C2BA74247D0AE100844D4E /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2BA6F247CF65200844D4E /* TableViewCell */,
+				F4C2BA61247CC4AE00844D4E /* TableViewController */,
+				F4BD1209247BC7C800740150 /* Presenter */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		F4C2BA78247D3A2600844D4E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		F4C2BA79247D3A4B00844D4E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F4C2BA7A247D3A5700844D4E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F4C2BA7B247D3A6000844D4E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F4EEFBC6247CB76800B1FA31 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD120B247BCBA200740150 /* Cairo */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F4EEFBC7247CB79600B1FA31 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD11E1247A466E00740150 /* AppDelegate.swift */,
+				F4BD11EC247A467000740150 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +333,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4BD11F2247A467000740150 /* Build configuration list for PBXNativeTarget "Corona-EG" */;
 			buildPhases = (
+				C57150CC7332748B4B781BC8 /* [CP] Check Pods Manifest.lock */,
 				F4BD11DA247A466E00740150 /* Sources */,
 				F4BD11DB247A466E00740150 /* Frameworks */,
 				F4BD11DC247A466E00740150 /* Resources */,
+				D7BC3FA88122E9C6D0D7123E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,6 +370,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = F4BD11D5247A466D00740150;
 			productRefGroup = F4BD11DF247A466E00740150 /* Products */;
@@ -126,21 +388,79 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4BD11EE247A467000740150 /* LaunchScreen.storyboard in Resources */,
-				F4BD11EB247A467000740150 /* Assets.xcassets in Resources */,
+				F4EEFBC3247CB23300B1FA31 /* Cairo-ExtraLight.ttf in Resources */,
+				F4EEFBC4247CB23300B1FA31 /* Cairo-Bold.ttf in Resources */,
+				F4EEFBC2247CB23300B1FA31 /* Cairo-SemiBold.ttf in Resources */,
+				F4EEFBC1247CB23300B1FA31 /* Cairo-Regular.ttf in Resources */,
+				F4BD11FB247BBF0300740150 /* Localizable.strings in Resources */,
 				F4BD11E9247A466E00740150 /* Main.storyboard in Resources */,
+				F4BD121C247CA9C600740150 /* Assets.xcassets in Resources */,
+				F4BD1220247CAA5400740150 /* Colors.xcassets in Resources */,
+				F4EEFBC5247CB23300B1FA31 /* Cairo-Light.ttf in Resources */,
+				F4EEFBC0247CB23300B1FA31 /* Cairo-Black.ttf in Resources */,
+				F4C2BA73247CF66D00844D4E /* SideMenuCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C57150CC7332748B4B781BC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Corona-EG-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7BC3FA88122E9C6D0D7123E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Corona-EG/Pods-Corona-EG-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Corona-EG/Pods-Corona-EG-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Corona-EG/Pods-Corona-EG-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4BD11DA247A466E00740150 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4BD11E6247A466E00740150 /* ViewController.swift in Sources */,
+				F4C2BA77247D100B00844D4E /* UIViewExtension.swift in Sources */,
+				F4BD11E6247A466E00740150 /* HomeViewController.swift in Sources */,
+				F4BD1200247BBFEB00740150 /* LocalizationSystem.swift in Sources */,
+				F4BD1210247BCE4A00740150 /* UIFont+Extensions.swift in Sources */,
+				F4C2BA6C247CE33000844D4E /* SideMenuItems.swift in Sources */,
+				F4C2BA6E247CF43C00844D4E /* HomeViewControllerPresenter.swift in Sources */,
+				F4C2BA72247CF66D00844D4E /* SideMenuCell.swift in Sources */,
 				F4BD11E2247A466E00740150 /* AppDelegate.swift in Sources */,
-				F4BD11E4247A466E00740150 /* SceneDelegate.swift in Sources */,
+				F4C2BA63247CC4DD00844D4E /* MenuListController.swift in Sources */,
+				F4C2BA69247CDAA000844D4E /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +471,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F4BD11E8247A466E00740150 /* Base */,
+				F4BD11F7247BBE9500740150 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -159,8 +480,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				F4BD11ED247A467000740150 /* Base */,
+				F4BD11F8247BBE9500740150 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F4BD11FD247BBF0300740150 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4BD11FC247BBF0300740150 /* ar */,
+				F4BD11FE247BBF0A00740150 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -170,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -230,6 +562,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -282,11 +615,12 @@
 		};
 		F4BD11F3247A467000740150 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80F1B199FC02FFE0D54E692E /* Pods-Corona-EG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B39DQ9LWFN;
-				INFOPLIST_FILE = "Corona-EG/Info.plist";
+				INFOPLIST_FILE = "Corona-EG/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +634,12 @@
 		};
 		F4BD11F4247A467000740150 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87C22201B692E8B20702E32C /* Pods-Corona-EG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B39DQ9LWFN;
-				INFOPLIST_FILE = "Corona-EG/Info.plist";
+				INFOPLIST_FILE = "Corona-EG/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
