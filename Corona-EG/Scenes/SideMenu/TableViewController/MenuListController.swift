@@ -17,11 +17,12 @@ class MenuListController: UITableViewController, MenuTableView {
     }
     
     var presenter: MenuListControllerPresenter?
+    let router = MenuListControllerRouter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        presenter = MenuListControllerPresenter(view: self)
+        presenter = MenuListControllerPresenter(view: self, router: router)
         tableView.register(
             UINib(nibName: Constants.nibName, bundle: nil),
             forCellReuseIdentifier: Constants.cellIdentifier)
@@ -38,7 +39,7 @@ class MenuListController: UITableViewController, MenuTableView {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter?.didSelectRow(at: indexPath.row)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

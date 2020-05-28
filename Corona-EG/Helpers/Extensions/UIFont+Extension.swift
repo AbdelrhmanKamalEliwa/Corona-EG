@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIFont {
-    class func defaultFont(_ size: CGFloat = 12) -> UIFont {
-        return UIFont(name: "Cairo", size: size)!
+    class func defaultFont(_ size: CGFloat = 12, _ style: FontStyle = .Regular) -> UIFont {
+        return UIFont(name: "Cairo-\(style)", size: size)!
     }
 }

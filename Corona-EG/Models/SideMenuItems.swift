@@ -12,10 +12,11 @@ class SideMenuItems {
     let items: [Item] = [
         Item(itemName: "side_menu_item_1", itemIcon: "news"),
         Item(itemName: "side_menu_item_2", itemIcon: "numbers-updates"),
-        Item(itemName: "side_menu_item_3", itemIcon: "infection-methods"),
-        Item(itemName: "side_menu_item_4", itemIcon: "prevention-tips"),
-        Item(itemName: "side_menu_item_5", itemIcon: "covid-19-test"),
-        Item(itemName: "side_menu_item_6", itemIcon: "emergency-numbers")
+        Item(itemName: "side_menu_item_3", itemIcon: "covid-19-test"),
+        Item(itemName: "side_menu_item_4", itemIcon: "infection-methods"),
+        Item(itemName: "side_menu_item_5", itemIcon: "prevention-tips"),
+        Item(itemName: "side_menu_item_6", itemIcon: "emergency-numbers"),
+        Item(itemName: "side_menu_item_7", itemIcon: "about-us")
     ]
 }
 

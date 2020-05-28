@@ -11,9 +11,9 @@ import Kingfisher
 
 class NewsCell: UITableViewCell, NewsCellView {
     
-    @IBOutlet weak var articleImage: UIImageView!
-    @IBOutlet weak var articleTitle: UILabel!
-    @IBOutlet weak var articleDescription: UILabel!
+    @IBOutlet private weak var articleImage: UIImageView!
+    @IBOutlet private weak var articleTitle: UILabel!
+    @IBOutlet private weak var articleDescription: UILabel!
     
     func displayArticleImage(_ imageUrl: String?) {
         if imageUrl != nil {

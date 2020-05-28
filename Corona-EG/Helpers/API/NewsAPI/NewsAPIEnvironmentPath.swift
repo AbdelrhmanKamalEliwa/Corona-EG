@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct APIService {
+struct NewsAPIService {
     static func baseURL() -> String {
-        return APIEnvironmentPath.development.scheme() + APIEnvironmentPath.development.host() + "apiKey=" + APIEnvironmentPath.development.apiKey()
+        return NewsAPIEnvironmentPath.development.scheme() + NewsAPIEnvironmentPath.development.host() + "/v2/top-headlines?apiKey=" + NewsAPIEnvironmentPath.development.apiKey()
     }
 }
 
-enum APIEnvironmentPath {
+enum NewsAPIEnvironmentPath {
     
     case development
     case testing
@@ -34,7 +34,7 @@ enum APIEnvironmentPath {
     func host() -> String {
         switch self {
         case .development:
-            return "newsapi.org/v2/top-headlines?"
+            return "newsapi.org"
         case .testing:
             return ""
         case .production:

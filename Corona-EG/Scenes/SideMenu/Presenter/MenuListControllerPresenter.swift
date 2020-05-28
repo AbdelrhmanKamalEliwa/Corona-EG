@@ -20,10 +20,12 @@ protocol MenuCellView {
 
 class MenuListControllerPresenter {
     private weak var view: MenuTableView?
+    private let router: MenuListControllerRouter
     private let items = SideMenuItems().items
     
-    init(view: MenuTableView?) {
+    init(view: MenuTableView?, router: MenuListControllerRouter) {
         self.view = view
+        self.router = router
     }
     
     func getSideMenuItemsCount() -> Int {
@@ -40,7 +42,27 @@ class MenuListControllerPresenter {
         cell.displayItemIcon(itemIcon)
     }
     
+    
     func didSelectRow(at index: Int) {
+        let screen = Screens(rawValue: index)
+        switch screen {
+        case .NewsScreen:
+            router.navigateToNewsScreen(from: view)
+        case .NumbersUpdatesScreen:
+            router.navigateToNumbersUpdatesScreen(from: view)
+        case .COVID19TestScreen:
+            print(screen!)
+        case .InfectionMethodsScreen:
+            print(screen!)
+        case .PreventionTipsScreen:
+            print(screen!)
+        case .EmergencyContactsScreen:
+            router.navigateToEmergencyContactsScreen(from: view)
+        case .AboutUsScreen:
+            print(screen!)
+        case .none:
+            break
+        }
         
     }
 }

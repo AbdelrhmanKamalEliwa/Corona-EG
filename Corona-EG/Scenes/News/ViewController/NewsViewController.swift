@@ -9,28 +9,27 @@
 import UIKit
 import SideMenu
 import SKActivityIndicatorView
+import SafariServices
 
 class NewsViewController: BaseViewController {
     
-    var presenter: NewsViewControllerPresenter?
-    
+    internal var presenter: NewsViewControllerPresenter?
+    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
+        setupNavigationBar(navbarTitle: "side_menu_item_1")
         setupSideMenu()
         setupTableView()
         presenter = NewsViewControllerPresenter(view: self, interactor: NewsInteractor())
         presenter?.viewDidLoad()
     }
-    
 }
 
 
 // MARK: - Presenter Delegate
 extension NewsViewController: NewsView {
-    
     func showIndicator() {
         DispatchQueue.main.async {
             SKActivityIndicator.show()
@@ -44,7 +43,9 @@ extension NewsViewController: NewsView {
     }
     
     func fetchDataSuccess() {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func showError(error: String) {
@@ -78,5 +79,26 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         presenter?.cellConfiguartion(cell: cell, for: indexPath.row)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let url = presenter?.didSelectRow(at: indexPath.row)
+        let webViewController = SFSafariViewController(url: url!)
+        present(webViewController, animated: true, completion: nil)
+    }
+    
+}
 
+// MARK: - Animation
+extension NewsViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if tableView.panGestureRecognizer.translation(in: self.view).y < 0 {
+            tableViewTopConstraint.constant = 44
+            navbar.isHidden = true
+            UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
+        } else {
+            tableViewTopConstraint.constant = 88
+            navbar.isHidden = false
+            UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
+        }
+    }
 }

@@ -10,12 +10,12 @@
         <!--News View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="NewsViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsViewController" id="BYZ-38-t0r" customClass="NewsViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-3k-6oN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-3k-6oN">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
@@ -24,7 +24,7 @@
                         <constraints>
                             <constraint firstItem="EL4-3k-6oN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GSP-V0-35v"/>
                             <constraint firstItem="EL4-3k-6oN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ivq-rf-ojX"/>
-                            <constraint firstItem="EL4-3k-6oN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cjC-jV-dgq"/>
+                            <constraint firstItem="EL4-3k-6oN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="88" id="ox3-aM-qeo"/>
                             <constraint firstAttribute="bottom" secondItem="EL4-3k-6oN" secondAttribute="bottom" id="sBR-um-8di"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -32,11 +32,88 @@
                     <navigationItem key="navigationItem" id="agu-7r-hjT"/>
                     <connections>
                         <outlet property="tableView" destination="EL4-3k-6oN" id="0TT-zQ-7An"/>
+                        <outlet property="tableViewTopConstraint" destination="ox3-aM-qeo" id="i3b-ct-xAc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+            <point key="canvasLocation" x="138" y="892"/>
+        </scene>
+        <!--Numbers Updates View Controller-->
+        <scene sceneID="12Z-gU-yhR">
+            <objects>
+                <viewController storyboardIdentifier="NumbersUpdatesViewController" id="MUN-Sn-UbP" customClass="NumbersUpdatesViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XgX-I0-Ms5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EpM-GV-DIL">
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eds-aD-Tag">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="UVP-00-l9n">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EpM-GV-DIL" firstAttribute="leading" secondItem="mvd-cN-JWJ" secondAttribute="leading" id="2R8-pL-ivc"/>
+                            <constraint firstItem="UVP-00-l9n" firstAttribute="trailing" secondItem="mvd-cN-JWJ" secondAttribute="trailing" id="9DA-dd-rzF"/>
+                            <constraint firstAttribute="bottom" secondItem="EpM-GV-DIL" secondAttribute="bottom" id="Ls8-AU-lq8"/>
+                            <constraint firstItem="UVP-00-l9n" firstAttribute="leading" secondItem="mvd-cN-JWJ" secondAttribute="leading" id="XWA-uK-XqV"/>
+                            <constraint firstItem="UVP-00-l9n" firstAttribute="top" secondItem="mvd-cN-JWJ" secondAttribute="top" id="btp-oh-qvP"/>
+                            <constraint firstItem="EpM-GV-DIL" firstAttribute="trailing" secondItem="mvd-cN-JWJ" secondAttribute="trailing" id="odB-Th-LYe"/>
+                            <constraint firstItem="EpM-GV-DIL" firstAttribute="top" secondItem="mvd-cN-JWJ" secondAttribute="top" constant="50" id="p5l-Xj-Gyb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mvd-cN-JWJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="EpM-GV-DIL" id="Zli-sG-9Wz"/>
+                        <outlet property="collectionViewTopConstraint" destination="p5l-Xj-Gyb" id="dNr-mZ-E3k"/>
+                        <outlet property="searchBar" destination="UVP-00-l9n" id="jfc-5V-4Gx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="br6-Uq-bYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.85507246376824" y="891.96428571428567"/>
+        </scene>
+        <!--Emergency Contacts View Controller-->
+        <scene sceneID="4X9-Gn-p7q">
+            <objects>
+                <viewController storyboardIdentifier="EmergencyContactsViewController" id="b37-xh-7uN" customClass="EmergencyContactsViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CA0-Md-GqK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rYA-7J-q7m">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rYA-7J-q7m" firstAttribute="leading" secondItem="imQ-eW-Pd5" secondAttribute="leading" id="3Iw-WT-v1c"/>
+                            <constraint firstAttribute="bottom" secondItem="rYA-7J-q7m" secondAttribute="bottom" id="QFW-w4-GjG"/>
+                            <constraint firstItem="rYA-7J-q7m" firstAttribute="trailing" secondItem="imQ-eW-Pd5" secondAttribute="trailing" id="Qp2-dx-RFA"/>
+                            <constraint firstItem="rYA-7J-q7m" firstAttribute="top" secondItem="CA0-Md-GqK" secondAttribute="top" constant="44" id="nme-1Z-qVY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="imQ-eW-Pd5"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="rYA-7J-q7m" id="NBB-Hj-Gtg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMN-yV-Xwj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="892"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="OAB-oj-FZm">
@@ -54,7 +131,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTb-cN-5Zd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="788" y="110"/>
         </scene>
     </scenes>
 </document>

@@ -6,14 +6,37 @@
   Copyright © 2020 Abdelrhman Eliwa. All rights reserved.
 */
 
-"navbar_title" = "Home";
+"language_type" = "AR";
+"change_language_title" = "Change Language";
+"change_language_message" = "The application language will change to the Arabic language";
+"chnage_language_button_title" = "Go Ahead";
 "change_language" = "Change Language";
 
 
+//SideMenuItems
 "side_menu_item_1" = "News";
 "side_menu_item_2" = "Numbers Updates";
-"side_menu_item_3" = "Infection Methods";
-"side_menu_item_4" = "Prevention Tips";
-"side_menu_item_5" = "COVID-19 Test";
-"side_menu_item_5" = "Emergency Numbers";
-"side_menu_item_6" = "About Us";
+"side_menu_item_3" = "COVID-19 Test";
+"side_menu_item_4" = "Infection Methods";
+"side_menu_item_5" = "Prevention Tips";
+"side_menu_item_6" = "Emergency Contacts";
+"side_menu_item_7" = "About Us";
+
+
+//Contacts Names
+"contact_name_1" = "Ministry of Health";
+"contact_name_2" = "COVID-19 Support";
+"contact_name_3" = "Ambulance Service";
+
+//Contacts Numbers
+"contact_number_1" = "15335";
+"contact_number_2" = "105";
+"contact_number_3" = "123";
+
+//CountryDataCell
+"total_confirmed" = "Total Confirmed";
+"total_deaths" = "Total Deaths";
+"total_recovered" = "Total Recovered";
+"active_cases" = "Active Cases";
+"more_details" = "More Details";
+

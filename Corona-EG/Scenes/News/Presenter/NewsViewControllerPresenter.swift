@@ -60,7 +60,7 @@ class NewsViewControllerPresenter {
                 self.view?.showError(error: error.localizedDescription)
             } else {
                 guard let news = news else { return }
-                self.news = news
+                self.news = news.articles
                 self.view?.fetchDataSuccess()
             }
         }
@@ -73,17 +73,28 @@ class NewsViewControllerPresenter {
     func cellConfiguartion(cell: NewsCellView, for index: Int) {
         let article = news[index]
         
-        let articleImageUrl = article.urlToImage
-        cell.displayArticleImage(articleImageUrl)
+        if let articleImageUrl = article.urlToImage {
+            cell.displayArticleImage(articleImageUrl)
+        }
         
-        let articleTitle = article.title
-        cell.displayArticleTitle(articleTitle)
         
-        let articleDescription = article.description
-        cell.displayArticleDescription(articleDescription)
+        if let articleTitle = article.author {
+            cell.displayArticleTitle(articleTitle)
+        }
+        
+        if let articleDescription = article.description {
+            cell.displayArticleDescription(articleDescription)
+        }
+        
     }
     
-    func didSelectRow(at index: Int) {
-        
+    
+    func didSelectRow(at index: Int) -> URL {
+        let mockUrl = "https://www.google.com"
+        if let url = news[index].url {
+            return URL(string: url)!
+        } else {
+            return URL(string: mockUrl)!
+        }
     }
 }

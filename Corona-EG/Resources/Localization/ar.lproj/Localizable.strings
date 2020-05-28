@@ -6,14 +6,36 @@
   Copyright © 2020 Abdelrhman Eliwa. All rights reserved.
 */
 
-"navbar_title" = "الرئيسيه";
+"language_type" = "EN";
+"change_language_title" = "تغيير اللغة";
+"change_language_message" = "ستتغير لغة التطبيق إلى اللغة الإنجليزية";
+"chnage_language_button_title" = "إستمر";
 "change_language" = "غير اللغه";
 
 
+//SideMenuItems
 "side_menu_item_1" = "الأخبار";
 "side_menu_item_2" = "الإحصائيات";
-"side_menu_item_3" = "طرق العدوى";
-"side_menu_item_4" = "طرق الوقايه";
-"side_menu_item_5" = "اختبار كورونا";
-"side_menu_item_5" = "أرقام الطوارئ";
-"side_menu_item_6" = "عن المطور";
+"side_menu_item_3" = "اختبار كورونا";
+"side_menu_item_4" = "طرق العدوى";
+"side_menu_item_5" = "طرق الوقايه";
+"side_menu_item_6" = "أرقام الطوارئ";
+"side_menu_item_7" = "عن المطور";
+
+//Contacts Names
+"contact_name_1" = "وزارة الصحه";
+"contact_name_2" = "دعم كورونا";
+"contact_name_3" = "الإسعاف";
+
+//Contacts Numbers
+"contact_number_1" = "15335";
+"contact_number_2" = "105";
+"contact_number_3" = "123";
+
+
+//CountryDataCell
+"total_confirmed" = "الحالات المسجلة";
+"total_deaths" = "الوفيات";
+"total_recovered" = "المتعافين";
+"active_cases" = "المصابين";
+"more_details" = "التفاصيل";

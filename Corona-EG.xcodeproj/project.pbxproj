@@ -7,20 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F433F5E5247F7ED200CAEE70 /* MenuListControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5E4247F7ED200CAEE70 /* MenuListControllerRouter.swift */; };
+		F433F5E7247F812A00CAEE70 /* NewsViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5E6247F812A00CAEE70 /* NewsViewControllerRouter.swift */; };
+		F433F5E9247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5E8247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift */; };
+		F433F5EB247F8B3900CAEE70 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5EA247F8B3900CAEE70 /* Screens.swift */; };
+		F433F5F3247F966E00CAEE70 /* NumbersUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5F2247F966E00CAEE70 /* NumbersUpdatesViewController.swift */; };
+		F433F5F5247F97CE00CAEE70 /* CountyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5F4247F97CE00CAEE70 /* CountyDataModel.swift */; };
+		F433F5F8247F9A0500CAEE70 /* NumbersUpdatesViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5F7247F9A0500CAEE70 /* NumbersUpdatesViewControllerPresenter.swift */; };
+		F433F5FA247F9A2300CAEE70 /* NumbersUpdatesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5F9247F9A2300CAEE70 /* NumbersUpdatesInteractor.swift */; };
+		F433F5FE247F9C7A00CAEE70 /* CountryDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5FC247F9C7A00CAEE70 /* CountryDataCell.swift */; };
+		F433F5FF247F9C7A00CAEE70 /* CountryDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F433F5FD247F9C7A00CAEE70 /* CountryDataCell.xib */; };
+		F433F601247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F600247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift */; };
+		F433F603247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F602247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift */; };
+		F454FD66247E5939004EF907 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454FD65247E5939004EF907 /* FontStyle.swift */; };
 		F45E5A4A247D4A6F008891B6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A49247D4A6F008891B6 /* NetworkManager.swift */; };
 		F45E5A4D247D4A76008891B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A4B247D4A76008891B6 /* HTTPMethod.swift */; };
 		F45E5A4E247D4A76008891B6 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A4C247D4A76008891B6 /* APIResult.swift */; };
 		F45E5A51247D4A7E008891B6 /* EndPointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A4F247D4A7D008891B6 /* EndPointRouter.swift */; };
-		F45E5A52247D4A7E008891B6 /* APIEnvironmentPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A50247D4A7E008891B6 /* APIEnvironmentPath.swift */; };
+		F45E5A52247D4A7E008891B6 /* NewsAPIEnvironmentPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A50247D4A7E008891B6 /* NewsAPIEnvironmentPath.swift */; };
 		F45E5A55247D4C99008891B6 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A54247D4C99008891B6 /* Countries.swift */; };
 		F45E5A59247D4FFD008891B6 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A58247D4FFD008891B6 /* NewsModel.swift */; };
+		F45E5A61247DFF8A008891B6 /* EmergencyContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A60247DFF8A008891B6 /* EmergencyContactsViewController.swift */; };
+		F45E5A63247DFFF0008891B6 /* EmergencyContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A62247DFFF0008891B6 /* EmergencyContacts.swift */; };
+		F45E5A66247E1382008891B6 /* EmergencyContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A64247E1382008891B6 /* EmergencyContactsCell.swift */; };
+		F45E5A67247E1382008891B6 /* EmergencyContactsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45E5A65247E1382008891B6 /* EmergencyContactsCell.xib */; };
+		F45E5A69247E1716008891B6 /* EmergencyContactsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A68247E1715008891B6 /* EmergencyContactsViewControllerPresenter.swift */; };
 		F4BD11E2247A466E00740150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11E1247A466E00740150 /* AppDelegate.swift */; };
 		F4BD11E6247A466E00740150 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11E5247A466E00740150 /* NewsViewController.swift */; };
 		F4BD11E9247A466E00740150 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BD11E7247A466E00740150 /* Main.storyboard */; };
 		F4BD11EE247A467000740150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BD11EC247A467000740150 /* LaunchScreen.storyboard */; };
 		F4BD11FB247BBF0300740150 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4BD11FD247BBF0300740150 /* Localizable.strings */; };
 		F4BD1200247BBFEB00740150 /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11FF247BBFEB00740150 /* LocalizationSystem.swift */; };
-		F4BD1210247BCE4A00740150 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD120F247BCE4A00740150 /* UIFont+Extensions.swift */; };
+		F4BD1210247BCE4A00740150 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD120F247BCE4A00740150 /* UIFont+Extension.swift */; };
 		F4BD121C247CA9C600740150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BD121B247CA9C600740150 /* Assets.xcassets */; };
 		F4BD1220247CAA5400740150 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BD121F247CAA5400740150 /* Colors.xcassets */; };
 		F4C2BA63247CC4DD00844D4E /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA62247CC4DD00844D4E /* MenuListController.swift */; };
@@ -35,6 +53,7 @@
 		F4C2BA86247D3FA100844D4E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F4C2BA85247D3FA100844D4E /* .swiftlint.yml */; };
 		F4C2BA88247D45CC00844D4E /* NewsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA87247D45CC00844D4E /* NewsViewControllerPresenter.swift */; };
 		F4C2BA8A247D46FC00844D4E /* NewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA89247D46FC00844D4E /* NewsInteractor.swift */; };
+		F4ED7FE8247E69EC00DCA13B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7FE7247E69EC00DCA13B /* UIColor+Extension.swift */; };
 		F4EEFBC0247CB23300B1FA31 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBA247CB23300B1FA31 /* Cairo-Black.ttf */; };
 		F4EEFBC1247CB23300B1FA31 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBB247CB23300B1FA31 /* Cairo-Regular.ttf */; };
 		F4EEFBC2247CB23300B1FA31 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBC247CB23300B1FA31 /* Cairo-SemiBold.ttf */; };
@@ -48,13 +67,31 @@
 		3CC6EBBAFDB0F301A31E45A6 /* Pods_Corona_EG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Corona_EG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F1B199FC02FFE0D54E692E /* Pods-Corona-EG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona-EG.debug.xcconfig"; path = "Target Support Files/Pods-Corona-EG/Pods-Corona-EG.debug.xcconfig"; sourceTree = "<group>"; };
 		87C22201B692E8B20702E32C /* Pods-Corona-EG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona-EG.release.xcconfig"; path = "Target Support Files/Pods-Corona-EG/Pods-Corona-EG.release.xcconfig"; sourceTree = "<group>"; };
+		F433F5E4247F7ED200CAEE70 /* MenuListControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListControllerRouter.swift; sourceTree = "<group>"; };
+		F433F5E6247F812A00CAEE70 /* NewsViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewControllerRouter.swift; sourceTree = "<group>"; };
+		F433F5E8247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsViewControllerRouter.swift; sourceTree = "<group>"; };
+		F433F5EA247F8B3900CAEE70 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
+		F433F5F2247F966E00CAEE70 /* NumbersUpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUpdatesViewController.swift; sourceTree = "<group>"; };
+		F433F5F4247F97CE00CAEE70 /* CountyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyDataModel.swift; sourceTree = "<group>"; };
+		F433F5F7247F9A0500CAEE70 /* NumbersUpdatesViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUpdatesViewControllerPresenter.swift; sourceTree = "<group>"; };
+		F433F5F9247F9A2300CAEE70 /* NumbersUpdatesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUpdatesInteractor.swift; sourceTree = "<group>"; };
+		F433F5FC247F9C7A00CAEE70 /* CountryDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataCell.swift; sourceTree = "<group>"; };
+		F433F5FD247F9C7A00CAEE70 /* CountryDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryDataCell.xib; sourceTree = "<group>"; };
+		F433F600247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUpdatesViewControllerRouter.swift; sourceTree = "<group>"; };
+		F433F602247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsAPIEnvironmentPath.swift; sourceTree = "<group>"; };
+		F454FD65247E5939004EF907 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		F45E5A49247D4A6F008891B6 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F45E5A4B247D4A76008891B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		F45E5A4C247D4A76008891B6 /* APIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
 		F45E5A4F247D4A7D008891B6 /* EndPointRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointRouter.swift; sourceTree = "<group>"; };
-		F45E5A50247D4A7E008891B6 /* APIEnvironmentPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEnvironmentPath.swift; sourceTree = "<group>"; };
+		F45E5A50247D4A7E008891B6 /* NewsAPIEnvironmentPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAPIEnvironmentPath.swift; sourceTree = "<group>"; };
 		F45E5A54247D4C99008891B6 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		F45E5A58247D4FFD008891B6 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		F45E5A60247DFF8A008891B6 /* EmergencyContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsViewController.swift; sourceTree = "<group>"; };
+		F45E5A62247DFFF0008891B6 /* EmergencyContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContacts.swift; sourceTree = "<group>"; };
+		F45E5A64247E1382008891B6 /* EmergencyContactsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsCell.swift; sourceTree = "<group>"; };
+		F45E5A65247E1382008891B6 /* EmergencyContactsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmergencyContactsCell.xib; sourceTree = "<group>"; };
+		F45E5A68247E1715008891B6 /* EmergencyContactsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsViewControllerPresenter.swift; sourceTree = "<group>"; };
 		F4BD11DE247A466E00740150 /* Corona-EG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona-EG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BD11E1247A466E00740150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4BD11E5247A466E00740150 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +103,7 @@
 		F4BD11FC247BBF0300740150 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4BD11FE247BBF0A00740150 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4BD11FF247BBFEB00740150 /* LocalizationSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
-		F4BD120F247BCE4A00740150 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		F4BD120F247BCE4A00740150 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		F4BD121B247CA9C600740150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4BD121F247CAA5400740150 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F4C2BA62247CC4DD00844D4E /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
@@ -81,6 +118,7 @@
 		F4C2BA85247D3FA100844D4E /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		F4C2BA87247D45CC00844D4E /* NewsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewControllerPresenter.swift; sourceTree = "<group>"; };
 		F4C2BA89247D46FC00844D4E /* NewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInteractor.swift; sourceTree = "<group>"; };
+		F4ED7FE7247E69EC00DCA13B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		F4EEFBBA247CB23300B1FA31 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
 		F4EEFBBB247CB23300B1FA31 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
 		F4EEFBBC247CB23300B1FA31 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -118,10 +156,87 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F433F5E3247F7E4200CAEE70 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F433F5E4247F7ED200CAEE70 /* MenuListControllerRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F433F5EE247F947C00CAEE70 /* NumbersUpdates */ = {
+			isa = PBXGroup;
+			children = (
+				F433F5EF247F948F00CAEE70 /* Router */,
+				F433F5F6247F99EB00CAEE70 /* Interactor */,
+				F433F5F1247F94B100CAEE70 /* Presenter */,
+				F433F5FB247F9C3900CAEE70 /* CollectionViewCell */,
+				F433F5F0247F949500CAEE70 /* ViewController */,
+			);
+			path = NumbersUpdates;
+			sourceTree = "<group>";
+		};
+		F433F5EF247F948F00CAEE70 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F433F600247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F433F5F0247F949500CAEE70 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F433F5F2247F966E00CAEE70 /* NumbersUpdatesViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F433F5F1247F94B100CAEE70 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F433F5F7247F9A0500CAEE70 /* NumbersUpdatesViewControllerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F433F5F6247F99EB00CAEE70 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F433F5F9247F9A2300CAEE70 /* NumbersUpdatesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F433F5FB247F9C3900CAEE70 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F433F5FC247F9C7A00CAEE70 /* CountryDataCell.swift */,
+				F433F5FD247F9C7A00CAEE70 /* CountryDataCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		F433F604247FB16000CAEE70 /* NewsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F45E5A50247D4A7E008891B6 /* NewsAPIEnvironmentPath.swift */,
+			);
+			path = NewsAPI;
+			sourceTree = "<group>";
+		};
+		F433F605247FB16900CAEE70 /* StatisticsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F433F602247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift */,
+			);
+			path = StatisticsAPI;
+			sourceTree = "<group>";
+		};
 		F45E5A47247D4A52008891B6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				F45E5A57247D4FD1008891B6 /* Manager */,
+				F45E5A57247D4FD1008891B6 /* Managers */,
 				F45E5A48247D4A59008891B6 /* Entities */,
 			);
 			path = Networking;
@@ -140,6 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				F45E5A54247D4C99008891B6 /* Countries.swift */,
+				F454FD65247E5939004EF907 /* FontStyle.swift */,
+				F433F5EA247F8B3900CAEE70 /* Screens.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -147,18 +264,63 @@
 		F45E5A56247D4F8A008891B6 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				F45E5A50247D4A7E008891B6 /* APIEnvironmentPath.swift */,
 				F45E5A4F247D4A7D008891B6 /* EndPointRouter.swift */,
+				F433F604247FB16000CAEE70 /* NewsAPI */,
+				F433F605247FB16900CAEE70 /* StatisticsAPI */,
 			);
 			path = API;
 			sourceTree = "<group>";
 		};
-		F45E5A57247D4FD1008891B6 /* Manager */ = {
+		F45E5A57247D4FD1008891B6 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				F45E5A49247D4A6F008891B6 /* NetworkManager.swift */,
 			);
-			path = Manager;
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F45E5A5B247DFF11008891B6 /* EmergencyContacts */ = {
+			isa = PBXGroup;
+			children = (
+				F45E5A5C247DFF3E008891B6 /* Router */,
+				F45E5A5D247DFF43008891B6 /* Presenter */,
+				F45E5A5F247DFF59008891B6 /* TableViewCell */,
+				F45E5A5E247DFF4E008891B6 /* ViewController */,
+			);
+			path = EmergencyContacts;
+			sourceTree = "<group>";
+		};
+		F45E5A5C247DFF3E008891B6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F433F5E8247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F45E5A5D247DFF43008891B6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F45E5A68247E1715008891B6 /* EmergencyContactsViewControllerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F45E5A5E247DFF4E008891B6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F45E5A60247DFF8A008891B6 /* EmergencyContactsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F45E5A5F247DFF59008891B6 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F45E5A64247E1382008891B6 /* EmergencyContactsCell.swift */,
+				F45E5A65247E1382008891B6 /* EmergencyContactsCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		F4BD11D5247A466D00740150 = {
@@ -226,6 +388,8 @@
 			children = (
 				F4C2BA6B247CE33000844D4E /* SideMenuItems.swift */,
 				F45E5A58247D4FFD008891B6 /* NewsModel.swift */,
+				F45E5A62247DFFF0008891B6 /* EmergencyContacts.swift */,
+				F433F5F4247F97CE00CAEE70 /* CountyDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,7 +399,9 @@
 			children = (
 				F4C2BA6A247CE2DA00844D4E /* Base */,
 				F4C2BA74247D0AE100844D4E /* SideMenu */,
-				F4BD1207247BC7BD00740150 /* Home */,
+				F4BD1207247BC7BD00740150 /* News */,
+				F433F5EE247F947C00CAEE70 /* NumbersUpdates */,
+				F45E5A5B247DFF11008891B6 /* EmergencyContacts */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -248,7 +414,7 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		F4BD1207247BC7BD00740150 /* Home */ = {
+		F4BD1207247BC7BD00740150 /* News */ = {
 			isa = PBXGroup;
 			children = (
 				F4C2BA7B247D3A6000844D4E /* Router */,
@@ -257,7 +423,7 @@
 				F4C2BA78247D3A2600844D4E /* TableViewCell */,
 				F4BD1208247BC7C000740150 /* ViewController */,
 			);
-			path = Home;
+			path = News;
 			sourceTree = "<group>";
 		};
 		F4BD1208247BC7C000740150 /* ViewController */ = {
@@ -313,7 +479,8 @@
 			isa = PBXGroup;
 			children = (
 				F4C2BA76247D100B00844D4E /* UIViewExtension.swift */,
-				F4BD120F247BCE4A00740150 /* UIFont+Extensions.swift */,
+				F4BD120F247BCE4A00740150 /* UIFont+Extension.swift */,
+				F4ED7FE7247E69EC00DCA13B /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -346,9 +513,10 @@
 		F4C2BA74247D0AE100844D4E /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				F433F5E3247F7E4200CAEE70 /* Router */,
+				F4BD1209247BC7C800740150 /* Presenter */,
 				F4C2BA6F247CF65200844D4E /* TableViewCell */,
 				F4C2BA61247CC4AE00844D4E /* TableViewController */,
-				F4BD1209247BC7C800740150 /* Presenter */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -381,6 +549,7 @@
 		F4C2BA7B247D3A6000844D4E /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				F433F5E6247F812A00CAEE70 /* NewsViewControllerRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -466,6 +635,7 @@
 			files = (
 				F4BD11EE247A467000740150 /* LaunchScreen.storyboard in Resources */,
 				F4EEFBC3247CB23300B1FA31 /* Cairo-ExtraLight.ttf in Resources */,
+				F433F5FF247F9C7A00CAEE70 /* CountryDataCell.xib in Resources */,
 				F4EEFBC4247CB23300B1FA31 /* Cairo-Bold.ttf in Resources */,
 				F4EEFBC2247CB23300B1FA31 /* Cairo-SemiBold.ttf in Resources */,
 				F4EEFBC1247CB23300B1FA31 /* Cairo-Regular.ttf in Resources */,
@@ -474,6 +644,7 @@
 				F4BD121C247CA9C600740150 /* Assets.xcassets in Resources */,
 				F4BD1220247CAA5400740150 /* Colors.xcassets in Resources */,
 				F4C2BA83247D3E4D00844D4E /* NewsCell.xib in Resources */,
+				F45E5A67247E1382008891B6 /* EmergencyContactsCell.xib in Resources */,
 				F4C2BA86247D3FA100844D4E /* .swiftlint.yml in Resources */,
 				F4EEFBC5247CB23300B1FA31 /* Cairo-Light.ttf in Resources */,
 				F4EEFBC0247CB23300B1FA31 /* Cairo-Black.ttf in Resources */,
@@ -548,25 +719,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4C2BA88247D45CC00844D4E /* NewsViewControllerPresenter.swift in Sources */,
-				F45E5A52247D4A7E008891B6 /* APIEnvironmentPath.swift in Sources */,
+				F433F601247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift in Sources */,
+				F45E5A52247D4A7E008891B6 /* NewsAPIEnvironmentPath.swift in Sources */,
 				F4C2BA77247D100B00844D4E /* UIViewExtension.swift in Sources */,
+				F433F5E5247F7ED200CAEE70 /* MenuListControllerRouter.swift in Sources */,
+				F4ED7FE8247E69EC00DCA13B /* UIColor+Extension.swift in Sources */,
 				F4BD11E6247A466E00740150 /* NewsViewController.swift in Sources */,
+				F433F5E7247F812A00CAEE70 /* NewsViewControllerRouter.swift in Sources */,
 				F45E5A59247D4FFD008891B6 /* NewsModel.swift in Sources */,
 				F45E5A4E247D4A76008891B6 /* APIResult.swift in Sources */,
+				F45E5A69247E1716008891B6 /* EmergencyContactsViewControllerPresenter.swift in Sources */,
+				F433F5F8247F9A0500CAEE70 /* NumbersUpdatesViewControllerPresenter.swift in Sources */,
+				F454FD66247E5939004EF907 /* FontStyle.swift in Sources */,
+				F433F5E9247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift in Sources */,
 				F4BD1200247BBFEB00740150 /* LocalizationSystem.swift in Sources */,
 				F45E5A51247D4A7E008891B6 /* EndPointRouter.swift in Sources */,
 				F4C2BA8A247D46FC00844D4E /* NewsInteractor.swift in Sources */,
-				F4BD1210247BCE4A00740150 /* UIFont+Extensions.swift in Sources */,
+				F4BD1210247BCE4A00740150 /* UIFont+Extension.swift in Sources */,
 				F4C2BA6C247CE33000844D4E /* SideMenuItems.swift in Sources */,
+				F433F5F3247F966E00CAEE70 /* NumbersUpdatesViewController.swift in Sources */,
 				F4C2BA6E247CF43C00844D4E /* MenuListControllerPresenter.swift in Sources */,
+				F45E5A63247DFFF0008891B6 /* EmergencyContacts.swift in Sources */,
 				F45E5A4D247D4A76008891B6 /* HTTPMethod.swift in Sources */,
+				F45E5A61247DFF8A008891B6 /* EmergencyContactsViewController.swift in Sources */,
+				F433F5EB247F8B3900CAEE70 /* Screens.swift in Sources */,
 				F4C2BA72247CF66D00844D4E /* SideMenuCell.swift in Sources */,
 				F4BD11E2247A466E00740150 /* AppDelegate.swift in Sources */,
 				F45E5A4A247D4A6F008891B6 /* NetworkManager.swift in Sources */,
 				F4C2BA63247CC4DD00844D4E /* MenuListController.swift in Sources */,
 				F4C2BA69247CDAA000844D4E /* BaseViewController.swift in Sources */,
+				F433F5FE247F9C7A00CAEE70 /* CountryDataCell.swift in Sources */,
+				F433F5FA247F9A2300CAEE70 /* NumbersUpdatesInteractor.swift in Sources */,
+				F45E5A66247E1382008891B6 /* EmergencyContactsCell.swift in Sources */,
+				F433F5F5247F97CE00CAEE70 /* CountyDataModel.swift in Sources */,
 				F45E5A55247D4C99008891B6 /* Countries.swift in Sources */,
 				F4C2BA82247D3E4D00844D4E /* NewsCell.swift in Sources */,
+				F433F603247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

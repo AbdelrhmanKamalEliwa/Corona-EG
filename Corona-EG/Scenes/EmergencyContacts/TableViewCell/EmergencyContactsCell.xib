@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
+        </array>
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="KGk-i7-Jjw" customClass="EmergencyContactsCell" customModule="Corona_EG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vdt-hQ-sLY">
+                        <rect key="frame" x="10" y="10" width="300" height="45"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asC-4k-q4Z">
+                                <rect key="frame" x="10" y="5.5" width="40.5" height="34"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9f-qr-VZw">
+                                <rect key="frame" x="248" y="5.5" width="42" height="34"/>
+                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
+                                <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.90946570161270768" alpha="0.51174550513698636" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="F9f-qr-VZw" secondAttribute="trailing" constant="10" id="YIN-uj-yg9"/>
+                            <constraint firstItem="asC-4k-q4Z" firstAttribute="centerY" secondItem="Vdt-hQ-sLY" secondAttribute="centerY" id="igQ-uo-T9q"/>
+                            <constraint firstItem="F9f-qr-VZw" firstAttribute="centerY" secondItem="Vdt-hQ-sLY" secondAttribute="centerY" id="mre-WU-Mmp"/>
+                            <constraint firstItem="asC-4k-q4Z" firstAttribute="leading" secondItem="Vdt-hQ-sLY" secondAttribute="leading" constant="10" id="xGt-he-trj"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Vdt-hQ-sLY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="G19-gD-vEu"/>
+                    <constraint firstItem="Vdt-hQ-sLY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Rwb-vX-DiQ"/>
+                    <constraint firstAttribute="trailing" secondItem="Vdt-hQ-sLY" secondAttribute="trailing" constant="10" id="ko9-Rn-Mco"/>
+                    <constraint firstAttribute="bottom" secondItem="Vdt-hQ-sLY" secondAttribute="bottom" id="uCw-dC-p94"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contactName" destination="asC-4k-q4Z" id="ymX-bF-EtP"/>
+                <outlet property="contactNumber" destination="F9f-qr-VZw" id="AB1-Fx-13m"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="114.17410714285714"/>
+        </tableViewCell>
+    </objects>
+</document>
