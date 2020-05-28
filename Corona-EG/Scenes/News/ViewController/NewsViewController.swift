@@ -14,8 +14,8 @@ import SafariServices
 class NewsViewController: BaseViewController {
     
     internal var presenter: NewsViewControllerPresenter?
-    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,18 +51,17 @@ extension NewsViewController: NewsView {
     func showError(error: String) {
         print(error)
     }
-    
 }
 
 
 // MARK: - Setup TableView
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
-    enum Constants {
+    private enum Constants {
         static let nibName = "NewsCell"
         static let cellIdentifier = "NewsCell"
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(
@@ -85,7 +84,6 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         let webViewController = SFSafariViewController(url: url!)
         present(webViewController, animated: true, completion: nil)
     }
-    
 }
 
 // MARK: - Animation

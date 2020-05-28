@@ -38,5 +38,8 @@
 "total_deaths" = "Total Deaths";
 "total_recovered" = "Total Recovered";
 "active_cases" = "Active Cases";
+"daily_confirmed" = "Daily Confirmed";
+"daily_deaths" = "Daily Deaths";
+"total_critical" = "Total Critical";
 "more_details" = "More Details";
 

@@ -27,4 +27,11 @@ class NumbersUpdatesViewControllerRouter {
         }
         return numbersUpdatesViewController
     }
+    
+    func navigateToCountryDetailsScreen(from view: NumbersUpdatesView?, countryData: CountryDataModel) {
+        let countryDetailsView = CountryDetailsViewControllerRouter.createRepoDetailsVC(countryData: countryData)
+        if let viewController = view as? UIViewController {
+            viewController.navigationController?.pushViewController(countryDetailsView, animated: true)
+        }
+    }
 }

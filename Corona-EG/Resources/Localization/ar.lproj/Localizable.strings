@@ -38,4 +38,7 @@
 "total_deaths" = "الوفيات";
 "total_recovered" = "المتعافين";
 "active_cases" = "المصابين";
+"daily_confirmed" = "اصابات اليوم";
+"daily_deaths" = "وفيات اليوم";
+"total_critical" = "الحالات الخطره";
 "more_details" = "التفاصيل";

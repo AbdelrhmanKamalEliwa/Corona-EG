@@ -34,10 +34,8 @@ class MenuListControllerPresenter {
     
     func cellConfigutation(cell: MenuCellView, for index: Int) {
         let item = items[index]
-        
         let itemName = LocalizationSystem.sharedInstance.localizedStringForKey(key: item.itemName, comment: "")
         cell.displayItemLabel(itemName)
-        
         let itemIcon = LocalizationSystem.sharedInstance.localizedStringForKey(key: item.itemIcon, comment: "")
         cell.displayItemIcon(itemIcon)
     }

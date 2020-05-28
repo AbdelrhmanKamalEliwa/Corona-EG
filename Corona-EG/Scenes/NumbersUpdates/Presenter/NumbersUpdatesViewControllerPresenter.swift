@@ -36,6 +36,8 @@ class NumbersUpdatesViewControllerPresenter {
     private let interactor: NumbersUpdatesInteractor
     private let router: NumbersUpdatesViewControllerRouter
     private var countries: [CountryDataModel] = []
+    private var filteredCountries: [CountryDataModel] = []
+    private var searching = false
     
     init(view: NumbersUpdatesView?, interactor: NumbersUpdatesInteractor, router: NumbersUpdatesViewControllerRouter) {
         self.view = view
@@ -47,7 +49,7 @@ class NumbersUpdatesViewControllerPresenter {
         getCountriesData()
     }
     
-    func getCountriesData() {
+    private func getCountriesData() {
         view?.showIndicator()
         interactor.getCountriesData { [weak self] (countries, error) in
             guard let self = self else { return }
@@ -62,8 +64,23 @@ class NumbersUpdatesViewControllerPresenter {
         }
     }
     
+    func fetchSearch(_ searchText: String) {
+        view?.showIndicator()
+        filteredCountries = countries.filter { (country) -> Bool in
+            country.country!.lowercased().contains(searchText.lowercased())
+        }
+        view?.hideIndicator()
+        searching = true
+        if searchText.isEmpty { searching = false }
+        view?.fetchDataSuccess()
+    }
+    
     func getCountriesCount() -> Int {
-        countries.count
+        if searching {
+            return filteredCountries.count
+        } else {
+            return countries.count
+        }
     }
     
     private func cellLanguageConfiguration(cell: NumbersUpdatesCellView) {
@@ -81,21 +98,41 @@ class NumbersUpdatesViewControllerPresenter {
     
     func cellConfiguration(cell: NumbersUpdatesCellView, for index: Int) {
         cellLanguageConfiguration(cell: cell)
-        let country = countries[index]
-        guard let countryName = country.country else { return }
-        cell.displyaCountryNameLabel(countryName)
-        guard let totalConfirmedNumber = country.totalConfirmed else { return }
-        cell.displayTotalConfirmedNumber(String(totalConfirmedNumber))
-        guard let totalDeathsNumber = country.totalDeaths else { return }
-        cell.displayTotalDeathsNumber(String(totalDeathsNumber))
-        guard let totalRecoverdNumber = country.totalRecovered else { return }
-        cell.displayTotalRecoverdNumber(String(totalRecoverdNumber))
-        guard let activeCasesNumber = country.activeCases else { return }
-        cell.displayActiveCasesNumber(String(activeCasesNumber))
+        if searching {
+            let country = filteredCountries[index]
+            guard let countryName = country.country else { return }
+            cell.displyaCountryNameLabel(countryName)
+            guard let totalConfirmedNumber = country.totalConfirmed else { return }
+            cell.displayTotalConfirmedNumber(String(totalConfirmedNumber))
+            guard let totalDeathsNumber = country.totalDeaths else { return }
+            cell.displayTotalDeathsNumber(String(totalDeathsNumber))
+            guard let totalRecoverdNumber = country.totalRecovered else { return }
+            cell.displayTotalRecoverdNumber(String(totalRecoverdNumber))
+            guard let activeCasesNumber = country.activeCases else { return }
+            cell.displayActiveCasesNumber(String(activeCasesNumber))
+        } else {
+            let country = countries[index]
+            guard let countryName = country.country else { return }
+            cell.displyaCountryNameLabel(countryName)
+            guard let totalConfirmedNumber = country.totalConfirmed else { return }
+            cell.displayTotalConfirmedNumber(String(totalConfirmedNumber))
+            guard let totalDeathsNumber = country.totalDeaths else { return }
+            cell.displayTotalDeathsNumber(String(totalDeathsNumber))
+            guard let totalRecoverdNumber = country.totalRecovered else { return }
+            cell.displayTotalRecoverdNumber(String(totalRecoverdNumber))
+            guard let activeCasesNumber = country.activeCases else { return }
+            cell.displayActiveCasesNumber(String(activeCasesNumber))
+        }
     }
     
     func didSelectRow(at index: Int) {
-        
+        if searching {
+            let country = filteredCountries[index]
+            router.navigateToCountryDetailsScreen(from: view, countryData: country)
+        } else {
+            let country = countries[index]
+            router.navigateToCountryDetailsScreen(from: view, countryData: country)
+        }
     }
     
 }

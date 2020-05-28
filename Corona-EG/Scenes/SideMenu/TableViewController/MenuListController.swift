@@ -11,13 +11,13 @@ import SideMenu
 
 class MenuListController: UITableViewController, MenuTableView {
     
-    enum Constants {
+    private enum Constants {
         static let nibName = "SideMenuCell"
         static let cellIdentifier = "SideMenuCell"
     }
     
-    var presenter: MenuListControllerPresenter?
-    let router = MenuListControllerRouter()
+    internal var presenter: MenuListControllerPresenter?
+    private let router = MenuListControllerRouter()
     
     override func viewDidLoad() {
         super.viewDidLoad()

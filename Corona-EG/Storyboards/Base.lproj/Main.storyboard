@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--News View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -70,20 +75,67 @@
                             <constraint firstAttribute="bottom" secondItem="EpM-GV-DIL" secondAttribute="bottom" id="Ls8-AU-lq8"/>
                             <constraint firstItem="UVP-00-l9n" firstAttribute="leading" secondItem="mvd-cN-JWJ" secondAttribute="leading" id="XWA-uK-XqV"/>
                             <constraint firstItem="UVP-00-l9n" firstAttribute="top" secondItem="mvd-cN-JWJ" secondAttribute="top" id="btp-oh-qvP"/>
+                            <constraint firstItem="EpM-GV-DIL" firstAttribute="top" secondItem="mvd-cN-JWJ" secondAttribute="top" constant="50" id="fJ4-dI-b1D"/>
                             <constraint firstItem="EpM-GV-DIL" firstAttribute="trailing" secondItem="mvd-cN-JWJ" secondAttribute="trailing" id="odB-Th-LYe"/>
-                            <constraint firstItem="EpM-GV-DIL" firstAttribute="top" secondItem="mvd-cN-JWJ" secondAttribute="top" constant="50" id="p5l-Xj-Gyb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mvd-cN-JWJ"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="EpM-GV-DIL" id="Zli-sG-9Wz"/>
-                        <outlet property="collectionViewTopConstraint" destination="p5l-Xj-Gyb" id="dNr-mZ-E3k"/>
+                        <outlet property="collectionViewTopConstraint" destination="fJ4-dI-b1D" id="jzu-Ec-MMW"/>
                         <outlet property="searchBar" destination="UVP-00-l9n" id="jfc-5V-4Gx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="br6-Uq-bYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="989.85507246376824" y="891.96428571428567"/>
+        </scene>
+        <!--Country Details View Controller-->
+        <scene sceneID="pQ4-pZ-OWv">
+            <objects>
+                <viewController storyboardIdentifier="CountryDetailsViewController" id="5bM-E1-5Tk" customClass="CountryDetailsViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tu4-Wn-Seo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XK4-SU-nXQ">
+                                <rect key="frame" x="0.0" y="54" width="414" height="748"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZl-DV-GnW">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mFR-e2-Tx6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="20"/>
+                                <state key="normal" title="Show On Map">
+                                    <color key="titleColor" red="0.00058953653840000003" green="0.085794318600000002" blue="0.360501352" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="showOnMapButtonTapped:" destination="5bM-E1-5Tk" eventType="touchUpInside" id="Xim-Na-ao9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MZl-DV-GnW" firstAttribute="bottom" secondItem="cKl-E7-NVP" secondAttribute="bottom" id="BVH-3K-7BV"/>
+                            <constraint firstItem="XK4-SU-nXQ" firstAttribute="leading" secondItem="cKl-E7-NVP" secondAttribute="leading" id="b1p-xJ-8si"/>
+                            <constraint firstItem="XK4-SU-nXQ" firstAttribute="top" secondItem="cKl-E7-NVP" secondAttribute="top" constant="10" id="bF8-mF-D66"/>
+                            <constraint firstItem="cKl-E7-NVP" firstAttribute="trailing" secondItem="XK4-SU-nXQ" secondAttribute="trailing" id="g8S-ik-3xM"/>
+                            <constraint firstItem="MZl-DV-GnW" firstAttribute="trailing" secondItem="cKl-E7-NVP" secondAttribute="trailing" id="joR-pd-Kza"/>
+                            <constraint firstItem="MZl-DV-GnW" firstAttribute="top" secondItem="XK4-SU-nXQ" secondAttribute="bottom" constant="10" id="mmc-aR-EDS"/>
+                            <constraint firstItem="MZl-DV-GnW" firstAttribute="leading" secondItem="cKl-E7-NVP" secondAttribute="leading" id="sNM-l5-I5x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cKl-E7-NVP"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="XK4-SU-nXQ" id="WPW-ni-kQy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EAd-sg-NS3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.85507246376824" y="1581.6964285714284"/>
         </scene>
         <!--Emergency Contacts View Controller-->
         <scene sceneID="4X9-Gn-p7q">

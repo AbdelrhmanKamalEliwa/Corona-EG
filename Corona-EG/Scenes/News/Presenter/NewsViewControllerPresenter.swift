@@ -38,7 +38,7 @@ class NewsViewControllerPresenter {
         getNews()
     }
     
-    func checkForEnglishLanguage(_ currentLanguage: String) -> Bool {
+    private func checkForEnglishLanguage(_ currentLanguage: String) -> Bool {
         if currentLanguage == "en" { return true } else { return false }
     }
     
@@ -72,22 +72,13 @@ class NewsViewControllerPresenter {
     
     func cellConfiguartion(cell: NewsCellView, for index: Int) {
         let article = news[index]
-        
-        if let articleImageUrl = article.urlToImage {
-            cell.displayArticleImage(articleImageUrl)
-        }
-        
-        
-        if let articleTitle = article.author {
-            cell.displayArticleTitle(articleTitle)
-        }
-        
-        if let articleDescription = article.description {
-            cell.displayArticleDescription(articleDescription)
-        }
-        
+        guard let articleImageUrl = article.urlToImage else { return }
+        cell.displayArticleImage(articleImageUrl)
+        guard let articleTitle = article.author else { return }
+        cell.displayArticleTitle(articleTitle)
+        guard let articleDescription = article.description else { return }
+        cell.displayArticleDescription(articleDescription)
     }
-    
     
     func didSelectRow(at index: Int) -> URL {
         let mockUrl = "https://www.google.com"

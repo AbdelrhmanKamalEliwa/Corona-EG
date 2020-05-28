@@ -1,19 +1,19 @@
 //
-//  NewsInteractor.swift
+//  NumbersUpdatesViewControllerInteractor.swift
 //  Corona-EG
 //
-//  Created by Abdelrhman Eliwa on 5/26/20.
+//  Created by Abdelrhman Eliwa on 5/28/20.
 //  Copyright © 2020 Abdelrhman Eliwa. All rights reserved.
 //
 
 import Foundation
 
-class NewsInteractor {
-    func getNews(country: Countries, completionHandler: @escaping (NewsModel?, Error?) -> ()) {
+class NumbersUpdatesInteractor {
+    func getCountriesData(completionHandler: @escaping ([CountryDataModel]?, Error?) -> ()) {
         let networkManager = NetworkManager()
         _ = networkManager.request(
-            url: EndPointRouter.getNews(country: country), httpMethod: .get,
-        parameters: nil, headers: nil) { (result: APIResult<NewsModel>) in
+            url: EndPointRouter.getCountriesData, httpMethod: .get,
+        parameters: nil, headers: nil) { (result: APIResult<[CountryDataModel]>) in
             switch result {
             case .success(let data):
                 completionHandler(data, nil)

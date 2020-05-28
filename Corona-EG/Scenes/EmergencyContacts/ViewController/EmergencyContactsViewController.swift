@@ -10,8 +10,8 @@ import UIKit
 
 class EmergencyContactsViewController: BaseViewController, EmergencyContactsView {
     
-    var presenter: EmergencyContactsViewControllerPresenter?
-    @IBOutlet weak var tableView: UITableView!
+    internal var presenter: EmergencyContactsViewControllerPresenter?
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +26,12 @@ class EmergencyContactsViewController: BaseViewController, EmergencyContactsView
 
 // MARK: - Setup TableView
 extension EmergencyContactsViewController: UITableViewDelegate, UITableViewDataSource {
-    enum Constants {
+    private enum Constants {
         static let nibName = "EmergencyContactsCell"
         static let cellIdentifier = "EmergencyContactsCell"
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(

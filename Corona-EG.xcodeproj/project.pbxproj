@@ -20,6 +20,12 @@
 		F433F601247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F600247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift */; };
 		F433F603247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F602247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift */; };
 		F454FD66247E5939004EF907 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454FD65247E5939004EF907 /* FontStyle.swift */; };
+		F4576D31247FF11600911916 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4576D30247FF11600911916 /* CountryDetailsViewController.swift */; };
+		F4576D34247FF97D00911916 /* CounrtyDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4576D32247FF97D00911916 /* CounrtyDetailsCell.swift */; };
+		F4576D35247FF97D00911916 /* CounrtyDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4576D33247FF97D00911916 /* CounrtyDetailsCell.xib */; };
+		F4576D37247FFB6700911916 /* CountryDetailsViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4576D36247FFB6700911916 /* CountryDetailsViewControllerRouter.swift */; };
+		F4576D3A247FFB7600911916 /* CountryDetailsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4576D39247FFB7600911916 /* CountryDetailsViewControllerPresenter.swift */; };
+		F4576D3C248003AA00911916 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4576D3B248003AA00911916 /* CountryData.swift */; };
 		F45E5A4A247D4A6F008891B6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A49247D4A6F008891B6 /* NetworkManager.swift */; };
 		F45E5A4D247D4A76008891B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A4B247D4A76008891B6 /* HTTPMethod.swift */; };
 		F45E5A4E247D4A76008891B6 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A4C247D4A76008891B6 /* APIResult.swift */; };
@@ -80,6 +86,12 @@
 		F433F600247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUpdatesViewControllerRouter.swift; sourceTree = "<group>"; };
 		F433F602247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsAPIEnvironmentPath.swift; sourceTree = "<group>"; };
 		F454FD65247E5939004EF907 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		F4576D30247FF11600911916 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
+		F4576D32247FF97D00911916 /* CounrtyDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounrtyDetailsCell.swift; sourceTree = "<group>"; };
+		F4576D33247FF97D00911916 /* CounrtyDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounrtyDetailsCell.xib; sourceTree = "<group>"; };
+		F4576D36247FFB6700911916 /* CountryDetailsViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewControllerRouter.swift; sourceTree = "<group>"; };
+		F4576D39247FFB7600911916 /* CountryDetailsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewControllerPresenter.swift; sourceTree = "<group>"; };
+		F4576D3B248003AA00911916 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
 		F45E5A49247D4A6F008891B6 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F45E5A4B247D4A76008891B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		F45E5A4C247D4A76008891B6 /* APIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
@@ -231,6 +243,50 @@
 				F433F602247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift */,
 			);
 			path = StatisticsAPI;
+			sourceTree = "<group>";
+		};
+		F4576D2B247FE5D600911916 /* CountryDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F4576D2F247FE69200911916 /* Router */,
+				F4576D2E247FE68900911916 /* Presenter */,
+				F4576D2D247FE5EE00911916 /* TableViewCell */,
+				F4576D2C247FE5E700911916 /* ViewController */,
+			);
+			path = CountryDetailsScreen;
+			sourceTree = "<group>";
+		};
+		F4576D2C247FE5E700911916 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4576D30247FF11600911916 /* CountryDetailsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F4576D2D247FE5EE00911916 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4576D32247FF97D00911916 /* CounrtyDetailsCell.swift */,
+				F4576D33247FF97D00911916 /* CounrtyDetailsCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		F4576D2E247FE68900911916 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F4576D39247FFB7600911916 /* CountryDetailsViewControllerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F4576D2F247FE69200911916 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F4576D36247FFB6700911916 /* CountryDetailsViewControllerRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		F45E5A47247D4A52008891B6 /* Networking */ = {
@@ -390,6 +446,7 @@
 				F45E5A58247D4FFD008891B6 /* NewsModel.swift */,
 				F45E5A62247DFFF0008891B6 /* EmergencyContacts.swift */,
 				F433F5F4247F97CE00CAEE70 /* CountyDataModel.swift */,
+				F4576D3B248003AA00911916 /* CountryData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,6 +458,7 @@
 				F4C2BA74247D0AE100844D4E /* SideMenu */,
 				F4BD1207247BC7BD00740150 /* News */,
 				F433F5EE247F947C00CAEE70 /* NumbersUpdates */,
+				F4576D2B247FE5D600911916 /* CountryDetailsScreen */,
 				F45E5A5B247DFF11008891B6 /* EmergencyContacts */,
 			);
 			path = Scenes;
@@ -636,6 +694,7 @@
 				F4BD11EE247A467000740150 /* LaunchScreen.storyboard in Resources */,
 				F4EEFBC3247CB23300B1FA31 /* Cairo-ExtraLight.ttf in Resources */,
 				F433F5FF247F9C7A00CAEE70 /* CountryDataCell.xib in Resources */,
+				F4576D35247FF97D00911916 /* CounrtyDetailsCell.xib in Resources */,
 				F4EEFBC4247CB23300B1FA31 /* Cairo-Bold.ttf in Resources */,
 				F4EEFBC2247CB23300B1FA31 /* Cairo-SemiBold.ttf in Resources */,
 				F4EEFBC1247CB23300B1FA31 /* Cairo-Regular.ttf in Resources */,
@@ -718,9 +777,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4576D31247FF11600911916 /* CountryDetailsViewController.swift in Sources */,
 				F4C2BA88247D45CC00844D4E /* NewsViewControllerPresenter.swift in Sources */,
+				F4576D34247FF97D00911916 /* CounrtyDetailsCell.swift in Sources */,
 				F433F601247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift in Sources */,
 				F45E5A52247D4A7E008891B6 /* NewsAPIEnvironmentPath.swift in Sources */,
+				F4576D37247FFB6700911916 /* CountryDetailsViewControllerRouter.swift in Sources */,
 				F4C2BA77247D100B00844D4E /* UIViewExtension.swift in Sources */,
 				F433F5E5247F7ED200CAEE70 /* MenuListControllerRouter.swift in Sources */,
 				F4ED7FE8247E69EC00DCA13B /* UIColor+Extension.swift in Sources */,
@@ -731,7 +793,9 @@
 				F45E5A69247E1716008891B6 /* EmergencyContactsViewControllerPresenter.swift in Sources */,
 				F433F5F8247F9A0500CAEE70 /* NumbersUpdatesViewControllerPresenter.swift in Sources */,
 				F454FD66247E5939004EF907 /* FontStyle.swift in Sources */,
+				F4576D3C248003AA00911916 /* CountryData.swift in Sources */,
 				F433F5E9247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift in Sources */,
+				F4576D3A247FFB7600911916 /* CountryDetailsViewControllerPresenter.swift in Sources */,
 				F4BD1200247BBFEB00740150 /* LocalizationSystem.swift in Sources */,
 				F45E5A51247D4A7E008891B6 /* EndPointRouter.swift in Sources */,
 				F4C2BA8A247D46FC00844D4E /* NewsInteractor.swift in Sources */,

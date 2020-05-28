@@ -11,11 +11,11 @@ import SKActivityIndicatorView
 
 class NumbersUpdatesViewController: BaseViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var collectionViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var collectionViewTopConstraint: NSLayoutConstraint!
     
-    var presenter: NumbersUpdatesViewControllerPresenter?
+    internal var presenter: NumbersUpdatesViewControllerPresenter?
     fileprivate let interactor = NumbersUpdatesInteractor()
     fileprivate let router = NumbersUpdatesViewControllerRouter()
     
@@ -24,6 +24,7 @@ class NumbersUpdatesViewController: BaseViewController {
         setupNavigationBar(navbarTitle: "side_menu_item_2")
         setupSideMenu()
         setupCollectionView()
+        setupSearchBar()
         presenter = NumbersUpdatesViewControllerPresenter(view: self, interactor: interactor, router: router)
         presenter?.viewDidLoad()
     }
@@ -54,18 +55,16 @@ extension NumbersUpdatesViewController: NumbersUpdatesView {
     func showError(error: String) {
         print(error)
     }
-    
-    
 }
 
 // MARK: - Setup CollectionView
 extension NumbersUpdatesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    enum Constants {
+    private enum Constants {
         static let nibName = "CountryDataCell"
         static let cellIdentifier = "CountryDataCell"
     }
     
-    func setupCollectionView() {
+    private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(
@@ -83,15 +82,49 @@ extension NumbersUpdatesViewController: UICollectionViewDelegate, UICollectionVi
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.didSelectRow(at: indexPath.item)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-//        let noOfCellsInRow = 1   //number of column you want
-//        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-//        let totalSpace = flowLayout.sectionInset.left
-//            + flowLayout.sectionInset.right
-//            + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
-//
-//        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
         return CGSize(width: 319, height: 280)
+    }
+}
+
+// MARK: - Setup Search Bar
+extension NumbersUpdatesViewController: UISearchBarDelegate {
+    func setupSearchBar() {
+        searchBar.delegate = self
+        searchBar.searchTextField.delegate = self
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter?.fetchSearch(searchText)
+    }
+
+}
+
+// MARK: - Text Field Delegate
+extension NumbersUpdatesViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+}
+
+// MARK: - Animation
+extension NumbersUpdatesViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if collectionView.panGestureRecognizer.translation(in: self.view).y < 0 {
+            collectionViewTopConstraint.constant = 0
+            navbar.isHidden = true
+            searchBar.isHidden = true
+            UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
+        } else {
+            collectionViewTopConstraint.constant = 50
+            navbar.isHidden = false
+            searchBar.isHidden = false
+            UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
+        }
     }
 }
