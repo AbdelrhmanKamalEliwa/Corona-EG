@@ -52,7 +52,6 @@ class NewsViewControllerPresenter {
             country = Countries.Egypt
         }
         guard let safeCountry = country else { return }
-        
         interactor.getNews(country: safeCountry) { [weak self] (news, error) in
             guard let self = self else { return }
             self.view?.hideIndicator()
@@ -60,7 +59,13 @@ class NewsViewControllerPresenter {
                 self.view?.showError(error: error.localizedDescription)
             } else {
                 guard let news = news else { return }
-                self.news = news.articles
+                var safeNews: [Article] = []
+                for article in news.articles {
+                    if article.author != nil {
+                        safeNews.append(article)
+                    }
+                }
+                self.news = safeNews
                 self.view?.fetchDataSuccess()
             }
         }

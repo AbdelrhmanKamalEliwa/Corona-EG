@@ -24,7 +24,7 @@ class NewsCell: UITableViewCell, NewsCellView {
                 case .success(let image):
                     self.articleImage.image = image.image
                 case .failure:
-                    self.articleImage.image = UIImage(named: "default-article-image")?.imageFlippedForRightToLeftLayoutDirection()
+                    self.articleImage.image = UIImage(named: "AppIcon")?.imageFlippedForRightToLeftLayoutDirection()
                     return
                 }
             }

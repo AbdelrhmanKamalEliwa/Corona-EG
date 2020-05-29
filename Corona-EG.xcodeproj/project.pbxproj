@@ -379,6 +379,13 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		F4AFAC562480D57B000EB979 /* COVID19Test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = COVID19Test;
+			sourceTree = "<group>";
+		};
 		F4BD11D5247A466D00740150 = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +461,7 @@
 		F4BD1205247BC6DF00740150 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F4AFAC562480D57B000EB979 /* COVID19Test */,
 				F4C2BA6A247CE2DA00844D4E /* Base */,
 				F4C2BA74247D0AE100844D4E /* SideMenu */,
 				F4BD1207247BC7BD00740150 /* News */,
