@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SideMenu
 import SKActivityIndicatorView
 import SafariServices
 
@@ -20,7 +19,6 @@ class NewsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar(navbarTitle: "side_menu_item_1")
-        setupSideMenu(view: self.view)
         setupTableView()
         presenter = NewsViewControllerPresenter(view: self, interactor: NewsInteractor())
         presenter?.viewDidLoad()

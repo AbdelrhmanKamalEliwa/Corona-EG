@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-google_news.png",
+      "filename" : "icons8-settings.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-google_news copy.png",
+      "filename" : "icons8-settings copy.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icons8-google_news copy 2.png",
+      "filename" : "icons8-settings copy 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -7,32 +7,12 @@
 //
 
 import UIKit
-import SideMenu
 
 // MARK: - Properities
 class BaseViewController: UIViewController {
-    var menu: SideMenuNavigationController?
+//    var menu: SideMenuNavigationController?
     let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
 }
-
-
-// MARK: - SideMenu
-extension BaseViewController {
-    func setupSideMenu(view: UIView) {
-        menu = SideMenuNavigationController(rootViewController: MenuListController())
-        menu?.presentationStyle.backgroundColor = UIColor.clear
-        menu?.setNavigationBarHidden(true, animated: false)
-        if checkForEnglishLanguage(currentLanguage) {
-            SideMenuManager.default.leftMenuNavigationController = menu
-//            SideMenuManager.default.addPanGestureToPresent(toView: self.view)
-        } else {
-            SideMenuManager.default.rightMenuNavigationController = menu
-//            SideMenuManager.default.addPanGestureToPresent(toView: self.view)
-        }
-        SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: view)
-    }
-}
-
 
 // MARK: - NavigationBar
 extension BaseViewController {
@@ -75,7 +55,7 @@ extension BaseViewController {
     }
     
     @objc func leftSideBarButtonItemTapped(_ sender: UIBarButtonItem!) {
-        present(menu!, animated: true, completion: nil)
+//        present(menu!, animated: true, completion: nil)
     }
     
     @objc func rightSideBarButtonItemTapped(_ sender: UIBarButtonItem!) {
@@ -106,7 +86,7 @@ extension BaseViewController {
             UIView.appearance().semanticContentAttribute = .forceLeftToRight
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "UINavigationController") as! SideMenuNavigationController
+        let vc = storyboard.instantiateViewController(identifier: "TabBarController") as! UITabBarController
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         appDelegate?.window?.rootViewController = vc
     }

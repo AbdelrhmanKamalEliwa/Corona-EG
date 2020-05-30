@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3QA-No-tVa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4r7-x4-PL2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="892"/>
+            <point key="canvasLocation" x="-752" y="-716"/>
         </scene>
         <!--Numbers Updates View Controller-->
         <scene sceneID="12Z-gU-yhR">
@@ -53,7 +53,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EpM-GV-DIL">
-                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eds-aD-Tag">
                                     <size key="itemSize" width="128" height="128"/>
@@ -64,7 +64,7 @@
                                 <cells/>
                             </collectionView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="UVP-00-l9n">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -80,20 +80,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mvd-cN-JWJ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tWt-pn-5BT"/>
                     <connections>
                         <outlet property="collectionView" destination="EpM-GV-DIL" id="Zli-sG-9Wz"/>
                         <outlet property="collectionViewTopConstraint" destination="fJ4-dI-b1D" id="jzu-Ec-MMW"/>
                         <outlet property="searchBar" destination="UVP-00-l9n" id="jfc-5V-4Gx"/>
+                        <segue destination="5bM-E1-5Tk" kind="presentation" id="jFB-2a-hNm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="br6-Uq-bYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.85507246376824" y="891.96428571428567"/>
+            <point key="canvasLocation" x="229" y="-717"/>
         </scene>
         <!--Country Details View Controller-->
         <scene sceneID="pQ4-pZ-OWv">
             <objects>
-                <viewController storyboardIdentifier="CountryDetailsViewController" id="5bM-E1-5Tk" customClass="CountryDetailsViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CountryDetailsViewController" modalPresentationStyle="fullScreen" id="5bM-E1-5Tk" customClass="CountryDetailsViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tu4-Wn-Seo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,18 +137,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAd-sg-NS3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.85507246376824" y="1581.6964285714284"/>
+            <point key="canvasLocation" x="229" y="23"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="jxn-dc-fhf">
+            <objects>
+                <viewController storyboardIdentifier="COVID19TestViewController" id="hNJ-EB-N37" customClass="COVID19TestViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cgR-Iy-565">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UbV-si-Y4S"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TPI-3B-a1X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLd-Sm-G7w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245" y="-717"/>
         </scene>
         <!--Emergency Contacts View Controller-->
         <scene sceneID="4X9-Gn-p7q">
             <objects>
                 <viewController storyboardIdentifier="EmergencyContactsViewController" id="b37-xh-7uN" customClass="EmergencyContactsViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CA0-Md-GqK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rYA-7J-q7m">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -165,18 +183,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMN-yV-Xwj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="892"/>
+            <point key="canvasLocation" x="3110" y="244"/>
         </scene>
         <!--Infection Methods View Controller-->
         <scene sceneID="h0E-k0-P5v">
             <objects>
-                <viewController id="3QA-No-tVa" customClass="InfectionMethodsViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfectionMethodsViewController" id="3QA-No-tVa" customClass="InfectionMethodsViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rc3-Rm-iwu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sLY-xd-m4j">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -195,12 +213,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cuq-dJ-dpC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2742.0289855072465" y="883.92857142857144"/>
+            <point key="canvasLocation" x="1439" y="244"/>
         </scene>
-        <!--Side Menu Navigation Controller-->
+        <!--Prevention Tips View Controller-->
+        <scene sceneID="Wph-m5-lrG">
+            <objects>
+                <viewController id="1KA-uF-zaa" customClass="PreventionTipsViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z0q-Aw-M4v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GVz-nT-OZ5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GVz-nT-OZ5" firstAttribute="trailing" secondItem="3jQ-5B-rGC" secondAttribute="trailing" id="MQS-CL-nEE"/>
+                            <constraint firstItem="GVz-nT-OZ5" firstAttribute="top" secondItem="3jQ-5B-rGC" secondAttribute="top" id="gHO-oT-KAT"/>
+                            <constraint firstAttribute="bottom" secondItem="GVz-nT-OZ5" secondAttribute="bottom" id="q45-lo-bkU"/>
+                            <constraint firstItem="GVz-nT-OZ5" firstAttribute="leading" secondItem="3jQ-5B-rGC" secondAttribute="leading" id="wO5-3C-gBN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3jQ-5B-rGC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tqd-fB-Isj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2253.6231884057975" y="243.75"/>
+        </scene>
+        <!--News-->
         <scene sceneID="OAB-oj-FZm">
             <objects>
-                <navigationController storyboardIdentifier="UINavigationController" automaticallyAdjustsScrollViewInsets="NO" id="iSg-id-RmE" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NewsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="iSg-id-RmE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" image="news" selectedImage="news" id="dba-hO-LtS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iPf-XK-a9o">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -213,7 +259,124 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTb-cN-5Zd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="110"/>
+            <point key="canvasLocation" x="-752" y="-1463"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dfN-cy-3MO">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="4r7-x4-PL2" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nTw-Vk-yt1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iSg-id-RmE" kind="relationship" relationship="viewControllers" id="s2s-E1-l1x"/>
+                        <segue destination="E60-Hw-yLt" kind="relationship" relationship="viewControllers" id="mvs-7W-lE4"/>
+                        <segue destination="llY-XD-uOT" kind="relationship" relationship="viewControllers" id="aln-00-xKO"/>
+                        <segue destination="Jrr-1C-XDT" kind="relationship" relationship="viewControllers" id="eXu-wW-hok"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Dq-Me-yKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="-2267"/>
+        </scene>
+        <!--Updates-->
+        <scene sceneID="sLw-F3-75L">
+            <objects>
+                <navigationController storyboardIdentifier="NumbersUpdatesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="E60-Hw-yLt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Updates" image="numbers-updates" selectedImage="numbers-updates" id="B2c-x9-XZo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tQQ-Jp-fyc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MUN-Sn-UbP" kind="relationship" relationship="rootViewController" id="Gfd-LD-9vL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hd8-xO-VO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229" y="-1463"/>
+        </scene>
+        <!--COVID-19 Test-->
+        <scene sceneID="0ca-2c-fFP">
+            <objects>
+                <navigationController storyboardIdentifier="COVID19TestVC" automaticallyAdjustsScrollViewInsets="NO" id="llY-XD-uOT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="COVID-19 Test" image="covid-19-test" selectedImage="covid-19-test" id="B49-nM-tjv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v1x-gt-apd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hNJ-EB-N37" kind="relationship" relationship="rootViewController" id="lMc-Pd-MDd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TbH-N0-hHJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245" y="-1463"/>
+        </scene>
+        <!--More View Controller-->
+        <scene sceneID="hHV-fK-3p4">
+            <objects>
+                <viewController storyboardIdentifier="MoreViewController" id="dML-pf-89n" customClass="MoreViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dps-UN-fE6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3gp-c2-VcN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3gp-c2-VcN" firstAttribute="leading" secondItem="aJl-Vk-Sr9" secondAttribute="leading" id="Eqd-tv-cvw"/>
+                            <constraint firstItem="aJl-Vk-Sr9" firstAttribute="bottom" secondItem="3gp-c2-VcN" secondAttribute="bottom" id="an1-uq-oJG"/>
+                            <constraint firstItem="3gp-c2-VcN" firstAttribute="top" secondItem="aJl-Vk-Sr9" secondAttribute="top" id="iH8-oZ-vem"/>
+                            <constraint firstItem="aJl-Vk-Sr9" firstAttribute="trailing" secondItem="3gp-c2-VcN" secondAttribute="trailing" id="os1-01-O7n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aJl-Vk-Sr9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mKc-4f-L3X"/>
+                    <connections>
+                        <outlet property="tableView" destination="3gp-c2-VcN" id="Szf-h5-PD9"/>
+                        <segue destination="3QA-No-tVa" kind="presentation" id="YJK-yV-Ezc"/>
+                        <segue destination="b37-xh-7uN" kind="presentation" id="EI9-c3-3d1"/>
+                        <segue destination="1KA-uF-zaa" kind="presentation" id="F4Q-nj-Aor"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E94-Ab-QEN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2254" y="-717"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="kCr-mY-3XE">
+            <objects>
+                <navigationController storyboardIdentifier="MoreVC" automaticallyAdjustsScrollViewInsets="NO" id="Jrr-1C-XDT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" selectedImage="more" id="mJ9-IP-6at"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aEF-Da-YUq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dML-pf-89n" kind="relationship" relationship="rootViewController" id="cIZ-Yn-9HI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9We-3r-GeF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2255" y="-1463"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="covid-19-test" width="30" height="30"/>
+        <image name="more" width="30" height="30"/>
+        <image name="news" width="30" height="30"/>
+        <image name="numbers-updates" width="30" height="30"/>
+    </resources>
 </document>

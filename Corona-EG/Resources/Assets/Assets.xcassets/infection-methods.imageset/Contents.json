@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "infection-methods.png",
+      "filename" : "icons8-vomited.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "icons8-vomited copy.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "icons8-vomited copy 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

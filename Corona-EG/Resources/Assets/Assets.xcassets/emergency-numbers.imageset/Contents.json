@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "emergency-numbers.png",
+      "filename" : "icons8-hot_line.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "icons8-hot_line 2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "icons8-hot_line 3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

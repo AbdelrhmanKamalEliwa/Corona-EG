@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "covid-19-test.png",
+      "filename" : "icons8-health_checkup.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "icons8-health_checkup copy.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "icons8-health_checkup copy 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

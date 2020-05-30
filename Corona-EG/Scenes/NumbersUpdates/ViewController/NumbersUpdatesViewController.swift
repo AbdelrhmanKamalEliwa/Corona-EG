@@ -22,7 +22,6 @@ class NumbersUpdatesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar(navbarTitle: "side_menu_item_2")
-        setupSideMenu(view: self.view)
         setupCollectionView()
         setupSearchBar()
         presenter = NumbersUpdatesViewControllerPresenter(view: self, interactor: interactor, router: router)

@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "prevention-tips.png",
+      "filename" : "icons8-heart_health.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "icons8-heart_health copy.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "icons8-heart_health copy 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
