@@ -18,7 +18,7 @@ class BaseViewController: UIViewController {
 
 // MARK: - SideMenu
 extension BaseViewController {
-    func setupSideMenu() {
+    func setupSideMenu(view: UIView) {
         menu = SideMenuNavigationController(rootViewController: MenuListController())
         menu?.presentationStyle.backgroundColor = UIColor.clear
         menu?.setNavigationBarHidden(true, animated: false)
@@ -29,7 +29,7 @@ extension BaseViewController {
             SideMenuManager.default.rightMenuNavigationController = menu
 //            SideMenuManager.default.addPanGestureToPresent(toView: self.view)
         }
-//        SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view)
+        SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: view)
     }
 }
 

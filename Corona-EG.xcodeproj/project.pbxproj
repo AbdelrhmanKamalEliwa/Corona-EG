@@ -38,6 +38,10 @@
 		F45E5A66247E1382008891B6 /* EmergencyContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A64247E1382008891B6 /* EmergencyContactsCell.swift */; };
 		F45E5A67247E1382008891B6 /* EmergencyContactsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45E5A65247E1382008891B6 /* EmergencyContactsCell.xib */; };
 		F45E5A69247E1716008891B6 /* EmergencyContactsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A68247E1715008891B6 /* EmergencyContactsViewControllerPresenter.swift */; };
+		F4A83A5F24813EF4004DBF7F /* InfectionMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A83A5E24813EF4004DBF7F /* InfectionMethodsViewController.swift */; };
+		F4A83A6324813F2C004DBF7F /* InfectionMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A83A6124813F2C004DBF7F /* InfectionMethodCell.swift */; };
+		F4A83A6424813F2C004DBF7F /* InfectionMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A83A6224813F2C004DBF7F /* InfectionMethodCell.xib */; };
+		F4AFAC5E24810F55000EB979 /* InfectionMethodsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFAC5D24810F55000EB979 /* InfectionMethodsData.swift */; };
 		F4BD11E2247A466E00740150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11E1247A466E00740150 /* AppDelegate.swift */; };
 		F4BD11E6247A466E00740150 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11E5247A466E00740150 /* NewsViewController.swift */; };
 		F4BD11E9247A466E00740150 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BD11E7247A466E00740150 /* Main.storyboard */; };
@@ -104,7 +108,11 @@
 		F45E5A64247E1382008891B6 /* EmergencyContactsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsCell.swift; sourceTree = "<group>"; };
 		F45E5A65247E1382008891B6 /* EmergencyContactsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmergencyContactsCell.xib; sourceTree = "<group>"; };
 		F45E5A68247E1715008891B6 /* EmergencyContactsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsViewControllerPresenter.swift; sourceTree = "<group>"; };
-		F4BD11DE247A466E00740150 /* Corona-EG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona-EG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4A83A5E24813EF4004DBF7F /* InfectionMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionMethodsViewController.swift; sourceTree = "<group>"; };
+		F4A83A6124813F2C004DBF7F /* InfectionMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionMethodCell.swift; sourceTree = "<group>"; };
+		F4A83A6224813F2C004DBF7F /* InfectionMethodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfectionMethodCell.xib; sourceTree = "<group>"; };
+		F4AFAC5D24810F55000EB979 /* InfectionMethodsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionMethodsData.swift; sourceTree = "<group>"; };
+		F4BD11DE247A466E00740150 /* Corona EG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona EG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BD11E1247A466E00740150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4BD11E5247A466E00740150 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		F4BD11E8247A466E00740150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -379,6 +387,32 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		F4A83A5C24813E84004DBF7F /* InfectionMethods */ = {
+			isa = PBXGroup;
+			children = (
+				F4A83A6024813F05004DBF7F /* TableViewCell */,
+				F4A83A5D24813E92004DBF7F /* ViewController */,
+			);
+			path = InfectionMethods;
+			sourceTree = "<group>";
+		};
+		F4A83A5D24813E92004DBF7F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4A83A5E24813EF4004DBF7F /* InfectionMethodsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F4A83A6024813F05004DBF7F /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4A83A6124813F2C004DBF7F /* InfectionMethodCell.swift */,
+				F4A83A6224813F2C004DBF7F /* InfectionMethodCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		F4AFAC562480D57B000EB979 /* COVID19Test */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,7 +434,7 @@
 		F4BD11DF247A466E00740150 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4BD11DE247A466E00740150 /* Corona-EG.app */,
+				F4BD11DE247A466E00740150 /* Corona EG.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -454,6 +488,7 @@
 				F45E5A62247DFFF0008891B6 /* EmergencyContacts.swift */,
 				F433F5F4247F97CE00CAEE70 /* CountyDataModel.swift */,
 				F4576D3B248003AA00911916 /* CountryData.swift */,
+				F4AFAC5D24810F55000EB979 /* InfectionMethodsData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,6 +496,7 @@
 		F4BD1205247BC6DF00740150 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F4A83A5C24813E84004DBF7F /* InfectionMethods */,
 				F4AFAC562480D57B000EB979 /* COVID19Test */,
 				F4C2BA6A247CE2DA00844D4E /* Base */,
 				F4C2BA74247D0AE100844D4E /* SideMenu */,
@@ -657,7 +693,7 @@
 			);
 			name = "Corona-EG";
 			productName = "Corona-EG";
-			productReference = F4BD11DE247A466E00740150 /* Corona-EG.app */;
+			productReference = F4BD11DE247A466E00740150 /* Corona EG.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -705,6 +741,7 @@
 				F4576D35247FF97D00911916 /* CounrtyDetailsCell.xib in Resources */,
 				F4EEFBC4247CB23300B1FA31 /* Cairo-Bold.ttf in Resources */,
 				F4EEFBC2247CB23300B1FA31 /* Cairo-SemiBold.ttf in Resources */,
+				F4A83A6424813F2C004DBF7F /* InfectionMethodCell.xib in Resources */,
 				F4EEFBC1247CB23300B1FA31 /* Cairo-Regular.ttf in Resources */,
 				F4BD11FB247BBF0300740150 /* Localizable.strings in Resources */,
 				F4BD11E9247A466E00740150 /* Main.storyboard in Resources */,
@@ -790,6 +827,7 @@
 				F4576D34247FF97D00911916 /* CounrtyDetailsCell.swift in Sources */,
 				F433F601247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift in Sources */,
 				F45E5A52247D4A7E008891B6 /* NewsAPIEnvironmentPath.swift in Sources */,
+				F4A83A5F24813EF4004DBF7F /* InfectionMethodsViewController.swift in Sources */,
 				F4576D37247FFB6700911916 /* CountryDetailsViewControllerRouter.swift in Sources */,
 				F4C2BA77247D100B00844D4E /* UIViewExtension.swift in Sources */,
 				F433F5E5247F7ED200CAEE70 /* MenuListControllerRouter.swift in Sources */,
@@ -814,6 +852,7 @@
 				F45E5A63247DFFF0008891B6 /* EmergencyContacts.swift in Sources */,
 				F45E5A4D247D4A76008891B6 /* HTTPMethod.swift in Sources */,
 				F45E5A61247DFF8A008891B6 /* EmergencyContactsViewController.swift in Sources */,
+				F4AFAC5E24810F55000EB979 /* InfectionMethodsData.swift in Sources */,
 				F433F5EB247F8B3900CAEE70 /* Screens.swift in Sources */,
 				F4C2BA72247CF66D00844D4E /* SideMenuCell.swift in Sources */,
 				F4BD11E2247A466E00740150 /* AppDelegate.swift in Sources */,
@@ -821,6 +860,7 @@
 				F4C2BA63247CC4DD00844D4E /* MenuListController.swift in Sources */,
 				F4C2BA69247CDAA000844D4E /* BaseViewController.swift in Sources */,
 				F433F5FE247F9C7A00CAEE70 /* CountryDataCell.swift in Sources */,
+				F4A83A6324813F2C004DBF7F /* InfectionMethodCell.swift in Sources */,
 				F433F5FA247F9A2300CAEE70 /* NumbersUpdatesInteractor.swift in Sources */,
 				F45E5A66247E1382008891B6 /* EmergencyContactsCell.swift in Sources */,
 				F433F5F5247F97CE00CAEE70 /* CountyDataModel.swift in Sources */,
@@ -992,7 +1032,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "abdelrhmankamaleliwa.Corona-EG";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Corona EG";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1011,7 +1051,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "abdelrhmankamaleliwa.Corona-EG";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Corona EG";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -40,7 +40,6 @@ class MenuListControllerPresenter {
         cell.displayItemIcon(itemIcon)
     }
     
-    
     func didSelectRow(at index: Int) {
         let screen = Screens(rawValue: index)
         switch screen {
@@ -61,6 +60,5 @@ class MenuListControllerPresenter {
         case .none:
             break
         }
-        
     }
 }

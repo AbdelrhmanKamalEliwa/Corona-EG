@@ -17,7 +17,7 @@ class EmergencyContactsViewController: BaseViewController, EmergencyContactsView
         super.viewDidLoad()
         setupTableView()
         setupNavigationBar(navbarTitle: "side_menu_item_5")
-        setupSideMenu()
+        setupSideMenu(view: self.view)
         presenter = EmergencyContactsViewControllerPresenter(view: self)
     }
     

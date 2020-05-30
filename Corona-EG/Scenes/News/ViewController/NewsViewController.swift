@@ -20,7 +20,7 @@ class NewsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar(navbarTitle: "side_menu_item_1")
-        setupSideMenu()
+        setupSideMenu(view: self.view)
         setupTableView()
         presenter = NewsViewControllerPresenter(view: self, interactor: NewsInteractor())
         presenter?.viewDidLoad()
