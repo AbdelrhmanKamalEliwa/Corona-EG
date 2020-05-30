@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfectionMethodsViewController: UIViewController, InfectionMethodsView {
+class InfectionMethodsViewController: BaseViewController, InfectionMethodsView {
     
     internal var presenter: InfectionMethodsViewControllerPresenter?
     @IBOutlet weak var tableView: UITableView!
@@ -16,6 +16,7 @@ class InfectionMethodsViewController: UIViewController, InfectionMethodsView {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = InfectionMethodsViewControllerPresenter(view: self)
+        setupInnerScreensNavigationBar(navbarScreenTitle: .InfectionMethods)
         setupTableView()
     }
 }

@@ -18,7 +18,7 @@ class NewsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar(navbarTitle: .NewsScreen)
+        setupMainScreensNavigationBar(navbarTitle: .NewsScreen)
         setupTableView()
         presenter = NewsViewControllerPresenter(view: self, interactor: NewsInteractor())
         presenter?.viewDidLoad()

@@ -8,13 +8,14 @@
 
 import UIKit
 
-class PreventionTipsViewController: UIViewController, PreventionTipsView {
+class PreventionTipsViewController: BaseViewController, PreventionTipsView {
     var presenter: PreventionTipsViewControllerPresenter?
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = PreventionTipsViewControllerPresenter(view: self)
+        setupInnerScreensNavigationBar(navbarScreenTitle: .PreventionTips)
         setupTableView()
     }
 }

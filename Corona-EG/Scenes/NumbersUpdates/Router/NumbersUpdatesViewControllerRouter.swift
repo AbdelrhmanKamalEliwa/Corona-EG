@@ -9,25 +9,6 @@
 import UIKit
 
 class NumbersUpdatesViewControllerRouter {
-//    private enum Constants {
-//        static let identifier = "NumbersUpdatesViewController"
-//    }
-//    
-//    class var mainStoryboard: UIStoryboard {
-//        return UIStoryboard(name: "Main", bundle: Bundle.main)
-//    }
-    
-//    class func createNumbersUpdatesViewController() -> UIViewController {
-//        let numbersUpdatesViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.identifier)
-//        let interactor = NumbersUpdatesInteractor()
-//        let router = NumbersUpdatesViewControllerRouter()
-//        if let numbersUpdatesView = numbersUpdatesViewController as? NumbersUpdatesView {
-//            let presenter = NumbersUpdatesViewControllerPresenter(view: numbersUpdatesView, interactor: interactor, router: router)
-//            numbersUpdatesView.presenter = presenter
-//        }
-//        return numbersUpdatesViewController
-//    }
-    
     func navigateToCountryDetailsScreen(from view: NumbersUpdatesView?, countryData: CountryDataModel) {
         let countryDetailsView = CountryDetailsViewControllerRouter.createRepoDetailsVC(countryData: countryData)
         if let viewController = view as? UIViewController {

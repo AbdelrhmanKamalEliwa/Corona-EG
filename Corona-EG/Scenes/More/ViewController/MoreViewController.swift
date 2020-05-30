@@ -10,13 +10,14 @@ import UIKit
 
 class MoreViewController: BaseViewController, MoreView {
     
-    internal var presenter: MoreViewControllerPresenter?
     @IBOutlet private weak var tableView: UITableView!
+    internal var presenter: MoreViewControllerPresenter?
+    fileprivate let router = MoreRouter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = MoreViewControllerPresenter(view: self)
-        setupNavigationBar(navbarTitle: .More)
+        presenter = MoreViewControllerPresenter(view: self, router: router)
+        setupMainScreensNavigationBar(navbarTitle: .More)
         setupTableView()
     }
 }
@@ -48,8 +49,6 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let url = presenter?.didSelectRow(at: indexPath.row)
-//        let webViewController = SFSafariViewController(url: url!)
-//        present(webViewController, animated: true, completion: nil)
+        presenter?.didSelectRow(at: indexPath.row)
     }
 }

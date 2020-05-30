@@ -9,24 +9,6 @@
 import UIKit
 
 class MoreRouter {
-//    private enum Constants {
-//        static let identifier = "NewsViewController"
-//    }
-
-//    class var mainStoryboard: UIStoryboard {
-//        return UIStoryboard(name: "Main", bundle: Bundle.main)
-//    }
-
-//    class func createRouterViewController() -> UIViewController {
-//        let newsViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.identifier)
-//        let interactor = NewsInteractor()
-//        if let newsView = newsViewController as? NewsView {
-//            let presenter = NewsViewControllerPresenter(view: newsView, interactor: interactor)
-//            newsView.presenter = presenter
-//        }
-//        return newsViewController
-//    }
-    
     func navigateToInfectionMethodsScreen(from view: MoreView?) {
         let infectionMethodsView = InfectionMethodsRouter.createInfectionMethodsVC()
         if let viewController = view as? UIViewController {

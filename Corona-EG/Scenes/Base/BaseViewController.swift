@@ -10,17 +10,16 @@ import UIKit
 
 // MARK: - Properities
 class BaseViewController: UIViewController {
-//    var menu: SideMenuNavigationController?
     let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
 }
 
-// MARK: - NavigationBar
+// MARK: - MainScreensNavigationBar
 extension BaseViewController {
     final var navbar: UINavigationBar {
         return self.navigationController!.navigationBar
     }
     
-    func setupNavigationBar(navbarTitle: MainScreens) {
+    func setupMainScreensNavigationBar(navbarTitle: MainScreens) {
         navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navbar.shadowImage = UIImage()
         navbar.barStyle = UIBarStyle.default
@@ -28,6 +27,7 @@ extension BaseViewController {
         navbar.prefersLargeTitles = true
         
         navigationItem.title = LocalizationSystem.sharedInstance.localizedStringForKey(key: navbarTitle.rawValue, comment: "")
+        
         let titleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.defaultFont(20, .Bold),
             .foregroundColor: UIColor.navbarTitleColor
@@ -62,6 +62,43 @@ extension BaseViewController {
         presentGenericAlert(viewController: self, title: changeLanguageTitle, message: changeLanguageMessage, buttonTitle: buttonTitle) { (_) in
             self.changeLanguage()
         }
+    }
+    
+}
+
+
+// MARK: - MainScreensNavigationBar
+extension BaseViewController {
+    func setupInnerScreensNavigationBar(navbarScreenTitle: InnerScreens?, navbarDefaultTitle: String = "") {
+        let navbar = navigationController!.navigationBar
+        navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navbar.shadowImage = UIImage()
+        navbar.barStyle = UIBarStyle.default
+        
+        navbar.prefersLargeTitles = true
+        
+        if let title = navbarScreenTitle {
+            navigationItem.title = LocalizationSystem.sharedInstance.localizedStringForKey(key: title.rawValue, comment: "")
+        } else {
+            navigationItem.title = navbarDefaultTitle
+        }
+        let titleAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.defaultFont(20, .Bold),
+            .foregroundColor: UIColor.navbarTitleColor
+        ]
+        navbar.titleTextAttributes = titleAttributes
+        
+        // MARK: Letf Button
+        let leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: "back"),
+            style: .done, target: self,
+            action: #selector(innerLeftSideBarButtonItemTapped(_:)))
+        navigationItem.leftBarButtonItem = leftBarButtonItem
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.navbarButtonColor
+    }
+    
+    @objc func innerLeftSideBarButtonItemTapped(_ sender: UIBarButtonItem!) {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

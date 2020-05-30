@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MoreScreens: Int {
+enum MoreScreensCases: Int {
     case InfectionMethods = 0
     case PreventionTips = 1
     case EmergencyContacts = 2

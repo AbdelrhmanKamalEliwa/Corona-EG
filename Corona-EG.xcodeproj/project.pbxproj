@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F433F5E7247F812A00CAEE70 /* NewsViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5E6247F812A00CAEE70 /* NewsViewControllerRouter.swift */; };
 		F433F5E9247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5E8247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift */; };
 		F433F5EB247F8B3900CAEE70 /* MainScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5EA247F8B3900CAEE70 /* MainScreens.swift */; };
 		F433F5F3247F966E00CAEE70 /* NumbersUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5F2247F966E00CAEE70 /* NumbersUpdatesViewController.swift */; };
@@ -43,6 +42,7 @@
 		F471A9C62482C177002D0BDE /* PreventionTipsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471A9C52482C177002D0BDE /* PreventionTipsViewControllerPresenter.swift */; };
 		F471A9C92482C2B1002D0BDE /* PreventionTipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471A9C72482C2B1002D0BDE /* PreventionTipsCell.swift */; };
 		F471A9CA2482C2B1002D0BDE /* PreventionTipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F471A9C82482C2B1002D0BDE /* PreventionTipsCell.xib */; };
+		F471A9CE2482CCEF002D0BDE /* InnerScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471A9CD2482CCEF002D0BDE /* InnerScreens.swift */; };
 		F4A83A5F24813EF4004DBF7F /* InfectionMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A83A5E24813EF4004DBF7F /* InfectionMethodsViewController.swift */; };
 		F4A83A6324813F2C004DBF7F /* InfectionMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A83A6124813F2C004DBF7F /* InfectionMethodCell.swift */; };
 		F4A83A6424813F2C004DBF7F /* InfectionMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A83A6224813F2C004DBF7F /* InfectionMethodCell.xib */; };
@@ -53,7 +53,7 @@
 		F4A83A7D24827419004DBF7F /* MoreViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A83A7B24827419004DBF7F /* MoreViewCell.xib */; };
 		F4A83A7F2482756B004DBF7F /* MoreViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A83A7E2482756B004DBF7F /* MoreViewControllerPresenter.swift */; };
 		F4A83A8124829917004DBF7F /* MoreScreensData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A83A8024829917004DBF7F /* MoreScreensData.swift */; };
-		F4A83A8324829C93004DBF7F /* MoreScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A83A8224829C93004DBF7F /* MoreScreens.swift */; };
+		F4A83A8324829C93004DBF7F /* MoreScreensCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A83A8224829C93004DBF7F /* MoreScreensCases.swift */; };
 		F4A83A852482AE3B004DBF7F /* InfectionMethodsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A83A842482AE3B004DBF7F /* InfectionMethodsViewControllerPresenter.swift */; };
 		F4AFAC5E24810F55000EB979 /* InfectionMethodsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFAC5D24810F55000EB979 /* InfectionMethodsData.swift */; };
 		F4BD11E2247A466E00740150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11E1247A466E00740150 /* AppDelegate.swift */; };
@@ -87,7 +87,6 @@
 		3CC6EBBAFDB0F301A31E45A6 /* Pods_Corona_EG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Corona_EG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F1B199FC02FFE0D54E692E /* Pods-Corona-EG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona-EG.debug.xcconfig"; path = "Target Support Files/Pods-Corona-EG/Pods-Corona-EG.debug.xcconfig"; sourceTree = "<group>"; };
 		87C22201B692E8B20702E32C /* Pods-Corona-EG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona-EG.release.xcconfig"; path = "Target Support Files/Pods-Corona-EG/Pods-Corona-EG.release.xcconfig"; sourceTree = "<group>"; };
-		F433F5E6247F812A00CAEE70 /* NewsViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewControllerRouter.swift; sourceTree = "<group>"; };
 		F433F5E8247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsViewControllerRouter.swift; sourceTree = "<group>"; };
 		F433F5EA247F8B3900CAEE70 /* MainScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreens.swift; sourceTree = "<group>"; };
 		F433F5F2247F966E00CAEE70 /* NumbersUpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUpdatesViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +122,7 @@
 		F471A9C52482C177002D0BDE /* PreventionTipsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionTipsViewControllerPresenter.swift; sourceTree = "<group>"; };
 		F471A9C72482C2B1002D0BDE /* PreventionTipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionTipsCell.swift; sourceTree = "<group>"; };
 		F471A9C82482C2B1002D0BDE /* PreventionTipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreventionTipsCell.xib; sourceTree = "<group>"; };
+		F471A9CD2482CCEF002D0BDE /* InnerScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerScreens.swift; sourceTree = "<group>"; };
 		F4A83A5E24813EF4004DBF7F /* InfectionMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionMethodsViewController.swift; sourceTree = "<group>"; };
 		F4A83A6124813F2C004DBF7F /* InfectionMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionMethodCell.swift; sourceTree = "<group>"; };
 		F4A83A6224813F2C004DBF7F /* InfectionMethodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfectionMethodCell.xib; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		F4A83A7B24827419004DBF7F /* MoreViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewCell.xib; sourceTree = "<group>"; };
 		F4A83A7E2482756B004DBF7F /* MoreViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewControllerPresenter.swift; sourceTree = "<group>"; };
 		F4A83A8024829917004DBF7F /* MoreScreensData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreScreensData.swift; sourceTree = "<group>"; };
-		F4A83A8224829C93004DBF7F /* MoreScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreScreens.swift; sourceTree = "<group>"; };
+		F4A83A8224829C93004DBF7F /* MoreScreensCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreScreensCases.swift; sourceTree = "<group>"; };
 		F4A83A842482AE3B004DBF7F /* InfectionMethodsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionMethodsViewControllerPresenter.swift; sourceTree = "<group>"; };
 		F4AFAC5D24810F55000EB979 /* InfectionMethodsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionMethodsData.swift; sourceTree = "<group>"; };
 		F4BD11DE247A466E00740150 /* Corona EG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona EG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,7 +333,8 @@
 				F45E5A54247D4C99008891B6 /* Countries.swift */,
 				F454FD65247E5939004EF907 /* FontStyle.swift */,
 				F433F5EA247F8B3900CAEE70 /* MainScreens.swift */,
-				F4A83A8224829C93004DBF7F /* MoreScreens.swift */,
+				F471A9CD2482CCEF002D0BDE /* InnerScreens.swift */,
+				F4A83A8224829C93004DBF7F /* MoreScreensCases.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -689,7 +690,6 @@
 		F4BD1207247BC7BD00740150 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				F4C2BA7B247D3A6000844D4E /* Router */,
 				F4C2BA79247D3A4B00844D4E /* Interactor */,
 				F4C2BA7A247D3A5700844D4E /* Presenter */,
 				F4C2BA78247D3A2600844D4E /* TableViewCell */,
@@ -780,14 +780,6 @@
 				F4C2BA87247D45CC00844D4E /* NewsViewControllerPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		F4C2BA7B247D3A6000844D4E /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				F433F5E6247F812A00CAEE70 /* NewsViewControllerRouter.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		F4EEFBC6247CB76800B1FA31 /* Fonts */ = {
@@ -968,7 +960,6 @@
 				F4C2BA77247D100B00844D4E /* UIViewExtension.swift in Sources */,
 				F4ED7FE8247E69EC00DCA13B /* UIColor+Extension.swift in Sources */,
 				F4BD11E6247A466E00740150 /* NewsViewController.swift in Sources */,
-				F433F5E7247F812A00CAEE70 /* NewsViewControllerRouter.swift in Sources */,
 				F45E5A59247D4FFD008891B6 /* NewsModel.swift in Sources */,
 				F471A9C92482C2B1002D0BDE /* PreventionTipsCell.swift in Sources */,
 				F45E5A4E247D4A76008891B6 /* APIResult.swift in Sources */,
@@ -998,9 +989,10 @@
 				F4A83A7F2482756B004DBF7F /* MoreViewControllerPresenter.swift in Sources */,
 				F4BD11E2247A466E00740150 /* AppDelegate.swift in Sources */,
 				F45E5A4A247D4A6F008891B6 /* NetworkManager.swift in Sources */,
+				F471A9CE2482CCEF002D0BDE /* InnerScreens.swift in Sources */,
 				F4A83A6B24825AA2004DBF7F /* MoreViewController.swift in Sources */,
 				F4C2BA69247CDAA000844D4E /* BaseViewController.swift in Sources */,
-				F4A83A8324829C93004DBF7F /* MoreScreens.swift in Sources */,
+				F4A83A8324829C93004DBF7F /* MoreScreensCases.swift in Sources */,
 				F4A83A852482AE3B004DBF7F /* InfectionMethodsViewControllerPresenter.swift in Sources */,
 				F433F5FE247F9C7A00CAEE70 /* CountryDataCell.swift in Sources */,
 				F4A83A6324813F2C004DBF7F /* InfectionMethodCell.swift in Sources */,

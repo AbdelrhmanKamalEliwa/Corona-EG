@@ -9,14 +9,14 @@
 import UIKit
 import MapKit
 
-class CountryDetailsViewController: UIViewController, CountryDetailsView {
+class CountryDetailsViewController: BaseViewController, CountryDetailsView {
     
     @IBOutlet private weak var tableView: UITableView!
     internal var presenter: CountryDetailsViewControllerPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
+        setupInnerScreensNavigationBar(navbarScreenTitle: nil, navbarDefaultTitle: presenter?.getCountryName() ?? "")
         setupTableView()
     }
     
@@ -31,35 +31,6 @@ class CountryDetailsViewController: UIViewController, CountryDetailsView {
         let destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lng)))
         destination.name = destinationName
         MKMapItem.openMaps(with: [destination], launchOptions: [:])
-    }
-}
-
-// MARK: - Custom Navigation Bar
-extension CountryDetailsViewController {
-    func setupNavigationBar() {
-        let navbar = navigationController!.navigationBar
-        navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        navbar.shadowImage = UIImage()
-        navbar.barStyle = UIBarStyle.default
-        navigationItem.title = presenter?.getCountryName()
-        let titleAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.defaultFont(20, .Bold),
-            .foregroundColor: UIColor.navbarTitleColor
-        ]
-        navbar.titleTextAttributes = titleAttributes
-        
-        // MARK: Letf Button
-        let leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "arrow.left"),
-            style: .done, target: self,
-            action: #selector(leftSideBarButtonItemTapped(_:)))
-        navigationItem.leftBarButtonItem = leftBarButtonItem
-        navigationItem.leftBarButtonItem?.tintColor = UIColor.navbarButtonColor
-        
-    }
-    
-    @objc func leftSideBarButtonItemTapped(_ sender: UIBarButtonItem!) {
-        self.navigationController?.popViewController(animated: true)
     }
 }
 

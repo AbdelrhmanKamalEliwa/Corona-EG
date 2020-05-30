@@ -21,7 +21,7 @@ class NumbersUpdatesViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar(navbarTitle: .NumbersUpdatesScreen)
+        setupMainScreensNavigationBar(navbarTitle: .NumbersUpdatesScreen)
         setupCollectionView()
         setupSearchBar()
         presenter = NumbersUpdatesViewControllerPresenter(view: self, interactor: interactor, router: router)
@@ -115,12 +115,10 @@ extension NumbersUpdatesViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if collectionView.panGestureRecognizer.translation(in: self.view).y < 0 {
             collectionViewTopConstraint.constant = 0
-            navbar.isHidden = true
             searchBar.isHidden = true
             UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
         } else {
             collectionViewTopConstraint.constant = 50
-            navbar.isHidden = false
             searchBar.isHidden = false
             UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
         }

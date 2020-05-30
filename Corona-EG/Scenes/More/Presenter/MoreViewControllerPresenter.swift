@@ -20,10 +20,12 @@ protocol MoreCellView {
 class MoreViewControllerPresenter {
     
     private weak var view: MoreView?
+    private let router: MoreRouter
     private let screens = MoreScreensData().data
     
-    init(view: MoreView?) {
+    init(view: MoreView?, router: MoreRouter) {
         self.view = view
+        self.router = router
     }
     
     func getScreenCount() -> Int {
@@ -39,6 +41,20 @@ class MoreViewControllerPresenter {
     }
     
     func didSelectRow(at index: Int) {
-        
+        let screen = MoreScreensCases(rawValue: index)
+        switch screen {
+        case .InfectionMethods:
+            router.navigateToInfectionMethodsScreen(from: view)
+        case .PreventionTips:
+            router.navigateToPreventionTipsScreen(from: view)
+        case .EmergencyContacts:
+            print(screen!)
+        case .ContactUs:
+            print(screen!)
+        case .AboutUs:
+            print(screen!)
+        case .none:
+            break
+        }
     }
 }
