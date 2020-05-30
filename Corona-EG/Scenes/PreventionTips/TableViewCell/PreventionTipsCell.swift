@@ -1,14 +1,14 @@
 //
-//  InfectionMethodCell.swift
+//  PreventionTipsCell.swift
 //  Corona-EG
 //
-//  Created by Abdelrhman Eliwa on 5/29/20.
+//  Created by Abdelrhman Eliwa on 5/30/20.
 //  Copyright © 2020 Abdelrhman Eliwa. All rights reserved.
 //
 
 import UIKit
 
-class InfectionMethodCell: UITableViewCell, InfectionMethodsCellView {
+class PreventionTipsCell: UITableViewCell, PreventionTipsCellView {
     
     @IBOutlet private weak var questionLabel: UILabel!
     @IBOutlet private weak var answerLabel: UILabel!
@@ -20,7 +20,7 @@ class InfectionMethodCell: UITableViewCell, InfectionMethodsCellView {
     func displayAnswer(_ answer: String) {
         answerLabel.text = answer
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }

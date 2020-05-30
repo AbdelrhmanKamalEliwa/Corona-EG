@@ -18,7 +18,7 @@ class NewsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar(navbarTitle: "side_menu_item_1")
+        setupNavigationBar(navbarTitle: .NewsScreen)
         setupTableView()
         presenter = NewsViewControllerPresenter(view: self, interactor: NewsInteractor())
         presenter?.viewDidLoad()
@@ -81,20 +81,5 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         let url = presenter?.didSelectRow(at: indexPath.row)
         let webViewController = SFSafariViewController(url: url!)
         present(webViewController, animated: true, completion: nil)
-    }
-}
-
-// MARK: - Animation
-extension NewsViewController {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if tableView.panGestureRecognizer.translation(in: self.view).y < 0 {
-            tableViewTopConstraint.constant = 44
-            navbar.isHidden = true
-            UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
-        } else {
-            tableViewTopConstraint.constant = 88
-            navbar.isHidden = false
-            UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
-        }
     }
 }

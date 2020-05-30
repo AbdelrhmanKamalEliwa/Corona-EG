@@ -8,12 +8,14 @@
 
 import UIKit
 
-class InfectionMethodsViewController: UIViewController {
-
+class InfectionMethodsViewController: UIViewController, InfectionMethodsView {
+    
+    internal var presenter: InfectionMethodsViewControllerPresenter?
     @IBOutlet weak var tableView: UITableView!
-    let data = InfectionMethodData().data
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = InfectionMethodsViewControllerPresenter(view: self)
         setupTableView()
     }
 }
@@ -35,13 +37,12 @@ extension InfectionMethodsViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data.count
+        presenter?.getMethodsCount() ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! InfectionMethodCell
-        cell.questionLabel.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: data[indexPath.row].question, comment: "")
-        cell.answerLabel.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: data[indexPath.row].answer, comment: "")
+        presenter?.cellConfiguartion(cell: cell, for: indexPath.row)
         return cell
     }
     

@@ -13,14 +13,19 @@
 "change_language" = "Change Language";
 
 
-//SideMenuItems
-"side_menu_item_1" = "News";
-"side_menu_item_2" = "Numbers Updates";
-"side_menu_item_3" = "COVID-19 Test";
-"side_menu_item_4" = "Infection Methods";
-"side_menu_item_5" = "Prevention Tips";
-"side_menu_item_6" = "Emergency Contacts";
-"side_menu_item_7" = "About Us";
+//Main Screens
+"news" = "News";
+"numbers_updates" = "Numbers Updates";
+"covid-19_test" = "COVID-19 Test";
+"more" = "More";
+//More Screens
+"infection_methods" = "Infection Methods";
+"prevention_tips" = "Prevention Tips";
+"emergency_contacts" = "Emergency Contacts";
+"about_us" = "About Us";
+"contact_us" = "Contact Us";
+//Setting Button
+"change_language" = "Change Language";
 
 
 //Contacts Names

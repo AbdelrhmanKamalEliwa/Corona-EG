@@ -13,14 +13,19 @@
 "change_language" = "غير اللغه";
 
 
-//SideMenuItems
-"side_menu_item_1" = "الأخبار";
-"side_menu_item_2" = "الإحصائيات";
-"side_menu_item_3" = "اختبار كورونا";
-"side_menu_item_4" = "طرق العدوى";
-"side_menu_item_5" = "طرق الوقايه";
-"side_menu_item_6" = "أرقام الطوارئ";
-"side_menu_item_7" = "عن المطور";
+//Main Screens
+"news" = "الأخبار";
+"numbers_updates" = "الإحصائيات";
+"covid-19_test" = "اختبار كورونا";
+"more" = "المزيد";
+//More Screens
+"infection_methods" = "طرق العدوى";
+"prevention_tips" = "طرق الوقايه";
+"emergency_contacts" = "أرقام الطوارئ";
+"about_us" = "عن المطور";
+"contact_us" = "راسلنا";
+//Setting Button
+"change_language" = "تغيير اللغه";
 
 //Contacts Names
 "contact_name_1" = "وزارة الصحه";

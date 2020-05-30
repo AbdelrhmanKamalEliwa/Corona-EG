@@ -20,12 +20,14 @@ extension BaseViewController {
         return self.navigationController!.navigationBar
     }
     
-    func setupNavigationBar(navbarTitle: String) {
+    func setupNavigationBar(navbarTitle: MainScreens) {
         navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navbar.shadowImage = UIImage()
         navbar.barStyle = UIBarStyle.default
         
-        navigationItem.title = LocalizationSystem.sharedInstance.localizedStringForKey(key: navbarTitle, comment: "")
+        navbar.prefersLargeTitles = true
+        
+        navigationItem.title = LocalizationSystem.sharedInstance.localizedStringForKey(key: navbarTitle.rawValue, comment: "")
         let titleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.defaultFont(20, .Bold),
             .foregroundColor: UIColor.navbarTitleColor
@@ -34,24 +36,19 @@ extension BaseViewController {
         
         // MARK: Letf Button
         let leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "list.dash"),
+            image: UIImage(named: "refresh"),
             style: .done, target: self,
             action: #selector(leftSideBarButtonItemTapped(_:)))
         navigationItem.leftBarButtonItem = leftBarButtonItem
         navigationItem.leftBarButtonItem?.tintColor = UIColor.navbarButtonColor
         
         // MARK: right Button
-        let languageType = LocalizationSystem.sharedInstance.localizedStringForKey(key: "language_type", comment: "")
         let rightBarButtonItem = UIBarButtonItem(
-            title: languageType,
+            image: UIImage(named: "settings"),
             style: .done, target: self,
             action: #selector(rightSideBarButtonItemTapped(_:)))
         navigationItem.rightBarButtonItem = rightBarButtonItem
-        let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.defaultFont(18, .Bold),
-            .foregroundColor: UIColor.navbarButtonColor
-        ]
-        navigationItem.rightBarButtonItem?.setTitleTextAttributes(attributes, for: .normal)
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.navbarButtonColor
     }
     
     @objc func leftSideBarButtonItemTapped(_ sender: UIBarButtonItem!) {

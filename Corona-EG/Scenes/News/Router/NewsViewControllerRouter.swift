@@ -9,21 +9,21 @@
 import UIKit
 
 class NewsViewControllerRouter {
-    private enum Constants {
-        static let identifier = "NewsViewController"
-    }
-    
-    class var mainStoryboard: UIStoryboard {
-        return UIStoryboard(name: "Main", bundle: Bundle.main)
-    }
-    
-    class func createNewsViewController() -> UIViewController {
-        let newsViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.identifier)
-        let interactor = NewsInteractor()
-        if let newsView = newsViewController as? NewsView {
-            let presenter = NewsViewControllerPresenter(view: newsView, interactor: interactor)
-            newsView.presenter = presenter
-        }
-        return newsViewController
-    }
+//    private enum Constants {
+//        static let identifier = "NewsViewController"
+//    }
+//
+//    class var mainStoryboard: UIStoryboard {
+//        return UIStoryboard(name: "Main", bundle: Bundle.main)
+//    }
+//
+//    class func createNewsViewController() -> UIViewController {
+//        let newsViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.identifier)
+//        let interactor = NewsInteractor()
+//        if let newsView = newsViewController as? NewsView {
+//            let presenter = NewsViewControllerPresenter(view: newsView, interactor: interactor)
+//            newsView.presenter = presenter
+//        }
+//        return newsViewController
+//    }
 }

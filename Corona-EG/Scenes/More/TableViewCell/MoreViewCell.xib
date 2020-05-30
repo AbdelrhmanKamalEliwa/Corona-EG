@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="98" id="KGk-i7-Jjw" customClass="MoreViewCell" customModule="Corona_EG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbv-kD-Oaa">
+                        <rect key="frame" x="10" y="10" width="343" height="88"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vwM-eG-AHe">
+                                <rect key="frame" x="20" y="29" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MRq-5X-IUT"/>
+                                    <constraint firstAttribute="width" constant="30" id="bVP-vn-ZF9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U5-21-YmI">
+                                <rect key="frame" x="80" y="25.5" width="243" height="37.5"/>
+                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.039215686274509803" green="0.51764705882352946" blue="1" alpha="0.75214041095890416" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vwM-eG-AHe" firstAttribute="centerY" secondItem="Pbv-kD-Oaa" secondAttribute="centerY" id="267-KV-lY2"/>
+                            <constraint firstItem="1U5-21-YmI" firstAttribute="centerY" secondItem="vwM-eG-AHe" secondAttribute="centerY" id="LQZ-c6-JRr"/>
+                            <constraint firstItem="vwM-eG-AHe" firstAttribute="leading" secondItem="Pbv-kD-Oaa" secondAttribute="leading" constant="20" id="UO6-44-aJZ"/>
+                            <constraint firstItem="1U5-21-YmI" firstAttribute="leading" secondItem="vwM-eG-AHe" secondAttribute="trailing" constant="30" id="UYz-1O-pWf"/>
+                            <constraint firstAttribute="trailing" secondItem="1U5-21-YmI" secondAttribute="trailing" constant="20" id="ih8-3f-ZWW"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Pbv-kD-Oaa" secondAttribute="bottom" id="1be-rQ-JjE"/>
+                    <constraint firstItem="Pbv-kD-Oaa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7AX-r9-LoX"/>
+                    <constraint firstAttribute="trailing" secondItem="Pbv-kD-Oaa" secondAttribute="trailing" constant="10" id="DYd-CN-Sko"/>
+                    <constraint firstItem="Pbv-kD-Oaa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="LOS-YW-RHf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="screenIcon" destination="vwM-eG-AHe" id="yvQ-wf-zY7"/>
+                <outlet property="screenTitle" destination="1U5-21-YmI" id="ypG-Cw-54g"/>
+            </connections>
+            <point key="canvasLocation" x="168.84057971014494" y="152.67857142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
