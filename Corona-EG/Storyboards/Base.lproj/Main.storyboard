@@ -244,11 +244,11 @@
             </objects>
             <point key="canvasLocation" x="2254" y="23"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--News-->
         <scene sceneID="OAB-oj-FZm">
             <objects>
                 <navigationController storyboardIdentifier="NewsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="iSg-id-RmE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="news" selectedImage="news" id="dba-hO-LtS"/>
+                    <tabBarItem key="tabBarItem" title="News" image="news" selectedImage="news" id="dba-hO-LtS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iPf-XK-a9o">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -283,11 +283,11 @@
             </objects>
             <point key="canvasLocation" x="710" y="-2267"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Update-->
         <scene sceneID="sLw-F3-75L">
             <objects>
                 <navigationController storyboardIdentifier="NumbersUpdatesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="E60-Hw-yLt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="numbers-updates" selectedImage="numbers-updates" id="B2c-x9-XZo"/>
+                    <tabBarItem key="tabBarItem" title="Update" image="numbers-updates" selectedImage="numbers-updates" id="B2c-x9-XZo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tQQ-Jp-fyc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -302,11 +302,11 @@
             </objects>
             <point key="canvasLocation" x="229" y="-1463"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Corona Test-->
         <scene sceneID="0ca-2c-fFP">
             <objects>
                 <navigationController storyboardIdentifier="COVID19TestVC" automaticallyAdjustsScrollViewInsets="NO" id="llY-XD-uOT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="covid-19-test" selectedImage="covid-19-test" id="B49-nM-tjv"/>
+                    <tabBarItem key="tabBarItem" title="Corona Test" image="covid-19-test" selectedImage="covid-19-test" id="B49-nM-tjv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v1x-gt-apd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -355,11 +355,11 @@
             </objects>
             <point key="canvasLocation" x="2254" y="-717"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--More-->
         <scene sceneID="kCr-mY-3XE">
             <objects>
                 <navigationController storyboardIdentifier="MoreVC" automaticallyAdjustsScrollViewInsets="NO" id="Jrr-1C-XDT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="more" selectedImage="more" id="mJ9-IP-6at"/>
+                    <tabBarItem key="tabBarItem" title="More" image="more" selectedImage="more" id="mJ9-IP-6at"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aEF-Da-YUq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

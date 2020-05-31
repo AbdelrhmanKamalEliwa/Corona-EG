@@ -65,7 +65,7 @@
 		F4BD11FB247BBF0300740150 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4BD11FD247BBF0300740150 /* Localizable.strings */; };
 		F4BD1200247BBFEB00740150 /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD11FF247BBFEB00740150 /* LocalizationSystem.swift */; };
 		F4BD1210247BCE4A00740150 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD120F247BCE4A00740150 /* UIFont+Extension.swift */; };
-		F4BD121C247CA9C600740150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BD121B247CA9C600740150 /* Assets.xcassets */; };
+		F4BD121C247CA9C600740150 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BD121B247CA9C600740150 /* Images.xcassets */; };
 		F4BD1220247CAA5400740150 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BD121F247CAA5400740150 /* Colors.xcassets */; };
 		F4C2BA69247CDAA000844D4E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA68247CDAA000844D4E /* BaseViewController.swift */; };
 		F4C2BA77247D100B00844D4E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA76247D100B00844D4E /* UIViewExtension.swift */; };
@@ -77,6 +77,7 @@
 		F4ED7FE8247E69EC00DCA13B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7FE7247E69EC00DCA13B /* UIColor+Extension.swift */; };
 		F4EEA54324837D4C00AECA9C /* SocialMediaCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA54224837D4C00AECA9C /* SocialMediaCases.swift */; };
 		F4EEA5452483AB5900AECA9C /* PreventionTipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA5442483AB5900AECA9C /* PreventionTipsData.swift */; };
+		F4EEA54924842B0300AECA9C /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA54824842B0300AECA9C /* UITabBar+Extension.swift */; };
 		F4EEFBC0247CB23300B1FA31 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBA247CB23300B1FA31 /* Cairo-Black.ttf */; };
 		F4EEFBC1247CB23300B1FA31 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBB247CB23300B1FA31 /* Cairo-Regular.ttf */; };
 		F4EEFBC2247CB23300B1FA31 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBC247CB23300B1FA31 /* Cairo-SemiBold.ttf */; };
@@ -153,7 +154,7 @@
 		F4BD11FE247BBF0A00740150 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4BD11FF247BBFEB00740150 /* LocalizationSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
 		F4BD120F247BCE4A00740150 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
-		F4BD121B247CA9C600740150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4BD121B247CA9C600740150 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4BD121F247CAA5400740150 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F4C2BA68247CDAA000844D4E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F4C2BA76247D100B00844D4E /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -165,6 +166,7 @@
 		F4ED7FE7247E69EC00DCA13B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		F4EEA54224837D4C00AECA9C /* SocialMediaCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaCases.swift; sourceTree = "<group>"; };
 		F4EEA5442483AB5900AECA9C /* PreventionTipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionTipsData.swift; sourceTree = "<group>"; };
+		F4EEA54824842B0300AECA9C /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
 		F4EEFBBA247CB23300B1FA31 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
 		F4EEFBBB247CB23300B1FA31 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
 		F4EEFBBC247CB23300B1FA31 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -643,7 +645,7 @@
 			isa = PBXGroup;
 			children = (
 				F4EEFBC6247CB76800B1FA31 /* Fonts */,
-				F4BD121B247CA9C600740150 /* Assets.xcassets */,
+				F4BD121B247CA9C600740150 /* Images.xcassets */,
 				F4BD121F247CAA5400740150 /* Colors.xcassets */,
 			);
 			path = Assets;
@@ -754,6 +756,7 @@
 				F4C2BA76247D100B00844D4E /* UIViewExtension.swift */,
 				F4BD120F247BCE4A00740150 /* UIFont+Extension.swift */,
 				F4ED7FE7247E69EC00DCA13B /* UIColor+Extension.swift */,
+				F4EEA54824842B0300AECA9C /* UITabBar+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -883,7 +886,7 @@
 				F4A83A7D24827419004DBF7F /* MoreViewCell.xib in Resources */,
 				F4BD11FB247BBF0300740150 /* Localizable.strings in Resources */,
 				F4BD11E9247A466E00740150 /* Main.storyboard in Resources */,
-				F4BD121C247CA9C600740150 /* Assets.xcassets in Resources */,
+				F4BD121C247CA9C600740150 /* Images.xcassets in Resources */,
 				F4BD1220247CAA5400740150 /* Colors.xcassets in Resources */,
 				F4C2BA83247D3E4D00844D4E /* NewsCell.xib in Resources */,
 				F45E5A67247E1382008891B6 /* EmergencyContactsCell.xib in Resources */,
@@ -972,6 +975,7 @@
 				F4BD11E6247A466E00740150 /* NewsViewController.swift in Sources */,
 				F45E5A59247D4FFD008891B6 /* NewsModel.swift in Sources */,
 				F471A9C92482C2B1002D0BDE /* PreventionTipsCell.swift in Sources */,
+				F4EEA54924842B0300AECA9C /* UITabBar+Extension.swift in Sources */,
 				F45E5A4E247D4A76008891B6 /* APIResult.swift in Sources */,
 				F45E5A69247E1716008891B6 /* EmergencyContactsViewControllerPresenter.swift in Sources */,
 				F433F5F8247F9A0500CAEE70 /* NumbersUpdatesViewControllerPresenter.swift in Sources */,

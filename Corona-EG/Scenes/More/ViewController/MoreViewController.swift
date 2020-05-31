@@ -20,6 +20,10 @@ class MoreViewController: BaseViewController, MoreView {
         setupMainScreensNavigationBar(navbarTitle: .More)
         setupTableView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navbar.prefersLargeTitles = false
+    }
 }
 
 

@@ -63,10 +63,10 @@ class CountryDataCell: UICollectionViewCell, NumbersUpdatesCellView {
     override func awakeFromNib() {
         super.awakeFromNib()
         countryNameLabel.textColor = UIColor.white
-        totalConfirmedLabel.textColor = UIColor.navbarButtonColor
-        totalDeathsLabel.textColor = UIColor.navbarButtonColor
-        totalRecoverdLabel.textColor = UIColor.navbarButtonColor
-        activeCasesLabel.textColor = UIColor.navbarButtonColor
+        totalConfirmedLabel.textColor = UIColor.mainColor
+        totalDeathsLabel.textColor = UIColor.mainColor
+        totalRecoverdLabel.textColor = UIColor.mainColor
+        activeCasesLabel.textColor = UIColor.mainColor
     }
 
 }

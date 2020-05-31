@@ -28,6 +28,10 @@ class NumbersUpdatesViewController: BaseViewController {
         presenter = NumbersUpdatesViewControllerPresenter(view: self, interactor: interactor, router: router)
         presenter?.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navbar.prefersLargeTitles = false
+    }
 }
 
 // MARK: - Presenter Delegate

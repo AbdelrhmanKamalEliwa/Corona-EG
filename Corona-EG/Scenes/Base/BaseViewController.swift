@@ -28,7 +28,7 @@ extension BaseViewController {
         let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: navbarTitle.rawValue, comment: "")
         let titleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.defaultFont(25, .Bold),
-            .foregroundColor: UIColor.navbarTitleColor
+            .foregroundColor: UIColor.mainColor
         ]
         let leftBarButtonItem = UIBarButtonItem(
             title: title,
@@ -43,7 +43,7 @@ extension BaseViewController {
             style: .done, target: self,
             action: #selector(rightSideBarButtonItemTapped(_:)))
         navigationItem.rightBarButtonItem = rightBarButtonItem
-        navigationItem.rightBarButtonItem?.tintColor = UIColor.navbarButtonColor
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.mainColor
     }
     
     @objc func rightSideBarButtonItemTapped(_ sender: UIBarButtonItem!) {
@@ -64,7 +64,6 @@ extension BaseViewController {
         navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navbar.shadowImage = UIImage()
         navbar.barStyle = UIBarStyle.default
-        
         navbar.prefersLargeTitles = true
         
         if let title = navbarScreenTitle {
@@ -74,9 +73,14 @@ extension BaseViewController {
         }
         let titleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.defaultFont(20, .Bold),
-            .foregroundColor: UIColor.navbarTitleColor
+            .foregroundColor: UIColor.mainColor
         ]
         navbar.titleTextAttributes = titleAttributes
+        let largeTitleAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.defaultFont(30, .Bold),
+            .foregroundColor: UIColor.mainColor
+        ]
+        navbar.largeTitleTextAttributes = largeTitleAttributes
         
         // MARK: Letf Button
         let leftBarButtonItem = UIBarButtonItem(
@@ -84,7 +88,7 @@ extension BaseViewController {
             style: .done, target: self,
             action: #selector(innerLeftSideBarButtonItemTapped(_:)))
         navigationItem.leftBarButtonItem = leftBarButtonItem
-        navigationItem.leftBarButtonItem?.tintColor = UIColor.navbarButtonColor
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.mainColor
     }
     
     @objc func innerLeftSideBarButtonItemTapped(_ sender: UIBarButtonItem!) {
