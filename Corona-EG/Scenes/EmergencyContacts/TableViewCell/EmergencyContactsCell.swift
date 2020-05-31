@@ -12,6 +12,7 @@ class EmergencyContactsCell: UITableViewCell, EmergencyContactsCellView {
     
     @IBOutlet private weak var contactName: UILabel!
     @IBOutlet private weak var contactNumber: UILabel!
+    @IBOutlet private weak var containerView: UIView!
     
     func displayContactName(_ name: String) {
         contactName.text = name
@@ -21,8 +22,32 @@ class EmergencyContactsCell: UITableViewCell, EmergencyContactsCellView {
         contactNumber.text = number
     }
     
+    func displayCellUI() {
+        containerView.layer.masksToBounds = false
+        containerView.backgroundColor = UIColor.white
+        containerView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        containerView.layer.shadowColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        containerView.layer.shadowOpacity = 2
+    }
+    
+//    @objc func change() {
+//      containerView.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
+//    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        displayCellUI()
     }
-
+    
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//        if selected {
+//            Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(change), userInfo: nil, repeats: false)
+//            contentView.backgroundColor = UIColor.white
+//
+//        } else {
+//            contentView.backgroundColor = UIColor.white
+//            containerView.backgroundColor = UIColor.white
+//        }
+//    }
 }

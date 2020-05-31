@@ -10,15 +10,10 @@ import UIKit
 
 class PreventionTipsCell: UITableViewCell, PreventionTipsCellView {
     
-    @IBOutlet private weak var questionLabel: UILabel!
-    @IBOutlet private weak var answerLabel: UILabel!
+    @IBOutlet private weak var tipLabel: UILabel!
     
-    func displayQuestion(_ question: String) {
-        questionLabel.text = question
-    }
-    
-    func displayAnswer(_ answer: String) {
-        answerLabel.text = answer
+    func displayLabel(_ answer: String) {
+        tipLabel.text = answer
     }
 
     override func awakeFromNib() {

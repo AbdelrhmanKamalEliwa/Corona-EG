@@ -14,20 +14,20 @@ class NumbersUpdatesViewController: BaseViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var collectionViewTopConstraint: NSLayoutConstraint!
-    
     internal var presenter: NumbersUpdatesViewControllerPresenter?
     fileprivate let interactor = NumbersUpdatesInteractor()
     fileprivate let router = NumbersUpdatesViewControllerRouter()
+    fileprivate let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMainScreensNavigationBar(navbarTitle: .NumbersUpdatesScreen)
         setupCollectionView()
         setupSearchBar()
+        setupRefreshController()
         presenter = NumbersUpdatesViewControllerPresenter(view: self, interactor: interactor, router: router)
         presenter?.viewDidLoad()
     }
-
 }
 
 // MARK: - Presenter Delegate
@@ -51,7 +51,11 @@ extension NumbersUpdatesViewController: NumbersUpdatesView {
     }
     
     func showError(error: String) {
-        print(error)
+        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
+        let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
+        DispatchQueue.main.async {
+            self.presentGenericAlert(viewController: self, title: title, message: error, buttonTitle: buttonTitle)
+        }
     }
 }
 
@@ -82,6 +86,7 @@ extension NumbersUpdatesViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter?.didSelectRow(at: indexPath.item)
+        navbar.isHidden = false
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -91,9 +96,11 @@ extension NumbersUpdatesViewController: UICollectionViewDelegate, UICollectionVi
 
 // MARK: - Setup Search Bar
 extension NumbersUpdatesViewController: UISearchBarDelegate {
-    func setupSearchBar() {
+    private func setupSearchBar() {
         searchBar.delegate = self
         searchBar.searchTextField.delegate = self
+        searchBar.placeholder = LocalizationSystem.sharedInstance.localizedStringForKey(key: "search", comment: "")
+        searchBar.backgroundColor = UIColor.white
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -115,12 +122,26 @@ extension NumbersUpdatesViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if collectionView.panGestureRecognizer.translation(in: self.view).y < 0 {
             collectionViewTopConstraint.constant = 0
-            searchBar.isHidden = true
+            navbar.isHidden = true
             UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
         } else {
             collectionViewTopConstraint.constant = 50
-            searchBar.isHidden = false
+            navbar.isHidden = false
             UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
         }
+    }
+}
+
+// MARK: - Setup RefreshController
+extension NumbersUpdatesViewController {
+    private func setupRefreshController() {
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        collectionView.addSubview(refreshControl)
+    }
+    
+    @objc private func refresh(_ sender: AnyObject) {
+        presenter?.viewDidLoad()
+        refreshControl.endRefreshing()
     }
 }

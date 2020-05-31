@@ -41,8 +41,8 @@ extension PreventionTipsViewController: UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! PreventionTipsCell
+        cell.selectedBackgroundView = UIColor.selectedCellBackgroundColor()
         presenter?.cellConfiguartion(cell: cell, for: indexPath.row)
         return cell
     }
-    
 }

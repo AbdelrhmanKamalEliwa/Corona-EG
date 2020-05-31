@@ -48,11 +48,9 @@ class MoreViewControllerPresenter {
         case .PreventionTips:
             router.navigateToPreventionTipsScreen(from: view)
         case .EmergencyContacts:
-            print(screen!)
-        case .ContactUs:
-            print(screen!)
+            router.navigateToEmergencyContactsScreen(from: view)
         case .AboutUs:
-            print(screen!)
+            router.navigateToAboutUsScreen()
         case .none:
             break
         }

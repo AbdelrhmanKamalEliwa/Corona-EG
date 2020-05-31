@@ -12,19 +12,20 @@ import SafariServices
 
 class NewsViewController: BaseViewController {
     
-    internal var presenter: NewsViewControllerPresenter?
     @IBOutlet private weak var tableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet private weak var tableView: UITableView!
+    fileprivate let refreshControl = UIRefreshControl()
+    internal var presenter: NewsViewControllerPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMainScreensNavigationBar(navbarTitle: .NewsScreen)
         setupTableView()
+        setupRefreshController()
         presenter = NewsViewControllerPresenter(view: self, interactor: NewsInteractor())
         presenter?.viewDidLoad()
     }
 }
-
 
 // MARK: - Presenter Delegate
 extension NewsViewController: NewsView {
@@ -47,10 +48,13 @@ extension NewsViewController: NewsView {
     }
     
     func showError(error: String) {
-        print(error)
+        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
+        let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
+        DispatchQueue.main.async {
+            self.presentGenericAlert(viewController: self, title: title, message: error, buttonTitle: buttonTitle)
+        }
     }
 }
-
 
 // MARK: - Setup TableView
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -73,6 +77,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! NewsCell
+        cell.selectedBackgroundView = UIColor.selectedCellBackgroundColor()
         presenter?.cellConfiguartion(cell: cell, for: indexPath.row)
         return cell
     }
@@ -81,5 +86,34 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         let url = presenter?.didSelectRow(at: indexPath.row)
         let webViewController = SFSafariViewController(url: url!)
         present(webViewController, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Setup RefreshController
+extension NewsViewController {
+    private func setupRefreshController() {
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    @objc private func refresh(_ sender: AnyObject) {
+        presenter?.viewDidLoad()
+        refreshControl.endRefreshing()
+    }
+}
+
+// MARK: - Animation
+extension NewsViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if tableView.panGestureRecognizer.translation(in: self.view).y < 0 {
+            tableViewTopConstraint.constant = 44
+            navbar.isHidden = true
+            UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
+        } else {
+            tableViewTopConstraint.constant = 88
+            navbar.isHidden = false
+            UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
+        }
     }
 }

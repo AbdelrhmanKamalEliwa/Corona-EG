@@ -16,9 +16,13 @@ class EmergencyContactsViewController: BaseViewController, EmergencyContactsView
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-//        setupNavigationBar(navbarTitle: )
+        setupInnerScreensNavigationBar(navbarScreenTitle: .EmergencyContacts)
         presenter = EmergencyContactsViewControllerPresenter(view: self)
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        <#code#>
+//    }
     
 }
 

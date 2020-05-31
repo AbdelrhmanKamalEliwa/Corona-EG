@@ -13,27 +13,24 @@ protocol PreventionTipsView: class {
 }
 
 protocol PreventionTipsCellView {
-    func displayQuestion(_ question: String)
-    func displayAnswer(_ answer: String)
+    func displayLabel(_ tip: String)
 }
 
 class PreventionTipsViewControllerPresenter {
     private weak var view: PreventionTipsView?
-    private let infectionMethodsData = InfectionMethodData().data
+    private let preventionTipsData = PreventionTipsData().data
     
     init(view: PreventionTipsView?) {
         self.view = view
     }
     
     func getMethodsCount() -> Int {
-        infectionMethodsData.count
+        preventionTipsData.count
     }
     
     func cellConfiguartion(cell: PreventionTipsCellView, for index: Int) {
-        let infectionMethod = infectionMethodsData[index]
-        let question = LocalizationSystem.sharedInstance.localizedStringForKey(key: infectionMethod.question, comment: "")
-        cell.displayQuestion(question)
-        let answer = LocalizationSystem.sharedInstance.localizedStringForKey(key: infectionMethod.answer, comment: "")
-        cell.displayAnswer(answer)
+        let preventionTip = preventionTipsData[index]
+        let tip = LocalizationSystem.sharedInstance.localizedStringForKey(key: preventionTip, comment: "")
+        cell.displayLabel(tip)
     }
 }

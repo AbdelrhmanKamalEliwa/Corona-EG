@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Properities
 class BaseViewController: UIViewController {
-    let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
+    final let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
 }
 
 // MARK: - MainScreensNavigationBar
@@ -23,24 +23,19 @@ extension BaseViewController {
         navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navbar.shadowImage = UIImage()
         navbar.barStyle = UIBarStyle.default
+        navbar.prefersLargeTitles = false
         
-        navbar.prefersLargeTitles = true
-        
-        navigationItem.title = LocalizationSystem.sharedInstance.localizedStringForKey(key: navbarTitle.rawValue, comment: "")
-        
+        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: navbarTitle.rawValue, comment: "")
         let titleAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.defaultFont(20, .Bold),
+            .font: UIFont.defaultFont(25, .Bold),
             .foregroundColor: UIColor.navbarTitleColor
         ]
-        navbar.titleTextAttributes = titleAttributes
-        
-        // MARK: Letf Button
         let leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(named: "refresh"),
+            title: title,
             style: .done, target: self,
-            action: #selector(leftSideBarButtonItemTapped(_:)))
-        navigationItem.leftBarButtonItem = leftBarButtonItem
-        navigationItem.leftBarButtonItem?.tintColor = UIColor.navbarButtonColor
+            action: nil)
+        leftBarButtonItem.setTitleTextAttributes(titleAttributes, for: .normal)
+        navbar.topItem?.leftBarButtonItem = leftBarButtonItem
         
         // MARK: right Button
         let rightBarButtonItem = UIBarButtonItem(
@@ -51,10 +46,6 @@ extension BaseViewController {
         navigationItem.rightBarButtonItem?.tintColor = UIColor.navbarButtonColor
     }
     
-    @objc func leftSideBarButtonItemTapped(_ sender: UIBarButtonItem!) {
-//        present(menu!, animated: true, completion: nil)
-    }
-    
     @objc func rightSideBarButtonItemTapped(_ sender: UIBarButtonItem!) {
         let changeLanguageTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "change_language_title", comment: "")
         let changeLanguageMessage = LocalizationSystem.sharedInstance.localizedStringForKey(key: "change_language_message", comment: "")
@@ -63,7 +54,6 @@ extension BaseViewController {
             self.changeLanguage()
         }
     }
-    
 }
 
 

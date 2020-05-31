@@ -11,6 +11,7 @@ import Kingfisher
 
 class NewsCell: UITableViewCell, NewsCellView {
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet private weak var articleImage: UIImageView!
     @IBOutlet private weak var articleTitle: UILabel!
     @IBOutlet private weak var articleDescription: UILabel!
@@ -39,8 +40,17 @@ class NewsCell: UITableViewCell, NewsCellView {
         articleDescription.text = description
     }
     
+    func displayCellUI() {
+        containerView.layer.masksToBounds = false
+        containerView.backgroundColor = UIColor.white
+        containerView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        containerView.layer.shadowColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        containerView.layer.shadowOpacity = 2
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        displayCellUI()
     }
     
 }

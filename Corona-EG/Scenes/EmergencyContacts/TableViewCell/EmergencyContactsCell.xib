@@ -25,22 +25,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vdt-hQ-sLY">
-                        <rect key="frame" x="10" y="10" width="300" height="45"/>
+                        <rect key="frame" x="10" y="5" width="300" height="40"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asC-4k-q4Z">
-                                <rect key="frame" x="10" y="5.5" width="40.5" height="34"/>
+                                <rect key="frame" x="10" y="3" width="40.5" height="34"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9f-qr-VZw">
-                                <rect key="frame" x="248" y="5.5" width="42" height="34"/>
+                                <rect key="frame" x="248" y="3" width="42" height="34"/>
                                 <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                                 <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.90946570161270768" alpha="0.51174550513698636" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="F9f-qr-VZw" secondAttribute="trailing" constant="10" id="YIN-uj-yg9"/>
                             <constraint firstItem="asC-4k-q4Z" firstAttribute="centerY" secondItem="Vdt-hQ-sLY" secondAttribute="centerY" id="igQ-uo-T9q"/>
@@ -51,20 +51,33 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="5" height="5"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Vdt-hQ-sLY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="G19-gD-vEu"/>
+                    <constraint firstItem="Vdt-hQ-sLY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="G19-gD-vEu"/>
                     <constraint firstItem="Vdt-hQ-sLY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Rwb-vX-DiQ"/>
                     <constraint firstAttribute="trailing" secondItem="Vdt-hQ-sLY" secondAttribute="trailing" constant="10" id="ko9-Rn-Mco"/>
-                    <constraint firstAttribute="bottom" secondItem="Vdt-hQ-sLY" secondAttribute="bottom" id="uCw-dC-p94"/>
+                    <constraint firstAttribute="bottom" secondItem="Vdt-hQ-sLY" secondAttribute="bottom" constant="10" id="uCw-dC-p94"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="contactName" destination="asC-4k-q4Z" id="ymX-bF-EtP"/>
                 <outlet property="contactNumber" destination="F9f-qr-VZw" id="AB1-Fx-13m"/>
+                <outlet property="containerView" destination="Vdt-hQ-sLY" id="mer-a6-Whc"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="114.17410714285714"/>
         </tableViewCell>

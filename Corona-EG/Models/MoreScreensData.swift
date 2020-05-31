@@ -13,7 +13,6 @@ class MoreScreensData {
         ScreenData(iconName: "infection-methods", screenTitle: "infection_methods"),
         ScreenData(iconName: "prevention-tips", screenTitle: "prevention_tips"),
         ScreenData(iconName: "emergency-numbers", screenTitle: "emergency_contacts"),
-        ScreenData(iconName: "contact-us", screenTitle: "contact_us"),
         ScreenData(iconName: "about-us", screenTitle: "about_us")
     ]
 }

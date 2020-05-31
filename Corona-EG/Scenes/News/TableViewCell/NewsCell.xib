@@ -17,52 +17,69 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="196" id="KGk-i7-Jjw" customClass="NewsCell" customModule="Corona_EG" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="244" height="196"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="249" id="KGk-i7-Jjw" customClass="NewsCell" customModule="Corona_EG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="281" height="249"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="244" height="196"/>
+                <rect key="frame" x="0.0" y="0.0" width="281" height="249"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fnx-01-9dB">
-                        <rect key="frame" x="10" y="5" width="224" height="147"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Isw-Pa-nd1">
+                        <rect key="frame" x="10" y="10" width="261" height="224"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fnx-01-9dB">
+                                <rect key="frame" x="5" y="0.0" width="251" height="147"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="XBF-dT-OFZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGt-14-fqk">
+                                <rect key="frame" x="5" y="122" width="251" height="26.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9i-il-mkw">
+                                <rect key="frame" x="10" y="157" width="241" height="57"/>
+                                <fontDescription key="fontDescription" name="Cairo-Light" family="Cairo" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="147" id="XBF-dT-OFZ"/>
+                            <constraint firstAttribute="trailing" secondItem="kGt-14-fqk" secondAttribute="trailing" constant="5" id="2fa-Nm-4v7"/>
+                            <constraint firstAttribute="bottom" secondItem="W9i-il-mkw" secondAttribute="bottom" constant="10" id="5HZ-3d-WxO"/>
+                            <constraint firstItem="Fnx-01-9dB" firstAttribute="leading" secondItem="Isw-Pa-nd1" secondAttribute="leading" constant="5" id="BcP-14-FIn"/>
+                            <constraint firstItem="W9i-il-mkw" firstAttribute="leading" secondItem="Isw-Pa-nd1" secondAttribute="leading" constant="10" id="LKn-eY-laM"/>
+                            <constraint firstItem="kGt-14-fqk" firstAttribute="top" secondItem="Fnx-01-9dB" secondAttribute="bottom" constant="-25" id="Lwx-J4-n4c"/>
+                            <constraint firstAttribute="trailing" secondItem="W9i-il-mkw" secondAttribute="trailing" constant="10" id="OYg-0c-i0T"/>
+                            <constraint firstItem="kGt-14-fqk" firstAttribute="leading" secondItem="Isw-Pa-nd1" secondAttribute="leading" constant="5" id="S2x-K9-Yzc"/>
+                            <constraint firstItem="W9i-il-mkw" firstAttribute="top" secondItem="Fnx-01-9dB" secondAttribute="bottom" constant="10" id="UMx-a5-KQG"/>
+                            <constraint firstAttribute="trailing" secondItem="Fnx-01-9dB" secondAttribute="trailing" constant="5" id="lC1-Mv-HTp"/>
+                            <constraint firstItem="Fnx-01-9dB" firstAttribute="top" secondItem="Isw-Pa-nd1" secondAttribute="top" id="u36-m6-OGE"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="0.0"/>
-                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9i-il-mkw">
-                        <rect key="frame" x="15" y="162" width="214" height="19"/>
-                        <fontDescription key="fontDescription" name="Cairo-Light" family="Cairo" pointSize="12"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGt-14-fqk">
-                        <rect key="frame" x="10" y="135" width="224" height="26.5"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Fnx-01-9dB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1wu-LS-gDR"/>
-                    <constraint firstItem="Fnx-01-9dB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="3QW-yA-S0G"/>
-                    <constraint firstAttribute="trailing" secondItem="W9i-il-mkw" secondAttribute="trailing" constant="15" id="9ev-D1-LxD"/>
-                    <constraint firstItem="W9i-il-mkw" firstAttribute="top" secondItem="Fnx-01-9dB" secondAttribute="bottom" constant="10" id="QzP-9o-pvb"/>
-                    <constraint firstItem="kGt-14-fqk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Sg0-5F-fOd"/>
-                    <constraint firstItem="kGt-14-fqk" firstAttribute="top" secondItem="Fnx-01-9dB" secondAttribute="bottom" constant="-17" id="VaY-z1-rX5"/>
-                    <constraint firstItem="W9i-il-mkw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Yuz-Ab-lYp"/>
-                    <constraint firstAttribute="trailing" secondItem="kGt-14-fqk" secondAttribute="trailing" constant="10" id="q36-P2-Pem"/>
-                    <constraint firstAttribute="trailing" secondItem="Fnx-01-9dB" secondAttribute="trailing" constant="10" id="wMQ-bc-Dy1"/>
-                    <constraint firstAttribute="bottom" secondItem="W9i-il-mkw" secondAttribute="bottom" constant="15" id="xlq-AN-RrV"/>
+                    <constraint firstAttribute="trailing" secondItem="Isw-Pa-nd1" secondAttribute="trailing" constant="10" id="HaR-7y-Qif"/>
+                    <constraint firstAttribute="bottom" secondItem="Isw-Pa-nd1" secondAttribute="bottom" constant="15" id="ihU-Jp-3bV"/>
+                    <constraint firstItem="Isw-Pa-nd1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ler-jJ-KbG"/>
+                    <constraint firstItem="Isw-Pa-nd1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rHi-dm-GGk"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -70,8 +87,9 @@
                 <outlet property="articleDescription" destination="W9i-il-mkw" id="M4E-Pf-WXR"/>
                 <outlet property="articleImage" destination="Fnx-01-9dB" id="YNh-L5-bTN"/>
                 <outlet property="articleTitle" destination="kGt-14-fqk" id="yoZ-u3-lV0"/>
+                <outlet property="containerView" destination="Isw-Pa-nd1" id="t1Q-hi-vvY"/>
             </connections>
-            <point key="canvasLocation" x="82.608695652173921" y="174.77678571428569"/>
+            <point key="canvasLocation" x="109.42028985507247" y="157.03125"/>
         </tableViewCell>
     </objects>
 </document>

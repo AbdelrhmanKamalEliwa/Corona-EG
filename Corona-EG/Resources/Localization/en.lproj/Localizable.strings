@@ -6,27 +6,35 @@
   Copyright © 2020 Abdelrhman Eliwa. All rights reserved.
 */
 
+//Error
+"error_title" = "Error";
+"error_button" = "GOT IT";
+
+//Change Language
 "language_type" = "AR";
 "change_language_title" = "Change Language";
 "change_language_message" = "The application language will change to the Arabic language";
 "chnage_language_button_title" = "Go Ahead";
 "change_language" = "Change Language";
 
+//Search Bar
+"search" = "Search for a country ...";
 
 //Main Screens
 "news" = "News";
 "numbers_updates" = "Numbers Updates";
 "covid-19_test" = "COVID-19 Test";
 "more" = "More";
+
 //More Screens
 "infection_methods" = "Infection Methods";
 "prevention_tips" = "Prevention Tips";
 "emergency_contacts" = "Emergency Contacts";
 "about_us" = "About Us";
 "contact_us" = "Contact Us";
+
 //Setting Button
 "change_language" = "Change Language";
-
 
 //Contacts Names
 "contact_name_1" = "Ministry of Health";
@@ -48,8 +56,7 @@
 "total_critical" = "Total Critical";
 "more_details" = "More Details";
 
-
-
+//Infection Methods
 "infiction_methods_title_1" = "How is COVID-19 disease spread?";
 "infiction_methods_description_1" = "People can catch COVID-19 infections from other people who have the virus. The disease is spread mainly from person to person through small droplets secreted by a person have COVID-19 from his nose or mouth when he coughs, sneezes or speaks. These droplets are relatively heavy in weight, as they do not travel to a remote location but rather fall quickly to the ground. People can catch COVID-19 disease if they breathe these droplets from someone who has the virus. Therefore it is important to keep at least 1 meter (3 feet) from others. These droplets may land on objects and surfaces surrounding the person, such as tables, door handles, and stair handrails. People can then become infected when they touch these objects or surfaces and then touch their eyes, nose, or mouth. Therefore, it is important to wash regularly the washing of hands with soap and water or to clean them with an alcohol disinfectant to rub the hands.";
 
@@ -109,3 +116,20 @@
 
 "infiction_methods_title_20" = "Is it safe to receive parcels from areas that have reported cases of COVID-19 disease?";
 "infiction_methods_description_20" = "Yes. The risk of contamination of commercial goods by an infected person is low, and the risk of contracting the virus that causes COVID-19 disease by expelling transport and shipping and exposing conditions and temperatures is minimal.";
+
+//Prevention Tips
+"prevention_tips_title_1" = "Clean your hands regularly, by rubbing them with an alcohol-based hand sanitizer or by washing them with soap and water. Why? Cleaning your hands with soap and water or rubbing them with an alcohol disinfectant will kill the viruses that may be on your hands.";
+
+"prevention_tips_title_2" = "Keep at least one meter (3 feet) between you and anyone coughing or sneezing. Why? When a person coughs or sneezes, small liquid droplets may contain from their nose or mouth that may contain the virus. This was very close to you. You can breathe these droplets, including the virus that causes COVID-19, if the person has it.";
+
+"prevention_tips_title_3" = "When a person coughs or sneezes, small liquid droplets may contain from their nose or mouth that may contain the virus. This was very close to you. You can breathe these droplets, including the virus that causes Covid-19, if the person has it.";
+
+"prevention_tips_title_4" = "Avoid touching your eyes, nose, and mouth. Why? Hands touch many surfaces and can catch viruses. If the hands are contaminated, they may transfer the virus to the eyes, nose, or mouth. The virus can enter the body through these outlets and make you sick.";
+
+"prevention_tips_title_5" = "Ensure that you and those around you follow good respiratory hygiene practices. This means covering your mouth and nose with your bent elbow or tissue paper when coughing or sneezing, and then immediately disposing of the used tissue. Why? Drips spread the virus. Having good respiratory practices protects the people around you from viruses such as cold viruses, influenza, and Covid-19.";
+
+"prevention_tips_title_6" = "Stay home if you feel sick. If you have a fever, cough, and difficulty breathing, seek medical attention, and contact your care provider before going to him. Follow the directions of the local health authorities. Why? The most recent information on the situation in your area is available to national and local authorities. Your pre-contact with your healthcare provider will allow him to direct you quickly to the appropriate health care facility. This will protect you and prevent the spread of viruses and other infections.";
+
+"prevention_tips_title_7" = "Stay up to date on the latest developments in COVID-19 disease. Follow the advice of your health care provider, national and local public health authorities, or your employer on how to protect yourself and others from COVID-19 disease. Why? The latest information on whether COVID-19 disease is spreading in your area is available to national and local authorities. They are best able to advise on what actions people in your area can take to protect themselves.";
+
+"prevention_tips_title_8" = "Keep up-to-date on the latest information on hotbeds of COVID-19 infection (cities or localities where COVID-19 disease is widespread). And avoid traveling to these places as much as possible, especially if you are elderly, have diabetes, or have a heart or lung disease. Why? Because you are more likely to get COVID-19 infection in one of these areas.";

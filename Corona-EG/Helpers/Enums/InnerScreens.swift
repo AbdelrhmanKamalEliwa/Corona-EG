@@ -12,7 +12,6 @@ enum InnerScreens: String {
     case InfectionMethods = "infection_methods"
     case PreventionTips = "prevention_tips"
     case EmergencyContacts = "emergency_contacts"
-    case ContactUs = "about_us"
-    case AboutUs = "contact_us"
+    case AboutUs = "about_us"
     case CountryDetails = ""
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIColor {
-    class var navbarTitleColor: UIColor { return #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1) }
+    class var navbarTitleColor: UIColor { return #colorLiteral(red: 0.2470588237, green: 0.3882353008, blue: 0.5450980663, alpha: 1) }
     class var navbarButtonColor: UIColor { return #colorLiteral(red: 0.2470588237, green: 0.3882353008, blue: 0.5450980663, alpha: 1) }
     class var navbarTintColor: UIColor { return #colorLiteral(red: 0.2470588237, green: 0.3882353008, blue: 0.5450980663, alpha: 1) }
     class var tabbarButtonColor: UIColor { return #colorLiteral(red: 0.2470588237, green: 0.3882353008, blue: 0.5450980663, alpha: 1) }
@@ -22,4 +22,5 @@ extension UIColor {
         backgroundView.backgroundColor = UIColor.clear
         return backgroundView
     }
+    class var unique: UIColor { return #colorLiteral(red: 0.9058823529, green: 0.9058823529, blue: 0.9058823529, alpha: 0.5) }
 }
