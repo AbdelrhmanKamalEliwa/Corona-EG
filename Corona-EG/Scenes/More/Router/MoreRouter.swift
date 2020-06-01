@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoreRouter: UIViewController {
+class MoreRouter {
     func navigateToInfectionMethodsScreen(from view: MoreView?) {
         let infectionMethodsView = InfectionMethodsRouter.createInfectionMethodsVC()
         if let viewController = view as? UIViewController {
@@ -30,10 +30,8 @@ class MoreRouter: UIViewController {
         }
     }
     
-    func navigateToAboutUsScreen() {
-        let aboutUsScreen = AboutUsViewController()
-        aboutUsScreen.modalPresentationStyle = .custom
-        aboutUsScreen.modalTransitionStyle = .crossDissolve
-        present(aboutUsScreen, animated: true, completion: nil)
-    }
+//    func navigateToAboutUsScreen(from view: MoreView?) -> UIViewController {
+//        let aboutUsView = AboutUsRouter.createAboutUsVC()
+//        return aboutUsView
+//    }
 }

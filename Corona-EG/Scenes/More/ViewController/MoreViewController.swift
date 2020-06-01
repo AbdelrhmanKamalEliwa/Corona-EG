@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoreViewController: BaseViewController, MoreView {
+class MoreViewController: BaseViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     internal var presenter: MoreViewControllerPresenter?
@@ -26,6 +26,15 @@ class MoreViewController: BaseViewController, MoreView {
     }
 }
 
+// MARK: - Presenter Delegate
+extension MoreViewController: MoreView {
+    func presentAboutUsView() {
+        let aboutUsView = AboutUsRouter.createAboutUsVC()
+        aboutUsView.modalPresentationStyle = .custom
+        aboutUsView.modalTransitionStyle = .crossDissolve
+        present(aboutUsView, animated: true, completion: nil)
+    }
+}
 
 // MARK: - Setup TableView
 extension MoreViewController: UITableViewDelegate, UITableViewDataSource {

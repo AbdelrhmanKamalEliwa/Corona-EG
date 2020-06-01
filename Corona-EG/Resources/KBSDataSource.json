@@ -1,0 +1,319 @@
+[
+    {
+        "language": "en",
+        "data": [
+            {
+                "question": "A temperature rise of more than 38?",
+                "answer": [
+                    {
+                        "answer": "Yes",
+                        "value": 2
+                    },
+                    {
+                        "answer": "No",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "Loss of smell?",
+                "answer": [
+                    {
+                        "answer": "Yes",
+                        "value": 2
+                    },
+                    {
+                        "answer": "No",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "Losing a sense of taste?",
+                "answer": [
+                    {
+                        "answer": "Yes",
+                        "value": 2
+                    },
+                    {
+                        "answer": "No",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "Severe or increased coughing?",
+                "answer": [
+                    {
+                        "answer": "Yes",
+                        "value": 2
+                    },
+                    {
+                        "answer": "No",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "Sore throat?",
+                "answer": [
+                    {
+                        "answer": "Yes",
+                        "value": 1
+                    },
+                    {
+                        "answer": "No",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "Vomiting or diarrhea?",
+                "answer": [
+                    {
+                        "answer": "Yes",
+                        "value": 1
+                    },
+                    {
+                        "answer": "No",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "Internal or external travel?",
+                "answer": [
+                    {
+                        "answer": "Yes",
+                        "value": 4
+                    },
+                    {
+                        "answer": "No",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "Mixed with an acute respiratory infection?",
+                "answer": [
+                    {
+                        "answer": "Yes",
+                        "value": 4
+                    },
+                    {
+                        "answer": "No",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "Visiting a health place where a positive health condition has been established?",
+                "answer": [
+                    {
+                        "answer": "Yes",
+                        "value": 3
+                    },
+                    {
+                        "answer": "No",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "A worker in the medical or sanitary sector?",
+                "answer": [
+                    {
+                        "answer": "Yes",
+                        "value": 2
+                    },
+                    {
+                        "answer": "No",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "Chronic disease?",
+                "answer": [
+                    {
+                        "answer": "Yes",
+                        "value": 1
+                    },
+                    {
+                        "answer": "No",
+                        "value": 0
+                    }
+                ]
+            }
+        ]
+    },
+    
+    {
+        "language": "ar",
+        "data": [
+            {
+                "question": "إرتفاع درجة الحرارة أكثر من ٣٨؟",
+                "answer": [
+                    {
+                        "answer": "نعم",
+                        "value": 2
+                    },
+                    {
+                        "answer": "لا",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "فقدان حاسة الشم؟",
+                "answer": [
+                    {
+                        "answer": "نعم",
+                        "value": 2
+                    },
+                    {
+                        "answer": "لا",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "فقدان حاسة التذوق؟",
+                "answer": [
+                    {
+                        "answer": "نعم",
+                        "value": 2
+                    },
+                    {
+                        "answer": "لا",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "سعال شديد أو متزايد؟",
+                "answer": [
+                    {
+                        "answer": "نعم",
+                        "value": 2
+                    },
+                    {
+                        "answer": "لا",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "إحتقان شديد بالحلق؟",
+                "answer": [
+                    {
+                        "answer": "نعم",
+                        "value": 1
+                    },
+                    {
+                        "answer": "لا",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "قيء أو إسهال؟",
+                "answer": [
+                    {
+                        "answer": "نعم",
+                        "value": 1
+                    },
+                    {
+                        "answer": "لا",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "سفر داخل او خارج مصر؟",
+                "answer": [
+                    {
+                        "answer": "نعم",
+                        "value": 4
+                    },
+                    {
+                        "answer": "لا",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "مخالطة لحالة إلتهاب تنفسي حاد؟",
+                "answer": [
+                    {
+                        "answer": "نعم",
+                        "value": 4
+                    },
+                    {
+                        "answer": "لا",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "زيارة مكان صحي ثبت فيه وجود حالة كورونا؟",
+                "answer": [
+                    {
+                        "answer": "نعم",
+                        "value": 3
+                    },
+                    {
+                        "answer": "لا",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "هل أنت من أحد العاملين بالقاع الطبي أو العزل الصحي؟",
+                "answer": [
+                    {
+                        "answer": "نعم",
+                        "value": 2
+                    },
+                    {
+                        "answer": "لا",
+                        "value": 0
+                    }
+                ]
+            },
+            
+            {
+                "question": "هل تعاني من مرض مزمن: سكر أو ضغط أو قلب؟",
+                "answer": [
+                    {
+                        "answer": "نعم",
+                        "value": 1
+                    },
+                    {
+                        "answer": "لا",
+                        "value": 0
+                    }
+                ]
+            }
+        ]
+    }
+]

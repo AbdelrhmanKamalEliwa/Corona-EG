@@ -8,11 +8,13 @@
 
 import UIKit
 
-class AboutUsViewController: UIViewController {
+class AboutUsViewController: UIViewController, AboutUsView {
+    var presenter: AboutUsViewControllerPresenter?
 
     @IBOutlet private weak var holderBackgroundView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = AboutUsViewControllerPresenter(view: self)
         setupCloseTouch()
     }
 

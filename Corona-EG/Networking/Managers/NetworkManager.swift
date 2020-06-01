@@ -16,7 +16,7 @@ class NetworkManager {
         url: URL, httpMethod: HTTPMethod, parameters: Data?,
         headers: [String: String]?, completionHandler: @escaping(_ result: APIResult<T>) -> ())
         -> URLSessionTask {
-        
+            
         // defining the type of method
         var urlRequest: URLRequest = URLRequest(url: url)
         urlRequest.httpMethod = httpMethod.rawValue
@@ -58,5 +58,23 @@ class NetworkManager {
         
         task.resume()
         return task
+    }
+    
+    func requestLocalJSONData<T: Codable>(
+        resource: String,
+        completionHandler: @escaping(_ result: APIResult<T>) -> ()) {
+        
+        let url =
+            URL(fileURLWithPath: Bundle.main.path(forResource: resource, ofType: "json")!)
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let decodedData = try JSONDecoder().decode(T.self, from: data)
+            completionHandler(.success(decodedData))
+            
+        } catch let error {
+            completionHandler(.decodingFailure(error))
+        }
+        
     }
 }

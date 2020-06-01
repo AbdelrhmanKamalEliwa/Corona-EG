@@ -17,6 +17,9 @@
 		F433F5FF247F9C7A00CAEE70 /* CountryDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F433F5FD247F9C7A00CAEE70 /* CountryDataCell.xib */; };
 		F433F601247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F600247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift */; };
 		F433F603247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F602247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift */; };
+		F443B6312485351000F2644E /* AboutUsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443B6302485351000F2644E /* AboutUsRouter.swift */; };
+		F443B6332485365400F2644E /* AboutUsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443B6322485365400F2644E /* AboutUsViewControllerPresenter.swift */; };
+		F453B56724851B9800BFB02C /* COVID19TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453B56624851B9800BFB02C /* COVID19TestRouter.swift */; };
 		F454FD66247E5939004EF907 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454FD65247E5939004EF907 /* FontStyle.swift */; };
 		F4576D31247FF11600911916 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4576D30247FF11600911916 /* CountryDetailsViewController.swift */; };
 		F4576D34247FF97D00911916 /* CounrtyDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4576D32247FF97D00911916 /* CounrtyDetailsCell.swift */; };
@@ -78,6 +81,10 @@
 		F4EEA54324837D4C00AECA9C /* SocialMediaCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA54224837D4C00AECA9C /* SocialMediaCases.swift */; };
 		F4EEA5452483AB5900AECA9C /* PreventionTipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA5442483AB5900AECA9C /* PreventionTipsData.swift */; };
 		F4EEA54924842B0300AECA9C /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA54824842B0300AECA9C /* UITabBar+Extension.swift */; };
+		F4EEA54E2484C8DE00AECA9C /* KBSDataSource.json in Resources */ = {isa = PBXBuildFile; fileRef = F4EEA54D2484C8DE00AECA9C /* KBSDataSource.json */; };
+		F4EEA5502484D69400AECA9C /* CoronaTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA54F2484D69400AECA9C /* CoronaTestModel.swift */; };
+		F4EEA5572484E16100AECA9C /* COVID19TestViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA5562484E16100AECA9C /* COVID19TestViewControllerPresenter.swift */; };
+		F4EEA5592484E17A00AECA9C /* COVID19TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA5582484E17A00AECA9C /* COVID19TestInteractor.swift */; };
 		F4EEFBC0247CB23300B1FA31 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBA247CB23300B1FA31 /* Cairo-Black.ttf */; };
 		F4EEFBC1247CB23300B1FA31 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBB247CB23300B1FA31 /* Cairo-Regular.ttf */; };
 		F4EEFBC2247CB23300B1FA31 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4EEFBBC247CB23300B1FA31 /* Cairo-SemiBold.ttf */; };
@@ -101,6 +108,9 @@
 		F433F5FD247F9C7A00CAEE70 /* CountryDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryDataCell.xib; sourceTree = "<group>"; };
 		F433F600247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUpdatesViewControllerRouter.swift; sourceTree = "<group>"; };
 		F433F602247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsAPIEnvironmentPath.swift; sourceTree = "<group>"; };
+		F443B6302485351000F2644E /* AboutUsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsRouter.swift; sourceTree = "<group>"; };
+		F443B6322485365400F2644E /* AboutUsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewControllerPresenter.swift; sourceTree = "<group>"; };
+		F453B56624851B9800BFB02C /* COVID19TestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19TestRouter.swift; sourceTree = "<group>"; };
 		F454FD65247E5939004EF907 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		F4576D30247FF11600911916 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		F4576D32247FF97D00911916 /* CounrtyDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounrtyDetailsCell.swift; sourceTree = "<group>"; };
@@ -167,6 +177,10 @@
 		F4EEA54224837D4C00AECA9C /* SocialMediaCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaCases.swift; sourceTree = "<group>"; };
 		F4EEA5442483AB5900AECA9C /* PreventionTipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionTipsData.swift; sourceTree = "<group>"; };
 		F4EEA54824842B0300AECA9C /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
+		F4EEA54D2484C8DE00AECA9C /* KBSDataSource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KBSDataSource.json; sourceTree = "<group>"; };
+		F4EEA54F2484D69400AECA9C /* CoronaTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaTestModel.swift; sourceTree = "<group>"; };
+		F4EEA5562484E16100AECA9C /* COVID19TestViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19TestViewControllerPresenter.swift; sourceTree = "<group>"; };
+		F4EEA5582484E17A00AECA9C /* COVID19TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19TestInteractor.swift; sourceTree = "<group>"; };
 		F4EEFBBA247CB23300B1FA31 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
 		F4EEFBBB247CB23300B1FA31 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
 		F4EEFBBC247CB23300B1FA31 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -271,6 +285,14 @@
 				F433F602247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift */,
 			);
 			path = StatisticsAPI;
+			sourceTree = "<group>";
+		};
+		F453B56424851B0700BFB02C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F453B56624851B9800BFB02C /* COVID19TestRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		F4576D2B247FE5D600911916 /* CountryDetailsScreen */ = {
@@ -580,6 +602,7 @@
 		F4A83A892482B50F004DBF7F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				F443B6322485365400F2644E /* AboutUsViewControllerPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -587,6 +610,7 @@
 		F4A83A8A2482B514004DBF7F /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				F443B6302485351000F2644E /* AboutUsRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -594,6 +618,9 @@
 		F4AFAC562480D57B000EB979 /* COVID19Test */ = {
 			isa = PBXGroup;
 			children = (
+				F453B56424851B0700BFB02C /* Router */,
+				F4EEA5532484E0E100AECA9C /* Interactor */,
+				F4EEA5542484E0E800AECA9C /* Presenter */,
 				F4A83A6524825A12004DBF7F /* ViewController */,
 			);
 			path = COVID19Test;
@@ -669,6 +696,7 @@
 				F4AFAC5D24810F55000EB979 /* InfectionMethodsData.swift */,
 				F4EEA5442483AB5900AECA9C /* PreventionTipsData.swift */,
 				F4A83A8024829917004DBF7F /* MoreScreensData.swift */,
+				F4EEA54F2484D69400AECA9C /* CoronaTestModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -676,7 +704,6 @@
 		F4BD1205247BC6DF00740150 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F4A83A862482B4BC004DBF7F /* AboutUs */,
 				F4C2BA6A247CE2DA00844D4E /* Base */,
 				F4BD1207247BC7BD00740150 /* News */,
 				F433F5EE247F947C00CAEE70 /* NumbersUpdates */,
@@ -686,6 +713,7 @@
 				F4A83A5C24813E84004DBF7F /* InfectionMethods */,
 				F4A83A6C24826168004DBF7F /* PreventionTips */,
 				F45E5A5B247DFF11008891B6 /* EmergencyContacts */,
+				F4A83A862482B4BC004DBF7F /* AboutUs */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -720,6 +748,7 @@
 		F4BD120A247BC81A00740150 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F4EEA54D2484C8DE00AECA9C /* KBSDataSource.json */,
 				F4BD1201247BC66200740150 /* Localization */,
 				F4EEFBC7247CB79600B1FA31 /* Application */,
 				F4BD1202247BC6C200740150 /* Assets */,
@@ -790,6 +819,22 @@
 			isa = PBXGroup;
 			children = (
 				F4C2BA87247D45CC00844D4E /* NewsViewControllerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F4EEA5532484E0E100AECA9C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F4EEA5582484E17A00AECA9C /* COVID19TestInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F4EEA5542484E0E800AECA9C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F4EEA5562484E16100AECA9C /* COVID19TestViewControllerPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -888,6 +933,7 @@
 				F4BD11E9247A466E00740150 /* Main.storyboard in Resources */,
 				F4BD121C247CA9C600740150 /* Images.xcassets in Resources */,
 				F4BD1220247CAA5400740150 /* Colors.xcassets in Resources */,
+				F4EEA54E2484C8DE00AECA9C /* KBSDataSource.json in Resources */,
 				F4C2BA83247D3E4D00844D4E /* NewsCell.xib in Resources */,
 				F45E5A67247E1382008891B6 /* EmergencyContactsCell.xib in Resources */,
 				F4C2BA86247D3FA100844D4E /* .swiftlint.yml in Resources */,
@@ -963,8 +1009,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4576D31247FF11600911916 /* CountryDetailsViewController.swift in Sources */,
+				F4EEA5572484E16100AECA9C /* COVID19TestViewControllerPresenter.swift in Sources */,
+				F4EEA5502484D69400AECA9C /* CoronaTestModel.swift in Sources */,
 				F4C2BA88247D45CC00844D4E /* NewsViewControllerPresenter.swift in Sources */,
 				F4576D34247FF97D00911916 /* CounrtyDetailsCell.swift in Sources */,
+				F4EEA5592484E17A00AECA9C /* COVID19TestInteractor.swift in Sources */,
 				F433F601247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift in Sources */,
 				F45E5A52247D4A7E008891B6 /* NewsAPIEnvironmentPath.swift in Sources */,
 				F4A83A8124829917004DBF7F /* MoreScreensData.swift in Sources */,
@@ -984,6 +1033,7 @@
 				F471A9C22482BFA3002D0BDE /* InfectionMethodsRouter.swift in Sources */,
 				F4EEA54324837D4C00AECA9C /* SocialMediaCases.swift in Sources */,
 				F433F5E9247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift in Sources */,
+				F443B6312485351000F2644E /* AboutUsRouter.swift in Sources */,
 				F471A9D12482DB8D002D0BDE /* AboutUsViewController.swift in Sources */,
 				F4576D3A247FFB7600911916 /* CountryDetailsViewControllerPresenter.swift in Sources */,
 				F4EEA5452483AB5900AECA9C /* PreventionTipsData.swift in Sources */,
@@ -995,8 +1045,10 @@
 				F4BD1210247BCE4A00740150 /* UIFont+Extension.swift in Sources */,
 				F433F5F3247F966E00CAEE70 /* NumbersUpdatesViewController.swift in Sources */,
 				F45E5A63247DFFF0008891B6 /* EmergencyContacts.swift in Sources */,
+				F453B56724851B9800BFB02C /* COVID19TestRouter.swift in Sources */,
 				F45E5A4D247D4A76008891B6 /* HTTPMethod.swift in Sources */,
 				F45E5A61247DFF8A008891B6 /* EmergencyContactsViewController.swift in Sources */,
+				F443B6332485365400F2644E /* AboutUsViewControllerPresenter.swift in Sources */,
 				F4AFAC5E24810F55000EB979 /* InfectionMethodsData.swift in Sources */,
 				F471A9C02482BEB9002D0BDE /* MoreRouter.swift in Sources */,
 				F4A83A7C24827419004DBF7F /* MoreViewCell.swift in Sources */,

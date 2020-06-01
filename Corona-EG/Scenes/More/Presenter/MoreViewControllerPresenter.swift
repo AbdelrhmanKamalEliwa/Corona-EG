@@ -10,6 +10,7 @@ import Foundation
 
 protocol MoreView: class {
     var presenter: MoreViewControllerPresenter? { get set }
+    func presentAboutUsView()
 }
 
 protocol MoreCellView {
@@ -50,7 +51,7 @@ class MoreViewControllerPresenter {
         case .EmergencyContacts:
             router.navigateToEmergencyContactsScreen(from: view)
         case .AboutUs:
-            router.navigateToAboutUsScreen()
+            view?.presentAboutUsView()
         case .none:
             break
         }

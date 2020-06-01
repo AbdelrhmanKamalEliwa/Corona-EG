@@ -12,5 +12,5 @@ enum MoreScreensCases: Int {
     case InfectionMethods = 0
     case PreventionTips = 1
     case EmergencyContacts = 2
-    case AboutUs = 4
+    case AboutUs = 3
 }
