@@ -22,12 +22,13 @@ class EmergencyContactsCell: UITableViewCell, EmergencyContactsCellView {
         contactNumber.text = number
     }
     
-    func displayCellUI() {
+    private func displayCellUI() {
         containerView.layer.masksToBounds = false
         containerView.backgroundColor = UIColor.white
         containerView.layer.shadowOffset = CGSize(width: 3, height: 3)
         containerView.layer.shadowColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         containerView.layer.shadowOpacity = 2
+        contactName.textColor = UIColor.titleColor
     }
     
 //    @objc func change() {

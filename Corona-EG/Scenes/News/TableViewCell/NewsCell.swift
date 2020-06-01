@@ -40,7 +40,7 @@ class NewsCell: UITableViewCell, NewsCellView {
         articleDescription.text = description
     }
     
-    func displayCellUI() {
+    private func displayCellUI() {
         containerView.layer.masksToBounds = false
         containerView.backgroundColor = UIColor.white
         containerView.layer.shadowOffset = CGSize(width: 3, height: 3)

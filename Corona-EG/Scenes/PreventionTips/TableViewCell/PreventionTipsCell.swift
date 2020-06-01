@@ -15,8 +15,13 @@ class PreventionTipsCell: UITableViewCell, PreventionTipsCellView {
     func displayLabel(_ answer: String) {
         tipLabel.text = answer
     }
-
+    
+    private func displayCellUI() {
+        tipLabel.textColor = UIColor.titleColor
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        displayCellUI()
     }
 }

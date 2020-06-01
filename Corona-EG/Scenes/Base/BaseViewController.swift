@@ -104,7 +104,6 @@ extension BaseViewController {
         if currentLanguage == "en" { return true } else { return false }
     }
     
-    
     func changeLanguage() {
         if checkForEnglishLanguage(currentLanguage) {
             LocalizationSystem.sharedInstance.setLanguage(languageCode: "ar")

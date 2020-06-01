@@ -28,7 +28,7 @@
                         <rect key="frame" x="10" y="10" width="261" height="224"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fnx-01-9dB">
-                                <rect key="frame" x="5" y="0.0" width="251" height="147"/>
+                                <rect key="frame" x="0.0" y="0.0" width="261" height="147"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="147" id="XBF-dT-OFZ"/>
                                 </constraints>
@@ -42,7 +42,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGt-14-fqk">
-                                <rect key="frame" x="5" y="122" width="251" height="26.5"/>
+                                <rect key="frame" x="0.0" y="122" width="261" height="26.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -57,15 +57,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="kGt-14-fqk" secondAttribute="trailing" constant="5" id="2fa-Nm-4v7"/>
+                            <constraint firstAttribute="trailing" secondItem="kGt-14-fqk" secondAttribute="trailing" id="2fa-Nm-4v7"/>
                             <constraint firstAttribute="bottom" secondItem="W9i-il-mkw" secondAttribute="bottom" constant="10" id="5HZ-3d-WxO"/>
-                            <constraint firstItem="Fnx-01-9dB" firstAttribute="leading" secondItem="Isw-Pa-nd1" secondAttribute="leading" constant="5" id="BcP-14-FIn"/>
+                            <constraint firstItem="Fnx-01-9dB" firstAttribute="leading" secondItem="Isw-Pa-nd1" secondAttribute="leading" id="BcP-14-FIn"/>
                             <constraint firstItem="W9i-il-mkw" firstAttribute="leading" secondItem="Isw-Pa-nd1" secondAttribute="leading" constant="10" id="LKn-eY-laM"/>
                             <constraint firstItem="kGt-14-fqk" firstAttribute="top" secondItem="Fnx-01-9dB" secondAttribute="bottom" constant="-25" id="Lwx-J4-n4c"/>
                             <constraint firstAttribute="trailing" secondItem="W9i-il-mkw" secondAttribute="trailing" constant="10" id="OYg-0c-i0T"/>
-                            <constraint firstItem="kGt-14-fqk" firstAttribute="leading" secondItem="Isw-Pa-nd1" secondAttribute="leading" constant="5" id="S2x-K9-Yzc"/>
+                            <constraint firstItem="kGt-14-fqk" firstAttribute="leading" secondItem="Isw-Pa-nd1" secondAttribute="leading" id="S2x-K9-Yzc"/>
                             <constraint firstItem="W9i-il-mkw" firstAttribute="top" secondItem="Fnx-01-9dB" secondAttribute="bottom" constant="10" id="UMx-a5-KQG"/>
-                            <constraint firstAttribute="trailing" secondItem="Fnx-01-9dB" secondAttribute="trailing" constant="5" id="lC1-Mv-HTp"/>
+                            <constraint firstAttribute="trailing" secondItem="Fnx-01-9dB" secondAttribute="trailing" id="lC1-Mv-HTp"/>
                             <constraint firstItem="Fnx-01-9dB" firstAttribute="top" secondItem="Isw-Pa-nd1" secondAttribute="top" id="u36-m6-OGE"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

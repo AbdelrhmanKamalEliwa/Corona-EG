@@ -22,12 +22,13 @@ class MoreViewCell: UITableViewCell, MoreCellView {
         screenTitle.text = title
     }
     
-    func displayCellUI() {
+    private func displayCellUI() {
         containerView.layer.masksToBounds = false
         containerView.backgroundColor = UIColor.white
         containerView.layer.shadowOffset = CGSize(width: 3, height: 3)
         containerView.layer.shadowColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         containerView.layer.shadowOpacity = 2
+        screenTitle.textColor = UIColor.titleColor
     }
     
     override func awakeFromNib() {

@@ -21,7 +21,13 @@ class InfectionMethodCell: UITableViewCell, InfectionMethodsCellView {
         answerLabel.text = answer
     }
     
+    private func displayCellUI() {
+        questionLabel.textColor = UIColor.titleColor
+        answerLabel.textColor = UIColor.subTitleColor
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        displayCellUI()
     }
 }
