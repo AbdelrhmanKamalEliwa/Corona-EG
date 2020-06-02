@@ -10,6 +10,10 @@
 "error_title" = "خطأ";
 "error_button" = "حسننا";
 
+//Settings Screen
+"settings_screen_title" = "الخصائص";
+"settings_screen_done_button_title" = "إغلاق";
+
 //Change Language
 "language_type" = "EN";
 "change_language_title" = "تغيير اللغة";
@@ -18,7 +22,7 @@
 "chnage_language_cancel_button_title" = "إلغاء";
 "change_language" = "غير اللغه";
 
-// Result Screen
+//Result Screen
 "screen_title" = "النتيجة";
 "screen_result_title_1" = "إطمئن";
 "screen_result_title_2" = "إصابه غير مؤكدة";

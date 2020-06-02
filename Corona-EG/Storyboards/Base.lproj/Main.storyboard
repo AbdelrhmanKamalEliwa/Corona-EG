@@ -362,20 +362,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NiS-Vt-mQ1">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="119" width="414" height="777"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5S-7p-g2x">
+                                <rect key="frame" x="0.0" y="44" width="414" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywo-fl-JNM">
+                                        <rect key="frame" x="20" y="20" width="273.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4M-V9-kzw">
+                                        <rect key="frame" x="313.5" y="20" width="80.5" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="BBZ-1V-K78"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doneButtonTapped:" destination="WwM-KZ-aCm" eventType="touchUpInside" id="S9b-I7-uva"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="w4M-V9-kzw" firstAttribute="leading" secondItem="Ywo-fl-JNM" secondAttribute="trailing" constant="20" id="1RZ-zd-def"/>
+                                    <constraint firstAttribute="trailing" secondItem="w4M-V9-kzw" secondAttribute="trailing" constant="20" id="ASD-5G-r4f"/>
+                                    <constraint firstItem="w4M-V9-kzw" firstAttribute="top" secondItem="y5S-7p-g2x" secondAttribute="top" constant="20" id="FzO-Zj-HWk"/>
+                                    <constraint firstAttribute="bottom" secondItem="w4M-V9-kzw" secondAttribute="bottom" constant="20" id="WbG-bj-lvx"/>
+                                    <constraint firstItem="Ywo-fl-JNM" firstAttribute="leading" secondItem="y5S-7p-g2x" secondAttribute="leading" constant="20" id="X8d-54-8vB"/>
+                                    <constraint firstItem="Ywo-fl-JNM" firstAttribute="top" secondItem="y5S-7p-g2x" secondAttribute="top" constant="20" id="cYP-Da-QQS"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ywo-fl-JNM" secondAttribute="bottom" constant="20" id="qBS-Zd-TsF"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="y5S-7p-g2x" firstAttribute="top" secondItem="qOO-ET-1Lf" secondAttribute="top" id="0wc-sO-eSr"/>
                             <constraint firstAttribute="bottom" secondItem="NiS-Vt-mQ1" secondAttribute="bottom" id="189-jy-Vwk"/>
                             <constraint firstItem="NiS-Vt-mQ1" firstAttribute="leading" secondItem="qOO-ET-1Lf" secondAttribute="leading" id="25e-BF-6Aq"/>
+                            <constraint firstItem="NiS-Vt-mQ1" firstAttribute="top" secondItem="y5S-7p-g2x" secondAttribute="bottom" id="Dvj-bN-QEe"/>
+                            <constraint firstItem="w4M-V9-kzw" firstAttribute="width" secondItem="FTm-Go-MMN" secondAttribute="width" multiplier="0.194444" id="GfX-lm-jba"/>
+                            <constraint firstItem="y5S-7p-g2x" firstAttribute="leading" secondItem="qOO-ET-1Lf" secondAttribute="leading" id="bLS-tI-smG"/>
+                            <constraint firstItem="y5S-7p-g2x" firstAttribute="trailing" secondItem="qOO-ET-1Lf" secondAttribute="trailing" id="c6g-A6-lPx"/>
                             <constraint firstItem="NiS-Vt-mQ1" firstAttribute="trailing" secondItem="qOO-ET-1Lf" secondAttribute="trailing" id="cMR-qQ-szT"/>
-                            <constraint firstItem="NiS-Vt-mQ1" firstAttribute="top" secondItem="qOO-ET-1Lf" secondAttribute="top" id="x6W-Yq-IcQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qOO-ET-1Lf"/>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="w4M-V9-kzw" id="M87-GX-ygp"/>
+                        <outlet property="screenTitle" destination="Ywo-fl-JNM" id="TR6-Bh-vhv"/>
                         <outlet property="tableView" destination="NiS-Vt-mQ1" id="fua-ju-x4M"/>
                     </connections>
                 </viewController>

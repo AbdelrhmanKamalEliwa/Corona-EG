@@ -10,6 +10,10 @@
 "error_title" = "Error";
 "error_button" = "GOT IT";
 
+//Settings Screen
+"settings_screen_title" = "Preferences";
+"settings_screen_done_button_title" = "Close";
+
 //Change Language
 "language_type" = "AR";
 "change_language_title" = "Change Language";
@@ -18,7 +22,7 @@
 "chnage_language_cancel_button_title" = "Cancel";
 "change_language" = "Change Language";
 
-// Result Screen
+//Result Screen
 "screen_title" = "Result";
 "screen_result_title_1" = "CALM DOWN";
 "screen_result_title_2" = "UNCONFIRMED CASE";

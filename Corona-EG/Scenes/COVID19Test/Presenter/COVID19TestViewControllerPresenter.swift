@@ -106,6 +106,6 @@ class COVID19TestViewControllerPresenter {
     }
     
     private func getProgress() -> Float {
-        return Float(questionNumber + 1) / Float(questions.count)
+        return Float(questionNumber) / Float(questions.count)
     }
 }

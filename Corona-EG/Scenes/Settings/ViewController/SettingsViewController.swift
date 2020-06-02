@@ -12,21 +12,32 @@ import SafariServices
 class SettingsViewController: BaseViewController {
     internal var presenter: SettingsViewControllerPresenter?
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var doneButton: UIButton!
+    @IBOutlet private weak var screenTitle: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SettingsViewControllerPresenter(view: self)
+        presenter?.viewDidLoad()
         setupTableView()
+    }
+    
+    @IBAction private func doneButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
 // MARK: - Presenter Delegate
 extension SettingsViewController: SettingsView {
-    func changeCurrentLanguage() {
-        let changeLanguageTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "change_language_title", comment: "")
-        let changeLanguageMessage = LocalizationSystem.sharedInstance.localizedStringForKey(key: "change_language_message", comment: "")
-        let doneButtonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "chnage_language_done_button_title", comment: "")
-        let cancelButtonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "chnage_language_cancel_button_title", comment: "")
-        presentGenericAlert(viewController: self, title: changeLanguageTitle, message: changeLanguageMessage, doneButtonTitle: doneButtonTitle, dismissButtonTitle: cancelButtonTitle) { (_) in
+    func displayScreenNavBar(_ title: String, buttonTitle: String) {
+        screenTitle.text = title
+        doneButton.setTitle(buttonTitle, for: .normal)
+        screenTitle.textColor = UIColor.mainColor
+        doneButton.tintColor = .lightGray
+        doneButton.backgroundColor = UIColor.mainColor
+    }
+    
+    func changeCurrentLanguage(_ languageTitle: String, _ languageMessage: String, _ doneButtonTitle: String, _ cancelButtonTitle: String) {
+        presentGenericAlert(viewController: self, title: languageTitle, message: languageMessage, doneButtonTitle: doneButtonTitle, dismissButtonTitle: cancelButtonTitle) { (_) in
             self.changeLanguage()
         }
     }
