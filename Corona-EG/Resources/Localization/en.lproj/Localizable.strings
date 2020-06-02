@@ -18,6 +18,16 @@
 "chnage_language_cancel_button_title" = "Cancel";
 "change_language" = "Change Language";
 
+// Result Screen
+"screen_title" = "Result";
+"screen_result_title_1" = "CALM DOWN";
+"screen_result_title_2" = "UNCONFIRMED CASE";
+"screen_result_title_3" = "CONFIRMED CASE";
+"screen_result_description_1" = "It appears that the result of your test shows that you do not have corona disease, but you must adhere quarantine to avoid having Corona disease.";
+"screen_result_description_2" = "It appears that your test result indicates that you may have an infection, but you need to consult a doctor to confirm whether or not your infection is confirmed.";
+"screen_result_description_3" = "Your test result confirms that you are infected with the Coronavirus and you must call 105. Do not contact anyone and stay home until health support comes to you.";
+"screen_result_button" = "Got it";
+
 //Search Bar
 "search" = "Search for a country ...";
 

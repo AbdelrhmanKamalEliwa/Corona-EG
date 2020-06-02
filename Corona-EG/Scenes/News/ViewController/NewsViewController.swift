@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import SKActivityIndicatorView
 import SafariServices
+import SVProgressHUD
 
 class NewsViewController: BaseViewController {
     
@@ -31,13 +31,13 @@ class NewsViewController: BaseViewController {
 extension NewsViewController: NewsView {
     func showIndicator() {
         DispatchQueue.main.async {
-            SKActivityIndicator.show()
+            SVProgressHUD.show()
         }
     }
     
     func hideIndicator() {
         DispatchQueue.main.async {
-            SKActivityIndicator.dismiss()
+            SVProgressHUD.dismiss()
         }
     }
     

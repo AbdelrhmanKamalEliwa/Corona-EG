@@ -6,8 +6,7 @@ target 'Corona-EG' do
   use_frameworks!
 
   # Pods for Corona-EG
-  pod 'SideMenu'
   pod 'Kingfisher', '~> 5.0'
-  pod 'SKActivityIndicatorView', '~> 1.0.0'
+  pod 'SVProgressHUD'
 
 end

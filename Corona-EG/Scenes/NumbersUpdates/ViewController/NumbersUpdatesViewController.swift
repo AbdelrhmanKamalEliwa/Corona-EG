@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SKActivityIndicatorView
+import SVProgressHUD
 
 class NumbersUpdatesViewController: BaseViewController {
     
@@ -38,13 +38,13 @@ class NumbersUpdatesViewController: BaseViewController {
 extension NumbersUpdatesViewController: NumbersUpdatesView {
     func showIndicator() {
         DispatchQueue.main.async {
-            SKActivityIndicator.show()
+            SVProgressHUD.show()
         }
     }
     
     func hideIndicator() {
         DispatchQueue.main.async {
-            SKActivityIndicator.dismiss()
+            SVProgressHUD.dismiss()
         }
     }
     

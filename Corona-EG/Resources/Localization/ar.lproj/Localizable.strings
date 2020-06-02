@@ -18,6 +18,16 @@
 "chnage_language_cancel_button_title" = "إلغاء";
 "change_language" = "غير اللغه";
 
+// Result Screen
+"screen_title" = "النتيجة";
+"screen_result_title_1" = "إطمئن";
+"screen_result_title_2" = "إصابه غير مؤكدة";
+"screen_result_title_3" = "إصابه مؤكدة";
+"screen_result_description_1" = "يبدو ان نتيجة اختبارك تُظهر بأنك لا تعاني من مرض كورونا، لكن عليك الإلتزام بالعزل المنزلي لتجنب إصابتك بمرض كورونا.";
+"screen_result_description_2" = "يبدو أن نتيجة اختبارك تبين أنك قد تكون مصاب ولكن تحتاج إلي استشارة الطبييب للتأكد من إذا كانت إصابتك مؤكده أم لا.";
+"screen_result_description_3" = "نتيجة إختبارك تؤكد بأنك مصاب بفيروس كورونا ويجب عليك الإتصال ب ١٠٥، لا تخالط احد وإلتزم المنزل حتى يأتي إليك الدعم الصحي.";
+"screen_result_button" = "حسنا";
+
 //Search Bar
 "search" = "ابحث عن دولة ...";
 

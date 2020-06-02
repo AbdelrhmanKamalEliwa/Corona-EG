@@ -3,7 +3,7 @@
         "language": "en",
         "data": [
             {
-                "question": "A temperature rise of more than 38?",
+                "question": "Is the body temperature above 38?",
                 "answer": [
                     {
                         "answer": "Yes",
@@ -17,7 +17,7 @@
             },
             
             {
-                "question": "Loss of smell?",
+                "question": "Do you suffer from loss of smell?",
                 "answer": [
                     {
                         "answer": "Yes",
@@ -31,7 +31,7 @@
             },
             
             {
-                "question": "Losing a sense of taste?",
+                "question": "Do you suffer from loss of taste?",
                 "answer": [
                     {
                         "answer": "Yes",
@@ -45,7 +45,7 @@
             },
             
             {
-                "question": "Severe or increased coughing?",
+                "question": "Do you suffer from severe or increased cough?",
                 "answer": [
                     {
                         "answer": "Yes",
@@ -59,7 +59,7 @@
             },
             
             {
-                "question": "Sore throat?",
+                "question": "Do you have a sore throat?",
                 "answer": [
                     {
                         "answer": "Yes",
@@ -73,7 +73,7 @@
             },
             
             {
-                "question": "Vomiting or diarrhea?",
+                "question": "Do you vomit or have diarrhea?",
                 "answer": [
                     {
                         "answer": "Yes",
@@ -87,7 +87,7 @@
             },
             
             {
-                "question": "Internal or external travel?",
+                "question": "Have you traveled inside or outside Egypt?",
                 "answer": [
                     {
                         "answer": "Yes",
@@ -101,7 +101,7 @@
             },
             
             {
-                "question": "Mixed with an acute respiratory infection?",
+                "question": "Have you got in contact with an acute respiratory syndrome case?",
                 "answer": [
                     {
                         "answer": "Yes",
@@ -115,7 +115,7 @@
             },
             
             {
-                "question": "Visiting a health place where a positive health condition has been established?",
+                "question": "Have you been to a place where a corona case was confirmed there?",
                 "answer": [
                     {
                         "answer": "Yes",
@@ -129,7 +129,7 @@
             },
             
             {
-                "question": "A worker in the medical or sanitary sector?",
+                "question": "Are you a medical or a health worker?",
                 "answer": [
                     {
                         "answer": "Yes",
@@ -143,7 +143,7 @@
             },
             
             {
-                "question": "Chronic disease?",
+                "question": "Do you suffer from a chronic disease: diabetes, blood pressure, or heart disease?",
                 "answer": [
                     {
                         "answer": "Yes",
@@ -288,7 +288,7 @@
             },
             
             {
-                "question": "هل أنت من أحد العاملين بالقاع الطبي أو العزل الصحي؟",
+                "question": "هل أنت من أحد العاملين بالقطاع الطبي أو العزل الصحي؟",
                 "answer": [
                     {
                         "answer": "نعم",

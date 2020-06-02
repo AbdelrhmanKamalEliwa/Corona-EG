@@ -2,25 +2,21 @@ PODS:
   - Kingfisher (5.14.0):
     - Kingfisher/Core (= 5.14.0)
   - Kingfisher/Core (5.14.0)
-  - SideMenu (6.4.8)
-  - SKActivityIndicatorView (1.0.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Kingfisher (~> 5.0)
-  - SideMenu
-  - SKActivityIndicatorView (~> 1.0.0)
+  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
     - Kingfisher
-    - SideMenu
-    - SKActivityIndicatorView
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
-  SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
-  SKActivityIndicatorView: 81c123380127ad497f9b57cd4d11347e40ab3427
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: f90386e00306fa243657728f4a88ad0a03d49c3d
+PODFILE CHECKSUM: 16dd4f1708ea733273174f81695cc8b4fc40468a
 
 COCOAPODS: 1.8.4

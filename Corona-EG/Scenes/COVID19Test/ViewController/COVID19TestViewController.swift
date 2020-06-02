@@ -7,18 +7,17 @@
 //
 
 import UIKit
-import SKActivityIndicatorView
+import SVProgressHUD
 
 class COVID19TestViewController: BaseViewController {
 
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var yesAnswerButton: UIButton!
-    @IBOutlet weak var noAnswerButton: UIButton!
-    @IBOutlet weak var progressView: UIProgressView!
-    
-    var presenter: COVID19TestViewControllerPresenter?
-    let interactor = COVID19TestInteractor()
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var questionLabel: UILabel!
+    @IBOutlet private weak var yesAnswerButton: UIButton!
+    @IBOutlet private weak var noAnswerButton: UIButton!
+    @IBOutlet private weak var progressView: UIProgressView!
+    internal var presenter: COVID19TestViewControllerPresenter?
+    private let interactor = COVID19TestInteractor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +30,12 @@ class COVID19TestViewController: BaseViewController {
         presenter?.viewDidLoad()
     }
     
-    @IBAction func answerButtonTapped(_ sender: UIButton) {
+    @IBAction private func answerButtonTapped(_ sender: UIButton) {
         presenter?.answerButtonTapped(sender.tag)
     }
     
     
-    func displayContainerViewUI() {
+    private func displayContainerViewUI() {
         containerView.layer.masksToBounds = false
         containerView.backgroundColor = UIColor.white
         containerView.layer.shadowOffset = .zero
@@ -46,39 +45,45 @@ class COVID19TestViewController: BaseViewController {
         containerView.layer.cornerRadius = 5
     }
     
-    func displayAnswerButtonsUI() {
+    private func displayAnswerButtonsUI() {
         yesAnswerButton.layer.masksToBounds = false
         yesAnswerButton.backgroundColor = #colorLiteral(red: 0, green: 0.6233705282, blue: 0.3099619448, alpha: 1)
         yesAnswerButton.tintColor = UIColor.white
         yesAnswerButton.layer.cornerRadius = 25
-        
         noAnswerButton.layer.masksToBounds = false
         noAnswerButton.backgroundColor = #colorLiteral(red: 0.741633296, green: 0.2273621857, blue: 0.1601242423, alpha: 1)
         noAnswerButton.tintColor = UIColor.white
         noAnswerButton.layer.cornerRadius = 25
     }
     
-    func displayQuestionLabelUI() {
+    private func displayQuestionLabelUI() {
         questionLabel.textColor = UIColor.titleColor
     }
     
-    func displayProgressViewUI() {
+    private func displayProgressViewUI() {
         progressView.tintColor = UIColor.mainColor
     }
 }
 
 // MARK: - Presenter Delegate
 extension COVID19TestViewController: COVID19TestView {
+    func navigateToResultScreen(score: Int) {
+        let covid19TestResultView = COVID19TestResultRouter.createCOVID19TestResultVC(score: score)
+        covid19TestResultView.modalPresentationStyle = .custom
+        covid19TestResultView.modalTransitionStyle = .crossDissolve
+        present(covid19TestResultView, animated: true, completion: nil)
+    }
+    
     func displayProgressView(_ number: Float) {
         progressView.progress = number
     }
     
     func showIndicator() {
-        SKActivityIndicator.show()
+        SVProgressHUD.show()
     }
     
     func hideIndicator() {
-        SKActivityIndicator.dismiss()
+        SVProgressHUD.dismiss()
     }
     
     func displayData(_ question: String, _ yesAnswerButtonTitle: String, _ noAnswerButtonTitle: String) {
@@ -88,7 +93,11 @@ extension COVID19TestViewController: COVID19TestView {
     }
     
     func showError(error: String) {
-//
+        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
+        let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
+        DispatchQueue.main.async {
+            self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)
+        }
     }
     
     

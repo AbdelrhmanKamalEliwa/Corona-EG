@@ -15,6 +15,7 @@ protocol COVID19TestView: class {
     func displayData(_ question: String, _ yesAnswerButtonTitle: String, _ noAnswerButtonTitle: String)
     func displayProgressView(_ number: Float)
     func showError(error: String)
+    func navigateToResultScreen(score: Int)
 }
 
 
@@ -22,7 +23,6 @@ class COVID19TestViewControllerPresenter {
     
     private weak var view: COVID19TestView?
     private let interactor: COVID19TestInteractor
-    
     private var data: [CoronaTestModel] = []
     private var questions: [Question] = []
     private let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
@@ -90,10 +90,8 @@ class COVID19TestViewControllerPresenter {
     private func checkAnswer(_ answer: Int) {
         if answer == 1 {
             score += questions[questionNumber].answer[0].value
-            print(score)
         } else {
             score += questions[questionNumber].answer[1].value
-            print(score)
         }
     }
     
@@ -101,6 +99,7 @@ class COVID19TestViewControllerPresenter {
         if questionNumber + 1 < questions.count {
             questionNumber += 1
         } else {
+            view?.navigateToResultScreen(score: score)
             questionNumber = 0
             score = 0
         }

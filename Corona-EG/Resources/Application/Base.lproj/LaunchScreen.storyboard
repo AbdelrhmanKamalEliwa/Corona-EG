@@ -19,9 +19,9 @@
                                 <rect key="frame" x="87" y="268" width="240" height="170"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL ABOUT COVID-19 IS HERE!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IM4-hX-HP9">
-                                <rect key="frame" x="30" y="513" width="354" height="32"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                <color key="textColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <rect key="frame" x="30" y="513" width="354" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.24705882352941178" green="0.38823529411764707" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

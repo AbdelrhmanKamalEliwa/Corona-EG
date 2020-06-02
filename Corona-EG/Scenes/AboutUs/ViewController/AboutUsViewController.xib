@@ -17,7 +17,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutUsViewController" customModule="Corona_EG" customModuleProvider="target">
             <connections>
+                <outlet property="facebookButton" destination="xu8-Gv-88K" id="ZBw-w2-lQh"/>
+                <outlet property="githubButton" destination="8Zm-G2-4pY" id="jx0-Aq-Iam"/>
+                <outlet property="gmailButton" destination="oCS-HC-zxv" id="T8W-mq-vc7"/>
                 <outlet property="holderBackgroundView" destination="Gg0-Vq-fGe" id="c75-0T-OD8"/>
+                <outlet property="linkedinButton" destination="HTC-YG-aj7" id="Ehg-JT-zcD"/>
+                <outlet property="twitterButton" destination="Q6a-TO-TB4" id="BL4-0d-1BO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
