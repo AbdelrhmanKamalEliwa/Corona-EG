@@ -18,4 +18,8 @@ struct EndPointRouter {
     static var getCountriesData: URL {
         return URL(string: StatisticsAPIService.baseURL())!
     }
+    
+    static var website: URL {
+        return URL(string: "https://corona-eg.firebaseapp.com/")!
+    }
 }

@@ -14,7 +14,8 @@
 "language_type" = "EN";
 "change_language_title" = "تغيير اللغة";
 "change_language_message" = "ستتغير لغة التطبيق إلى اللغة الإنجليزية";
-"chnage_language_button_title" = "إستمر";
+"chnage_language_done_button_title" = "إستمر";
+"chnage_language_cancel_button_title" = "إلغاء";
 "change_language" = "غير اللغه";
 
 //Search Bar
@@ -33,8 +34,9 @@
 "about_us" = "عن المطور";
 "contact_us" = "راسلنا";
 
-//Setting Button
+//Settings Screen Titles
 "change_language" = "تغيير اللغه";
+"website" = "زيارة الموقع الإلكتروني";
 
 //Contacts Names
 "contact_name_1" = "وزارة الصحه";

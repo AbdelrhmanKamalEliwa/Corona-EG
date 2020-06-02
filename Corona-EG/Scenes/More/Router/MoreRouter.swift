@@ -29,9 +29,4 @@ class MoreRouter {
             viewController.navigationController?.pushViewController(emergencyContactsView, animated: true)
         }
     }
-    
-//    func navigateToAboutUsScreen(from view: MoreView?) -> UIViewController {
-//        let aboutUsView = AboutUsRouter.createAboutUsVC()
-//        return aboutUsView
-//    }
 }

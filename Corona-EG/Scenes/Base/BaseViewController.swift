@@ -47,12 +47,9 @@ extension BaseViewController {
     }
     
     @objc func rightSideBarButtonItemTapped(_ sender: UIBarButtonItem!) {
-        let changeLanguageTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "change_language_title", comment: "")
-        let changeLanguageMessage = LocalizationSystem.sharedInstance.localizedStringForKey(key: "change_language_message", comment: "")
-        let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "chnage_language_button_title", comment: "")
-        presentGenericAlert(viewController: self, title: changeLanguageTitle, message: changeLanguageMessage, buttonTitle: buttonTitle) { (_) in
-            self.changeLanguage()
-        }
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let settingsVC = storyboard.instantiateViewController(identifier: "SettingsViewController")
+        present(settingsVC, animated: true, completion: nil)
     }
 }
 
@@ -122,12 +119,25 @@ extension BaseViewController {
 
 // MARK: - GenericAlert
 extension BaseViewController {
-    func presentGenericAlert(viewController: UIViewController, title: String, message: String, buttonTitle: String, completion: @escaping(_ done: Bool) -> Void = {_ in}) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: buttonTitle, style: .default) { (_) in
-            completion(true)
+    func presentGenericAlert(viewController: UIViewController, title: String, message: String, doneButtonTitle: String, dismissButtonTitle: String?, completion: @escaping(_ done: Bool) -> Void = {_ in}) {
+        
+        if dismissButtonTitle != nil {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let doneAction = UIAlertAction(title: doneButtonTitle, style: .cancel) { (_) in
+                completion(true)
+            }
+            let dissmisAction = UIAlertAction(title: dismissButtonTitle, style: .destructive, handler: nil)
+            alert.addAction(doneAction)
+            alert.addAction(dissmisAction)
+            viewController.present(alert, animated: true, completion: nil)
+            
+        } else {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let doneAction = UIAlertAction(title: doneButtonTitle, style: .cancel) { (_) in
+                completion(true)
+            }
+            alert.addAction(doneAction)
+            viewController.present(alert, animated: true, completion: nil)
         }
-        alert.addAction(dismissAction)
-        viewController.present(alert, animated: true, completion: nil)
     }
 }

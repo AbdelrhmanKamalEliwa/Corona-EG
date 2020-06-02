@@ -14,7 +14,8 @@
 "language_type" = "AR";
 "change_language_title" = "Change Language";
 "change_language_message" = "The application language will change to the Arabic language";
-"chnage_language_button_title" = "Go Ahead";
+"chnage_language_done_button_title" = "Go Ahead";
+"chnage_language_cancel_button_title" = "Cancel";
 "change_language" = "Change Language";
 
 //Search Bar
@@ -33,8 +34,9 @@
 "about_us" = "About Us";
 "contact_us" = "Contact Us";
 
-//Setting Button
+//Settings Screen Titles
 "change_language" = "Change Language";
+"website" = "Go to Corona EG Website";
 
 //Contacts Names
 "contact_name_1" = "Ministry of Health";

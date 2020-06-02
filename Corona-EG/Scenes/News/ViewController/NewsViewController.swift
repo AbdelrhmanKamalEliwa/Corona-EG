@@ -51,7 +51,7 @@ extension NewsViewController: NewsView {
         let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
         let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
         DispatchQueue.main.async {
-            self.presentGenericAlert(viewController: self, title: title, message: error, buttonTitle: buttonTitle)
+            self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)
         }
     }
 }
