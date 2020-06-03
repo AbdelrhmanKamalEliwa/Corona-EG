@@ -7,16 +7,39 @@
 //
 
 import UIKit
+import SVProgressHUD
 
-class PreventionTipsViewController: BaseViewController, PreventionTipsView {
-    var presenter: PreventionTipsViewControllerPresenter?
+class PreventionTipsViewController: BaseViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    internal var presenter: PreventionTipsViewControllerPresenter?
+    fileprivate let interactor = PreventionTipsInteractor()
+    @IBOutlet private weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = PreventionTipsViewControllerPresenter(view: self)
+        presenter = PreventionTipsViewControllerPresenter(view: self, interactor: interactor)
         setupInnerScreensNavigationBar(navbarScreenTitle: .PreventionTips)
         setupTableView()
+        presenter?.viewDidLoad()
+    }
+}
+
+// MARK: - Presenter Delegate
+extension PreventionTipsViewController: PreventionTipsView {
+    func showIndicator() {
+        SVProgressHUD.show()
+    }
+    
+    func hideIndicator() {
+        SVProgressHUD.dismiss()
+    }
+    
+    func showError(_ error: String) {
+        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
+        let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
+        DispatchQueue.main.async {
+            self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)
+        }
     }
 }
 
@@ -38,7 +61,7 @@ extension PreventionTipsViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter?.getMethodsCount() ?? 0
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! PreventionTipsCell
         cell.selectedBackgroundView = UIColor.selectedCellBackgroundColor()

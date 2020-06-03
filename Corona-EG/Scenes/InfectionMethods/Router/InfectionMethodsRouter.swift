@@ -19,8 +19,9 @@ class InfectionMethodsRouter {
     
     class func createInfectionMethodsVC() -> UIViewController {
         let infectionMethodsViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.identifier)
+        let interactor = InfectionMethodsInteractor()
         if let infectionMethodsView = infectionMethodsViewController as? InfectionMethodsView {
-            let presenter = InfectionMethodsViewControllerPresenter(view: infectionMethodsView)
+            let presenter = InfectionMethodsViewControllerPresenter(view: infectionMethodsView, interactor: interactor)
             infectionMethodsView.presenter = presenter
         }
         return infectionMethodsViewController

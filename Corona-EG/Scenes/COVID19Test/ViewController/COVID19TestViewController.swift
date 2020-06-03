@@ -99,6 +99,4 @@ extension COVID19TestViewController: COVID19TestView {
             self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)
         }
     }
-    
-    
 }

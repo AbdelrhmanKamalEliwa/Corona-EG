@@ -7,20 +7,41 @@
 //
 
 import UIKit
+import SVProgressHUD
 
-class InfectionMethodsViewController: BaseViewController, InfectionMethodsView {
+class InfectionMethodsViewController: BaseViewController {
     
     internal var presenter: InfectionMethodsViewControllerPresenter?
-    @IBOutlet weak var tableView: UITableView!
+    private let interactor = InfectionMethodsInteractor()
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = InfectionMethodsViewControllerPresenter(view: self)
+        presenter = InfectionMethodsViewControllerPresenter(view: self, interactor: interactor)
         setupInnerScreensNavigationBar(navbarScreenTitle: .InfectionMethods)
         setupTableView()
+        presenter?.viewDidLoad()
     }
 }
 
+// MARK: - Presenter Delegate
+extension InfectionMethodsViewController: InfectionMethodsView {
+    func showIndicator() {
+        SVProgressHUD.show()
+    }
+    
+    func hideIndicator() {
+        SVProgressHUD.dismiss()
+    }
+    
+    func showError(_ error: String) {
+        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
+        let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
+        DispatchQueue.main.async {
+            self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)
+        }
+    }
+}
 
 // MARK: - Setup TableView
 extension InfectionMethodsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -40,7 +61,7 @@ extension InfectionMethodsViewController: UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter?.getMethodsCount() ?? 0
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! InfectionMethodCell
         cell.selectedBackgroundView = UIColor.selectedCellBackgroundColor()

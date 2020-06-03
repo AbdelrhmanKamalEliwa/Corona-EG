@@ -88,7 +88,8 @@ class NewsViewControllerPresenter {
     func didSelectRow(at index: Int) -> URL {
         let mockUrl = "https://www.google.com"
         if let url = news[index].url {
-            return URL(string: url)!
+            let urlwithPercentEscapes = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+            return URL(string: urlwithPercentEscapes!)!
         } else {
             return URL(string: mockUrl)!
         }

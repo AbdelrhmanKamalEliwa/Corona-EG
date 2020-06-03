@@ -19,8 +19,9 @@ class PreventionTipsRouter {
     
     class func createPreventionTipsVC() -> UIViewController {
         let preventionTipsViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.identifier)
+        let interactor = PreventionTipsInteractor()
         if let preventionTipsView = preventionTipsViewController as? PreventionTipsView {
-            let presenter = PreventionTipsViewControllerPresenter(view: preventionTipsView)
+            let presenter = PreventionTipsViewControllerPresenter(view: preventionTipsView, interactor: interactor)
             preventionTipsView.presenter = presenter
         }
         return preventionTipsViewController

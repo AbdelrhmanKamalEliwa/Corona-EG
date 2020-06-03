@@ -10,6 +10,9 @@ import Foundation
 
 protocol InfectionMethodsView: class {
     var presenter: InfectionMethodsViewControllerPresenter? { get set }
+    func showIndicator()
+    func hideIndicator()
+    func showError(_ error: String)
 }
 
 protocol InfectionMethodsCellView {
@@ -19,21 +22,52 @@ protocol InfectionMethodsCellView {
 
 class InfectionMethodsViewControllerPresenter {
     private weak var view: InfectionMethodsView?
-    private let infectionMethodsData = InfectionMethodData().data
+    private let interactor: InfectionMethodsInteractor
+    private var infectionMethods: [InfectionMethodsModel] = []
+    private var infectionMethodsQuestions: [InfectionMethodQuestion] = []
+    private let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
     
-    init(view: InfectionMethodsView?) {
+    init(view: InfectionMethodsView?, interactor: InfectionMethodsInteractor) {
         self.view = view
+        self.interactor = interactor
+    }
+    
+    func viewDidLoad() {
+        getData()
+    }
+    
+    private func getData() {
+        view?.showIndicator()
+        interactor.getData { [weak self] (data, error) in
+            guard let self = self else { return }
+            self.view?.hideIndicator()
+            if let error = error {
+                self.view?.showError(error.localizedDescription)
+            } else {
+                guard let data = data else { return }
+                self.infectionMethods = data
+                self.checkDataLanguage()
+            }
+        }
+    }
+    
+    private func checkDataLanguage() {
+        for data in infectionMethods {
+            if data.language == currentLanguage {
+                infectionMethodsQuestions = data.data
+            }
+        }
     }
     
     func getMethodsCount() -> Int {
-        infectionMethodsData.count
+        infectionMethodsQuestions.count
     }
     
     func cellConfiguartion(cell: InfectionMethodsCellView, for index: Int) {
-        let infectionMethod = infectionMethodsData[index]
-        let question = LocalizationSystem.sharedInstance.localizedStringForKey(key: infectionMethod.question, comment: "")
+        let infectionMethod = infectionMethodsQuestions[index]
+        let question = infectionMethod.question
         cell.displayQuestion(question)
-        let answer = LocalizationSystem.sharedInstance.localizedStringForKey(key: infectionMethod.answer, comment: "")
+        let answer = infectionMethod.answer
         cell.displayAnswer(answer)
     }
 }
