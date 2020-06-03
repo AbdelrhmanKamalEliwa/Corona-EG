@@ -25,8 +25,6 @@ class PreventionTipsViewControllerPresenter {
     private var preventionTipsModel: [PreventionTipsModel] = []
     private var preventionTips: [PreventionTip] = []
     private let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
-
-    private let preventionTipsData = PreventionTipsData().data
     
     init(view: PreventionTipsView?, interactor: PreventionTipsInteractor) {
         self.view = view

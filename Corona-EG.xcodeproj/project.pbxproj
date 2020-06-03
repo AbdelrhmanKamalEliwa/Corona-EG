@@ -94,7 +94,6 @@
 		F4C2BA8A247D46FC00844D4E /* NewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2BA89247D46FC00844D4E /* NewsInteractor.swift */; };
 		F4ED7FE8247E69EC00DCA13B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7FE7247E69EC00DCA13B /* UIColor+Extension.swift */; };
 		F4EEA54324837D4C00AECA9C /* SocialMediaCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA54224837D4C00AECA9C /* SocialMediaCases.swift */; };
-		F4EEA5452483AB5900AECA9C /* PreventionTipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA5442483AB5900AECA9C /* PreventionTipsData.swift */; };
 		F4EEA54924842B0300AECA9C /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA54824842B0300AECA9C /* UITabBar+Extension.swift */; };
 		F4EEA54E2484C8DE00AECA9C /* KBSDataSource.json in Resources */ = {isa = PBXBuildFile; fileRef = F4EEA54D2484C8DE00AECA9C /* KBSDataSource.json */; };
 		F4EEA5502484D69400AECA9C /* CoronaTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEA54F2484D69400AECA9C /* CoronaTestModel.swift */; };
@@ -205,7 +204,6 @@
 		F4C2BA89247D46FC00844D4E /* NewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInteractor.swift; sourceTree = "<group>"; };
 		F4ED7FE7247E69EC00DCA13B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		F4EEA54224837D4C00AECA9C /* SocialMediaCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaCases.swift; sourceTree = "<group>"; };
-		F4EEA5442483AB5900AECA9C /* PreventionTipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionTipsData.swift; sourceTree = "<group>"; };
 		F4EEA54824842B0300AECA9C /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
 		F4EEA54D2484C8DE00AECA9C /* KBSDataSource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KBSDataSource.json; sourceTree = "<group>"; };
 		F4EEA54F2484D69400AECA9C /* CoronaTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaTestModel.swift; sourceTree = "<group>"; };
@@ -805,7 +803,6 @@
 				F45E5A62247DFFF0008891B6 /* EmergencyContacts.swift */,
 				F433F5F4247F97CE00CAEE70 /* CountyDataModel.swift */,
 				F4576D3B248003AA00911916 /* CountryData.swift */,
-				F4EEA5442483AB5900AECA9C /* PreventionTipsData.swift */,
 				F4A83A8024829917004DBF7F /* MoreScreensData.swift */,
 				F4EEA54F2484D69400AECA9C /* CoronaTestModel.swift */,
 				F443B63F2486138100F2644E /* SettingsScreenTitles.swift */,
@@ -1166,7 +1163,6 @@
 				F443B6312485351000F2644E /* AboutUsRouter.swift in Sources */,
 				F471A9D12482DB8D002D0BDE /* AboutUsViewController.swift in Sources */,
 				F4576D3A247FFB7600911916 /* CountryDetailsViewControllerPresenter.swift in Sources */,
-				F4EEA5452483AB5900AECA9C /* PreventionTipsData.swift in Sources */,
 				F4A83A6724825A31004DBF7F /* COVID19TestViewController.swift in Sources */,
 				F49F97402487965B0032753E /* PreventionTipsModel.swift in Sources */,
 				F4BD1200247BBFEB00740150 /* LocalizationSystem.swift in Sources */,
