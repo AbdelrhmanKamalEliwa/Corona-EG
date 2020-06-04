@@ -10,7 +10,7 @@ import Foundation
 
 struct StatisticsAPIService {
     static func baseURL() -> String {
-        return StatisticsAPIEnvironmentPath.development.scheme() + StatisticsAPIEnvironmentPath.development.host() + "/v3/stats/worldometer/country"
+        return StatisticsAPIEnvironmentPath.production.scheme() + StatisticsAPIEnvironmentPath.production.host() + "/v3/stats/worldometer/country"
     }
 }
 
@@ -23,11 +23,11 @@ enum StatisticsAPIEnvironmentPath {
     func scheme() -> String {
         switch self {
         case .development:
-            return "https://"
+            return "http://"
         case .testing:
-            return ""
+            return "http://"
         case .production:
-            return ""
+            return "https://"
         }
     }
     
@@ -36,9 +36,9 @@ enum StatisticsAPIEnvironmentPath {
         case .development:
             return "api.coronatracker.com"
         case .testing:
-            return ""
+            return "api.coronatracker.com"
         case .production:
-            return ""
+            return "api.coronatracker.com"
         }
     }
     

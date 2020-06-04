@@ -10,7 +10,7 @@ import Foundation
 
 struct FlagsAPIService {
     static func baseURL() -> String {
-        return FlagsAPIEnvironmentPath.development.scheme() + FlagsAPIEnvironmentPath.development.host() + "/"
+        return FlagsAPIEnvironmentPath.production.scheme() + FlagsAPIEnvironmentPath.production.host() + "/"
     }
 }
 
@@ -25,9 +25,9 @@ enum FlagsAPIEnvironmentPath {
         case .development:
             return "https://"
         case .testing:
-            return ""
+            return "https://"
         case .production:
-            return ""
+            return "https://"
         }
     }
     
@@ -36,9 +36,9 @@ enum FlagsAPIEnvironmentPath {
         case .development:
             return "www.countryflags.io"
         case .testing:
-            return ""
+            return "www.countryflags.io"
         case .production:
-            return ""
+            return "www.countryflags.io"
         }
     }
     

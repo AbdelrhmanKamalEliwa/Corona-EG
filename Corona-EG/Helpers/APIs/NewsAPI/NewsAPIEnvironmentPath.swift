@@ -10,7 +10,7 @@ import Foundation
 
 struct NewsAPIService {
     static func baseURL() -> String {
-        return NewsAPIEnvironmentPath.development.scheme() + NewsAPIEnvironmentPath.development.host() + "/v2/top-headlines?apiKey=" + NewsAPIEnvironmentPath.development.apiKey()
+        return NewsAPIEnvironmentPath.production.scheme() + NewsAPIEnvironmentPath.production.host() + "/v2/top-headlines?apiKey=" + NewsAPIEnvironmentPath.production.apiKey()
     }
 }
 
@@ -23,11 +23,11 @@ enum NewsAPIEnvironmentPath {
     func scheme() -> String {
         switch self {
         case .development:
-            return "https://"
+            return "http://"
         case .testing:
-            return ""
+            return "http://"
         case .production:
-            return ""
+            return "https://"
         }
     }
     
@@ -36,9 +36,9 @@ enum NewsAPIEnvironmentPath {
         case .development:
             return "newsapi.org"
         case .testing:
-            return ""
+            return "newsapi.org"
         case .production:
-            return ""
+            return "newsapi.org"
         }
     }
     
@@ -47,9 +47,9 @@ enum NewsAPIEnvironmentPath {
         case .development:
             return "ea66210c1d70444bac81823333127c8d"
         case .testing:
-            return ""
+            return "ea66210c1d70444bac81823333127c8d"
         case .production:
-            return ""
+            return "ea66210c1d70444bac81823333127c8d"
         }
     }
     
