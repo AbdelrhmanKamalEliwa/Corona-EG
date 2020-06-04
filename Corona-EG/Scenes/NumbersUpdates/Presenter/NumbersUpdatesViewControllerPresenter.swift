@@ -16,19 +16,6 @@ protocol NumbersUpdatesView: class {
     func showError(error: String)
 }
 
-protocol NumbersUpdatesCellView {
-    func displayMoreDetailsLabel(_ moreDetailsLabel: String)
-    func displyaCountryNameLabel(_ countyName: String?)
-    func displayTotalConfirmedNumber(_ number: String?)
-    func displayTotalDeathsNumber(_ number: String?)
-    func displayTotalRecoverdNumber(_ number: String?)
-    func displayActiveCasesNumber(_ number: String?)
-    func displayTotalConfirmedLabel(_ label: String?)
-    func displayTotalDeathsLabel(_ label: String?)
-    func displayTotalRecoverdLabel(_ label: String?)
-    func displayActiveCasesLabel(_ label: String?)
-}
-
 protocol CountryDataCellView {
     func displyaCountryName(_ countryName: String)
     func displayCountryImage(_ countryImage: String?)
@@ -39,7 +26,6 @@ protocol CountryDataCellView {
     func displayDailyConfirmed(_ dailyConfirmedLabel: String, _ dailyConfirmedNumber: String?)
     func displayDailyDeaths(_ dailyDeathsLabel: String, _ dailyDeathsNumber: String?)
     func displayTotalCritical(_ totalCriticalLabel: String, _ totalCriticalNumber: String?)
-
     func setBodyViewTopConstraint(_ constant: Int)
 }
 
@@ -91,11 +77,7 @@ class NumbersUpdatesViewControllerPresenter {
     }
     
     func getCountriesCount() -> Int {
-        if searching {
-            return filteredCountries.count
-        } else {
-            return countries.count
-        }
+        ifSearching().count
     }
     
     

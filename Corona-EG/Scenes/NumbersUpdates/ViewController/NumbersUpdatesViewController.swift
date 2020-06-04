@@ -10,7 +10,7 @@ import UIKit
 import SVProgressHUD
 
 class NumbersUpdatesViewController: BaseViewController {
-    @IBOutlet private weak var tableViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var searchBarTopConstraint: NSLayoutConstraint!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
     internal var presenter: NumbersUpdatesViewControllerPresenter?
@@ -96,8 +96,10 @@ extension NumbersUpdatesViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! CountryDataTableViewCell
         tableView.deselectRow(at: indexPath, animated: true)
+//        tableView.beginUpdates()
         presenter?.didSelectRow(cell: cell, at: indexPath.row)
-        tableView.reloadRows(at: [indexPath], with: .automatic)
+        tableView.reloadRows(at: [indexPath], with: .none)
+//        tableView.endUpdates()
     }
 }
 
@@ -128,11 +130,11 @@ extension NumbersUpdatesViewController: UITextFieldDelegate {
 extension NumbersUpdatesViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if tableView.panGestureRecognizer.translation(in: self.view).y < 0 {
-            tableViewTopConstraint.constant = 0
+            searchBarTopConstraint.constant = 44
             navbar.isHidden = true
             UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
         } else {
-            tableViewTopConstraint.constant = 50
+            searchBarTopConstraint.constant = 88
             navbar.isHidden = false
             UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
         }

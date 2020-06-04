@@ -124,5 +124,4 @@ class CountryDataTableViewCell: UITableViewCell, CountryDataCellView {
         super.awakeFromNib()
         displayCellUI()
     }
-    
 }

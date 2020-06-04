@@ -57,7 +57,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ioa-Vl-9Lx">
-                                <rect key="frame" x="0.0" y="138" width="414" height="675"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -65,10 +65,10 @@
                         <constraints>
                             <constraint firstItem="mvd-cN-JWJ" firstAttribute="bottom" secondItem="ioa-Vl-9Lx" secondAttribute="bottom" id="5tq-rI-qb4"/>
                             <constraint firstItem="UVP-00-l9n" firstAttribute="trailing" secondItem="mvd-cN-JWJ" secondAttribute="trailing" id="9DA-dd-rzF"/>
-                            <constraint firstItem="ioa-Vl-9Lx" firstAttribute="top" secondItem="mvd-cN-JWJ" secondAttribute="top" constant="50" id="LFv-NQ-t2n"/>
                             <constraint firstItem="UVP-00-l9n" firstAttribute="leading" secondItem="mvd-cN-JWJ" secondAttribute="leading" id="XWA-uK-XqV"/>
-                            <constraint firstItem="UVP-00-l9n" firstAttribute="top" secondItem="mvd-cN-JWJ" secondAttribute="top" id="btp-oh-qvP"/>
+                            <constraint firstItem="UVP-00-l9n" firstAttribute="top" secondItem="XgX-I0-Ms5" secondAttribute="top" constant="88" id="btp-oh-qvP"/>
                             <constraint firstItem="ioa-Vl-9Lx" firstAttribute="leading" secondItem="mvd-cN-JWJ" secondAttribute="leading" id="do9-dr-ZCe"/>
+                            <constraint firstItem="ioa-Vl-9Lx" firstAttribute="top" secondItem="UVP-00-l9n" secondAttribute="bottom" id="kx1-fD-YWM"/>
                             <constraint firstItem="mvd-cN-JWJ" firstAttribute="trailing" secondItem="ioa-Vl-9Lx" secondAttribute="trailing" id="nBY-Aa-x7F"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mvd-cN-JWJ"/>
@@ -76,14 +76,14 @@
                     <navigationItem key="navigationItem" id="tWt-pn-5BT"/>
                     <connections>
                         <outlet property="searchBar" destination="UVP-00-l9n" id="jfc-5V-4Gx"/>
+                        <outlet property="searchBarTopConstraint" destination="btp-oh-qvP" id="Zqz-WM-3gg"/>
                         <outlet property="tableView" destination="ioa-Vl-9Lx" id="umu-Lz-a9d"/>
-                        <outlet property="tableViewTopConstraint" destination="LFv-NQ-t2n" id="wTc-r9-HiZ"/>
                         <segue destination="5bM-E1-5Tk" kind="presentation" id="jFB-2a-hNm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="br6-Uq-bYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="229" y="-717"/>
+            <point key="canvasLocation" x="228.98550724637684" y="-717.1875"/>
         </scene>
         <!--Country Details View Controller-->
         <scene sceneID="pQ4-pZ-OWv">
