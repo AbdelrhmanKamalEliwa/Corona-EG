@@ -88,6 +88,12 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         let webViewController = SFSafariViewController(url: url!)
         present(webViewController, animated: true, completion: nil)
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == (presenter?.getNewsCount() ?? 0) - 1 {
+            presenter?.viewDidLoad()
+        }
+    }
 }
 
 // MARK: - Setup RefreshController

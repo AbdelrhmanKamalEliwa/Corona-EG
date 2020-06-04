@@ -26,6 +26,7 @@ class NewsViewControllerPresenter {
     private weak var view: NewsView?
     private let interactor: NewsInteractor
     private var news: [Article] = []
+    private var pageIndex = 1
     private let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
     
     init(view: NewsView?, interactor: NewsInteractor) {
@@ -51,7 +52,7 @@ class NewsViewControllerPresenter {
             country = Countries.Egypt
         }
         guard let safeCountry = country else { return }
-        interactor.getNews(country: safeCountry) { [weak self] (news, error) in
+        interactor.getNews(country: safeCountry, pageIndex: pageIndex) { [weak self] (news, error) in
             guard let self = self else { return }
             self.view?.hideIndicator()
             if let error = error {
@@ -64,7 +65,8 @@ class NewsViewControllerPresenter {
                         safeNews.append(article)
                     }
                 }
-                self.news = safeNews
+                self.news.append(contentsOf: safeNews)
+                self.pageIndex += 1
                 self.view?.fetchDataSuccess()
             }
         }

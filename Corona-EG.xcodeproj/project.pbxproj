@@ -372,7 +372,7 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		F45E5A56247D4F8A008891B6 /* API */ = {
+		F45E5A56247D4F8A008891B6 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
 				F45E5A4F247D4A7D008891B6 /* EndPointRouter.swift */,
@@ -380,7 +380,7 @@
 				F433F604247FB16000CAEE70 /* NewsAPI */,
 				F433F605247FB16900CAEE70 /* StatisticsAPI */,
 			);
-			path = API;
+			path = APIs;
 			sourceTree = "<group>";
 		};
 		F45E5A57247D4FD1008891B6 /* Managers */ = {
@@ -831,7 +831,7 @@
 		F4BD120E247BCE2A00740150 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				F45E5A56247D4F8A008891B6 /* API */,
+				F45E5A56247D4F8A008891B6 /* APIs */,
 				F45E5A53247D4C8A008891B6 /* Enums */,
 				F4BD1211247BCECE00740150 /* Extensions */,
 			);

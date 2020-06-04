@@ -9,10 +9,10 @@
 import Foundation
 
 class NewsInteractor {
-    func getNews(country: Countries, completionHandler: @escaping (NewsModel?, Error?) -> ()) {
+    func getNews(country: Countries, pageIndex: Int, completionHandler: @escaping (NewsModel?, Error?) -> ()) {
         let networkManager = NetworkManager()
         _ = networkManager.request(
-            url: EndPointRouter.getNews(country: country), httpMethod: .get,
+            url: EndPointRouter.getNews(country: country, at: pageIndex), httpMethod: .get,
         parameters: nil, headers: nil) { (result: APIResult<NewsModel>) in
             switch result {
             case .success(let data):

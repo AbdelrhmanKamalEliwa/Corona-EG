@@ -11,8 +11,9 @@ import Foundation
 struct EndPointRouter {
     static var getNews: URL { return URL(string: NewsAPIService.baseURL())! }
     
-    static func getNews(country: Countries) -> URL {
-        return URL(string: NewsAPIService.baseURL() + "&country=" + country.rawValue + "&category=health")!
+    static func getNews(country: Countries, at page: Int) -> URL {
+        return URL(string: NewsAPIService.baseURL() +
+            "&page=" + String(abs(page)) + "&pageSize=20" + "&country=" + country.rawValue + "&category=health")!
     }
     
     static var getCountriesData: URL {
