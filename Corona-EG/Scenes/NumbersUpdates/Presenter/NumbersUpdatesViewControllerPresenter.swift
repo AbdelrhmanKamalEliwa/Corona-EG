@@ -29,15 +29,30 @@ protocol NumbersUpdatesCellView {
     func displayActiveCasesLabel(_ label: String?)
 }
 
+protocol CountryDataCellView {
+    func displyaCountryName(_ countryName: String)
+    func displayCountryImage(_ countryImage: String?)
+    func displayTotalConfirmed(_ totalConfirmedLabel: String, _ totalConfirmedNumber: String?)
+    func displayTotalDeaths(_ totalDeathsLabel: String, _ totalDeathsNumber: String?)
+    func displayTotalRecoverd(_ totalRecoverdLabel: String, _ totalRecoverdNumber: String?)
+    func displayActiveCases(_ activeCasesLabel: String, _ activeCasesNumber: String?)
+    func displayDailyConfirmed(_ dailyConfirmedLabel: String, _ dailyConfirmedNumber: String?)
+    func displayDailyDeaths(_ dailyDeathsLabel: String, _ dailyDeathsNumber: String?)
+    func displayTotalCritical(_ totalCriticalLabel: String, _ totalCriticalNumber: String?)
+
+    func setBodyViewTopConstraint(_ constant: Int)
+}
+
 
 class NumbersUpdatesViewControllerPresenter {
-    
     private weak var view: NumbersUpdatesView?
     private let interactor: NumbersUpdatesInteractor
     private let router: NumbersUpdatesViewControllerRouter
     private var countries: [CountryDataModel] = []
     private var filteredCountries: [CountryDataModel] = []
     private var searching = false
+    private var isCollapce = false
+    private var selectedIndex = -1
     
     init(view: NumbersUpdatesView?, interactor: NumbersUpdatesInteractor, router: NumbersUpdatesViewControllerRouter) {
         self.view = view
@@ -58,7 +73,9 @@ class NumbersUpdatesViewControllerPresenter {
                 self.view?.showError(error: error.localizedDescription)
             } else {
                 guard let countries = countries else { return }
-                self.countries = countries
+                self.countries = countries.filter { (country) -> Bool in
+                    country.countryCode != nil
+                }
                 self.view?.fetchDataSuccess()
             }
         }
@@ -83,56 +100,86 @@ class NumbersUpdatesViewControllerPresenter {
         }
     }
     
-    private func cellLanguageConfiguration(cell: NumbersUpdatesCellView) {
-        let moreDetailsLabel = LocalizationSystem.sharedInstance.localizedStringForKey(key: "more_details", comment: "")
-        cell.displayMoreDetailsLabel(moreDetailsLabel)
-        let totalConfirmedLabel = LocalizationSystem.sharedInstance.localizedStringForKey(key: "total_confirmed", comment: "")
-        cell.displayTotalConfirmedLabel(totalConfirmedLabel)
-        let totalDeathsLabel = LocalizationSystem.sharedInstance.localizedStringForKey(key: "total_deaths", comment: "")
-        cell.displayTotalDeathsLabel(totalDeathsLabel)
-        let totalRecoverdLabel = LocalizationSystem.sharedInstance.localizedStringForKey(key: "total_recovered", comment: "")
-        cell.displayTotalRecoverdLabel(totalRecoverdLabel)
-        let activeCasesLabel = LocalizationSystem.sharedInstance.localizedStringForKey(key: "active_cases", comment: "")
-        cell.displayActiveCasesLabel(activeCasesLabel)
+    
+    private func getTotalConfirmedLabel() -> String {
+        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "total_confirmed", comment: "")
     }
     
-    func cellConfiguration(cell: NumbersUpdatesCellView, for index: Int) {
-        cellLanguageConfiguration(cell: cell)
+    private func getTotalDeathsLabel() -> String {
+        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "total_deaths", comment: "")
+    }
+    
+    private func getTotalRecoverdLabel() -> String {
+        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "total_recovered", comment: "")
+    }
+    
+    private func getActiveCasesLabel() -> String {
+        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "active_cases", comment: "")
+    }
+    
+    private func getDailyConfirmedLabel() -> String {
+        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "daily_confirmed", comment: "")
+    }
+    
+    private func getDailyDeathsLabel() -> String {
+        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "daily_deaths", comment: "")
+    }
+    
+    private func getTotalCriticalLabel() -> String {
+        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "total_critical", comment: "")
+    }
+    
+    private func ifSearching() -> [CountryDataModel] {
         if searching {
-            let country = filteredCountries[index]
-            guard let countryName = country.country else { return }
-            cell.displyaCountryNameLabel(countryName)
-            guard let totalConfirmedNumber = country.totalConfirmed else { return }
-            cell.displayTotalConfirmedNumber(String(totalConfirmedNumber))
-            guard let totalDeathsNumber = country.totalDeaths else { return }
-            cell.displayTotalDeathsNumber(String(totalDeathsNumber))
-            guard let totalRecoverdNumber = country.totalRecovered else { return }
-            cell.displayTotalRecoverdNumber(String(totalRecoverdNumber))
-            guard let activeCasesNumber = country.activeCases else { return }
-            cell.displayActiveCasesNumber(String(activeCasesNumber))
+            return filteredCountries
         } else {
-            let country = countries[index]
-            guard let countryName = country.country else { return }
-            cell.displyaCountryNameLabel(countryName)
-            guard let totalConfirmedNumber = country.totalConfirmed else { return }
-            cell.displayTotalConfirmedNumber(String(totalConfirmedNumber))
-            guard let totalDeathsNumber = country.totalDeaths else { return }
-            cell.displayTotalDeathsNumber(String(totalDeathsNumber))
-            guard let totalRecoverdNumber = country.totalRecovered else { return }
-            cell.displayTotalRecoverdNumber(String(totalRecoverdNumber))
-            guard let activeCasesNumber = country.activeCases else { return }
-            cell.displayActiveCasesNumber(String(activeCasesNumber))
+            return countries
         }
     }
     
-    func didSelectRow(at index: Int) {
-        if searching {
-            let country = filteredCountries[index]
-            router.navigateToCountryDetailsScreen(from: view, countryData: country)
-        } else {
-            let country = countries[index]
-            router.navigateToCountryDetailsScreen(from: view, countryData: country)
-        }
+    func cellConfiguration(cell: CountryDataCellView, for index: Int) {
+        let country = ifSearching()[index]
+        guard let countryImage = country.countryCode else { return }
+        cell.displayCountryImage(countryImage)
+        guard let countryName = country.country else { return }
+        cell.displyaCountryName(countryName)
+        guard let totalConfirmedNumber = country.totalConfirmed else { return }
+        cell.displayTotalConfirmed(getTotalConfirmedLabel(), String(totalConfirmedNumber))
+        guard let totalDeathsNumber = country.totalDeaths else { return }
+        cell.displayTotalDeaths(getTotalDeathsLabel(), String(totalDeathsNumber))
+        guard let totalRecoverdNumber = country.totalRecovered else { return }
+        cell.displayTotalRecoverd(getTotalRecoverdLabel(), String(totalRecoverdNumber))
+        guard let activeCasesNumber = country.activeCases else { return }
+        cell.displayActiveCases(getActiveCasesLabel(), String(activeCasesNumber))
+        guard let dailyConfirmedNumber = country.dailyConfirmed else { return }
+        cell.displayDailyConfirmed(getDailyConfirmedLabel(), String(dailyConfirmedNumber))
+        guard let dailyDeathsNumber = country.dailyDeaths else { return }
+        cell.displayDailyDeaths(getDailyDeathsLabel(), String(dailyDeathsNumber))
+        guard let totalCriticalNumber = country.totalCritical else { return }
+        cell.displayTotalCritical(getTotalCriticalLabel(), String(totalCriticalNumber))
     }
     
+    func didSelectRow(cell: CountryDataCellView, at index: Int) {
+        if selectedIndex == index {
+            if isCollapce == false {
+                cell.setBodyViewTopConstraint(0)
+                isCollapce = true
+            } else {
+                cell.setBodyViewTopConstraint(130)
+                isCollapce = false
+            }
+        } else {
+            cell.setBodyViewTopConstraint(0)
+            isCollapce = true
+        }
+        selectedIndex = index
+    }
+    
+    func heightForRow(at index: Int) -> Int {
+        if selectedIndex == index && isCollapce == true {
+            return 400
+        } else {
+            return 145
+        }
+    }
 }

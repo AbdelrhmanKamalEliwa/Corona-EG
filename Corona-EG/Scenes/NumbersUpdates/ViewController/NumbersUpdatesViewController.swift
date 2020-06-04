@@ -11,9 +11,14 @@ import SVProgressHUD
 
 class NumbersUpdatesViewController: BaseViewController {
     
-    @IBOutlet private weak var collectionView: UICollectionView!
+    var selectedIndex = -1
+    var isCollapce = false
+    
+    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableView: UITableView!
+//    @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var searchBar: UISearchBar!
-    @IBOutlet private weak var collectionViewTopConstraint: NSLayoutConstraint!
+//    @IBOutlet private weak var collectionViewTopConstraint: NSLayoutConstraint!
     internal var presenter: NumbersUpdatesViewControllerPresenter?
     fileprivate let interactor = NumbersUpdatesInteractor()
     fileprivate let router = NumbersUpdatesViewControllerRouter()
@@ -22,11 +27,14 @@ class NumbersUpdatesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMainScreensNavigationBar(navbarTitle: .NumbersUpdatesScreen)
-        setupCollectionView()
+//        setupCollectionView()
         setupSearchBar()
         setupRefreshController()
         presenter = NumbersUpdatesViewControllerPresenter(view: self, interactor: interactor, router: router)
         presenter?.viewDidLoad()
+        tableView.estimatedRowHeight = 400
+        tableView.rowHeight = UITableView.automaticDimension
+        setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +58,7 @@ extension NumbersUpdatesViewController: NumbersUpdatesView {
     
     func fetchDataSuccess() {
         DispatchQueue.main.async {
-            self.collectionView.reloadData()
+            self.tableView.reloadData()
         }
     }
     
@@ -64,39 +72,39 @@ extension NumbersUpdatesViewController: NumbersUpdatesView {
 }
 
 // MARK: - Setup CollectionView
-extension NumbersUpdatesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    private enum Constants {
-        static let nibName = "CountryDataCell"
-        static let cellIdentifier = "CountryDataCell"
-    }
-    
-    private func setupCollectionView() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(
-            UINib.init(nibName: Constants.nibName, bundle: nil),
-            forCellWithReuseIdentifier: Constants.cellIdentifier)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        presenter?.getCountriesCount() ?? 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellIdentifier, for: indexPath) as! CountryDataCell
-        presenter?.cellConfiguration(cell: cell, for: indexPath.item)
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.didSelectRow(at: indexPath.item)
-        navbar.isHidden = false
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 319, height: 280)
-    }
-}
+//extension NumbersUpdatesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+//    private enum Constants {
+//        static let nibName = "CountryDataCell"
+//        static let cellIdentifier = "CountryDataCell"
+//    }
+//
+//    private func setupCollectionView() {
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
+//        collectionView.register(
+//            UINib.init(nibName: Constants.nibName, bundle: nil),
+//            forCellWithReuseIdentifier: Constants.cellIdentifier)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        presenter?.getCountriesCount() ?? 0
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellIdentifier, for: indexPath) as! CountryDataCell
+//        presenter?.cellConfiguration(cell: cell, for: indexPath.item)
+//        return cell
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        presenter?.didSelectRow(at: indexPath.item)
+//        navbar.isHidden = false
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: 319, height: 280)
+//    }
+//}
 
 // MARK: - Setup Search Bar
 extension NumbersUpdatesViewController: UISearchBarDelegate {
@@ -124,12 +132,12 @@ extension NumbersUpdatesViewController: UITextFieldDelegate {
 // MARK: - Animation
 extension NumbersUpdatesViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if collectionView.panGestureRecognizer.translation(in: self.view).y < 0 {
-            collectionViewTopConstraint.constant = 0
+        if tableView.panGestureRecognizer.translation(in: self.view).y < 0 {
+            tableViewTopConstraint.constant = 0
             navbar.isHidden = true
             UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
         } else {
-            collectionViewTopConstraint.constant = 50
+            tableViewTopConstraint.constant = 50
             navbar.isHidden = false
             UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
         }
@@ -141,11 +149,53 @@ extension NumbersUpdatesViewController {
     private func setupRefreshController() {
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
-        collectionView.addSubview(refreshControl)
+        tableView.addSubview(refreshControl)
     }
     
     @objc private func refresh(_ sender: AnyObject) {
         presenter?.viewDidLoad()
         refreshControl.endRefreshing()
+    }
+}
+
+
+// MARK: - Setup TableView
+extension NumbersUpdatesViewController: UITableViewDelegate, UITableViewDataSource {
+    private enum Constants {
+        static let nibName = "CountryDataTableViewCell"
+        static let cellIdentifier = "CountryDataTableViewCell"
+    }
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(
+            UINib(nibName: Constants.nibName, bundle: nil),
+            forCellReuseIdentifier: Constants.cellIdentifier)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        CGFloat((presenter?.heightForRow(at: indexPath.row)) ?? 0)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        presenter?.getCountriesCount() ?? 0
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! CountryDataTableViewCell
+        cell.selectedBackgroundView = UIColor.selectedCellBackgroundColor()
+        presenter?.cellConfiguration(cell: cell, for: indexPath.row)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let url = presenter?.didSelectRow(at: indexPath.row)
+//        let webViewController = SFSafariViewController(url: url!)
+//        present(webViewController, animated: true, completion: nil)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! CountryDataTableViewCell
+        tableView.deselectRow(at: indexPath, animated: true)
+        presenter?.didSelectRow(cell: cell, at: indexPath.row)
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }

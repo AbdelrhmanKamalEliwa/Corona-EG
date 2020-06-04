@@ -52,39 +52,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EpM-GV-DIL">
-                                <rect key="frame" x="0.0" y="138" width="414" height="758"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eds-aD-Tag">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="UVP-00-l9n">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ioa-Vl-9Lx">
+                                <rect key="frame" x="0.0" y="138" width="414" height="675"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="EpM-GV-DIL" firstAttribute="leading" secondItem="mvd-cN-JWJ" secondAttribute="leading" id="2R8-pL-ivc"/>
+                            <constraint firstItem="mvd-cN-JWJ" firstAttribute="bottom" secondItem="ioa-Vl-9Lx" secondAttribute="bottom" id="5tq-rI-qb4"/>
                             <constraint firstItem="UVP-00-l9n" firstAttribute="trailing" secondItem="mvd-cN-JWJ" secondAttribute="trailing" id="9DA-dd-rzF"/>
-                            <constraint firstAttribute="bottom" secondItem="EpM-GV-DIL" secondAttribute="bottom" id="Ls8-AU-lq8"/>
+                            <constraint firstItem="ioa-Vl-9Lx" firstAttribute="top" secondItem="mvd-cN-JWJ" secondAttribute="top" constant="50" id="LFv-NQ-t2n"/>
                             <constraint firstItem="UVP-00-l9n" firstAttribute="leading" secondItem="mvd-cN-JWJ" secondAttribute="leading" id="XWA-uK-XqV"/>
                             <constraint firstItem="UVP-00-l9n" firstAttribute="top" secondItem="mvd-cN-JWJ" secondAttribute="top" id="btp-oh-qvP"/>
-                            <constraint firstItem="EpM-GV-DIL" firstAttribute="top" secondItem="mvd-cN-JWJ" secondAttribute="top" constant="50" id="fJ4-dI-b1D"/>
-                            <constraint firstItem="EpM-GV-DIL" firstAttribute="trailing" secondItem="mvd-cN-JWJ" secondAttribute="trailing" id="odB-Th-LYe"/>
+                            <constraint firstItem="ioa-Vl-9Lx" firstAttribute="leading" secondItem="mvd-cN-JWJ" secondAttribute="leading" id="do9-dr-ZCe"/>
+                            <constraint firstItem="mvd-cN-JWJ" firstAttribute="trailing" secondItem="ioa-Vl-9Lx" secondAttribute="trailing" id="nBY-Aa-x7F"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mvd-cN-JWJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="tWt-pn-5BT"/>
                     <connections>
-                        <outlet property="collectionView" destination="EpM-GV-DIL" id="Zli-sG-9Wz"/>
-                        <outlet property="collectionViewTopConstraint" destination="fJ4-dI-b1D" id="jzu-Ec-MMW"/>
                         <outlet property="searchBar" destination="UVP-00-l9n" id="jfc-5V-4Gx"/>
+                        <outlet property="tableView" destination="ioa-Vl-9Lx" id="umu-Lz-a9d"/>
+                        <outlet property="tableViewTopConstraint" destination="LFv-NQ-t2n" id="wTc-r9-HiZ"/>
                         <segue destination="5bM-E1-5Tk" kind="presentation" id="jFB-2a-hNm"/>
                     </connections>
                 </viewController>

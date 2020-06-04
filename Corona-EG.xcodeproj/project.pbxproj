@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F4083AAB2486F9A3007B17C6 /* PreventionTipsDataSource.json in Resources */ = {isa = PBXBuildFile; fileRef = F4083AAA2486F9A3007B17C6 /* PreventionTipsDataSource.json */; };
 		F4083AAD2486F9B2007B17C6 /* InfectionMethodsDataSource.json in Resources */ = {isa = PBXBuildFile; fileRef = F4083AAC2486F9B2007B17C6 /* InfectionMethodsDataSource.json */; };
+		F4337B7C2488C20000AC5881 /* FlagsAPIEnvironmentPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4337B7B2488C20000AC5881 /* FlagsAPIEnvironmentPath.swift */; };
 		F433F5E9247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5E8247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift */; };
 		F433F5EB247F8B3900CAEE70 /* MainScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5EA247F8B3900CAEE70 /* MainScreens.swift */; };
 		F433F5F3247F966E00CAEE70 /* NumbersUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5F2247F966E00CAEE70 /* NumbersUpdatesViewController.swift */; };
@@ -64,6 +65,8 @@
 		F49F973B24877C2F0032753E /* InfectionMethodsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F973A24877C2F0032753E /* InfectionMethodsModel.swift */; };
 		F49F973E248796360032753E /* PreventionTipsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F973D248796360032753E /* PreventionTipsInteractor.swift */; };
 		F49F97402487965B0032753E /* PreventionTipsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F973F2487965B0032753E /* PreventionTipsModel.swift */; };
+		F49F97492487DE770032753E /* CountryDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F97472487DE770032753E /* CountryDataTableViewCell.swift */; };
+		F49F974A2487DE770032753E /* CountryDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49F97482487DE770032753E /* CountryDataTableViewCell.xib */; };
 		F4A83A5F24813EF4004DBF7F /* InfectionMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A83A5E24813EF4004DBF7F /* InfectionMethodsViewController.swift */; };
 		F4A83A6324813F2C004DBF7F /* InfectionMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A83A6124813F2C004DBF7F /* InfectionMethodCell.swift */; };
 		F4A83A6424813F2C004DBF7F /* InfectionMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A83A6224813F2C004DBF7F /* InfectionMethodCell.xib */; };
@@ -114,6 +117,7 @@
 		87C22201B692E8B20702E32C /* Pods-Corona-EG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona-EG.release.xcconfig"; path = "Target Support Files/Pods-Corona-EG/Pods-Corona-EG.release.xcconfig"; sourceTree = "<group>"; };
 		F4083AAA2486F9A3007B17C6 /* PreventionTipsDataSource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PreventionTipsDataSource.json; sourceTree = "<group>"; };
 		F4083AAC2486F9B2007B17C6 /* InfectionMethodsDataSource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InfectionMethodsDataSource.json; sourceTree = "<group>"; };
+		F4337B7B2488C20000AC5881 /* FlagsAPIEnvironmentPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsAPIEnvironmentPath.swift; sourceTree = "<group>"; };
 		F433F5E8247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsViewControllerRouter.swift; sourceTree = "<group>"; };
 		F433F5EA247F8B3900CAEE70 /* MainScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreens.swift; sourceTree = "<group>"; };
 		F433F5F2247F966E00CAEE70 /* NumbersUpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUpdatesViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 		F49F973A24877C2F0032753E /* InfectionMethodsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionMethodsModel.swift; sourceTree = "<group>"; };
 		F49F973D248796360032753E /* PreventionTipsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionTipsInteractor.swift; sourceTree = "<group>"; };
 		F49F973F2487965B0032753E /* PreventionTipsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionTipsModel.swift; sourceTree = "<group>"; };
+		F49F97472487DE770032753E /* CountryDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataTableViewCell.swift; sourceTree = "<group>"; };
+		F49F97482487DE770032753E /* CountryDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryDataTableViewCell.xib; sourceTree = "<group>"; };
 		F4A83A5E24813EF4004DBF7F /* InfectionMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionMethodsViewController.swift; sourceTree = "<group>"; };
 		F4A83A6124813F2C004DBF7F /* InfectionMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionMethodCell.swift; sourceTree = "<group>"; };
 		F4A83A6224813F2C004DBF7F /* InfectionMethodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfectionMethodCell.xib; sourceTree = "<group>"; };
@@ -256,9 +262,18 @@
 			path = JSONData;
 			sourceTree = "<group>";
 		};
+		F4337B7A2488C18000AC5881 /* FlagsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F4337B7B2488C20000AC5881 /* FlagsAPIEnvironmentPath.swift */,
+			);
+			path = FlagsAPI;
+			sourceTree = "<group>";
+		};
 		F433F5EE247F947C00CAEE70 /* NumbersUpdates */ = {
 			isa = PBXGroup;
 			children = (
+				F49F97462487DE450032753E /* TableViewCell */,
 				F433F5EF247F948F00CAEE70 /* Router */,
 				F433F5F6247F99EB00CAEE70 /* Interactor */,
 				F433F5F1247F94B100CAEE70 /* Presenter */,
@@ -440,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				F45E5A4F247D4A7D008891B6 /* EndPointRouter.swift */,
+				F4337B7A2488C18000AC5881 /* FlagsAPI */,
 				F433F604247FB16000CAEE70 /* NewsAPI */,
 				F433F605247FB16900CAEE70 /* StatisticsAPI */,
 			);
@@ -547,6 +563,15 @@
 				F49F973D248796360032753E /* PreventionTipsInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F49F97462487DE450032753E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F49F97472487DE770032753E /* CountryDataTableViewCell.swift */,
+				F49F97482487DE770032753E /* CountryDataTableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		F4A83A5C24813E84004DBF7F /* InfectionMethods */ = {
@@ -1054,6 +1079,7 @@
 				F4EEA54E2484C8DE00AECA9C /* KBSDataSource.json in Resources */,
 				F4C2BA83247D3E4D00844D4E /* NewsCell.xib in Resources */,
 				F45E5A67247E1382008891B6 /* EmergencyContactsCell.xib in Resources */,
+				F49F974A2487DE770032753E /* CountryDataTableViewCell.xib in Resources */,
 				F4C2BA86247D3FA100844D4E /* .swiftlint.yml in Resources */,
 				F4EEFBC5247CB23300B1FA31 /* Cairo-Light.ttf in Resources */,
 				F4EEFBC0247CB23300B1FA31 /* Cairo-Black.ttf in Resources */,
@@ -1137,6 +1163,7 @@
 				F433F601247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift in Sources */,
 				F443B6402486138100F2644E /* SettingsScreenTitles.swift in Sources */,
 				F443B63A2486118900F2644E /* SettingsViewController.swift in Sources */,
+				F4337B7C2488C20000AC5881 /* FlagsAPIEnvironmentPath.swift in Sources */,
 				F45E5A52247D4A7E008891B6 /* NewsAPIEnvironmentPath.swift in Sources */,
 				F4A83A8124829917004DBF7F /* MoreScreensData.swift in Sources */,
 				F4A83A5F24813EF4004DBF7F /* InfectionMethodsViewController.swift in Sources */,
@@ -1174,6 +1201,7 @@
 				F433F5F3247F966E00CAEE70 /* NumbersUpdatesViewController.swift in Sources */,
 				F45E5A63247DFFF0008891B6 /* EmergencyContacts.swift in Sources */,
 				F45E5A4D247D4A76008891B6 /* HTTPMethod.swift in Sources */,
+				F49F97492487DE770032753E /* CountryDataTableViewCell.swift in Sources */,
 				F45E5A61247DFF8A008891B6 /* EmergencyContactsViewController.swift in Sources */,
 				F443B6332485365400F2644E /* AboutUsViewControllerPresenter.swift in Sources */,
 				F471A9C02482BEB9002D0BDE /* MoreRouter.swift in Sources */,

@@ -22,4 +22,8 @@ struct EndPointRouter {
     static var website: URL {
         return URL(string: "https://corona-eg.firebaseapp.com/")!
     }
+    
+    static func getCountryFlag(countryCode: String) -> URL {
+        return URL(string: FlagsAPIService.baseURL() + countryCode + "/flat/64.png")!
+    }
 }
