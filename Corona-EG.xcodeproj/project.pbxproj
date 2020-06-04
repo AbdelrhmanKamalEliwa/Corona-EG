@@ -16,9 +16,6 @@
 		F433F5F5247F97CE00CAEE70 /* CountyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5F4247F97CE00CAEE70 /* CountyDataModel.swift */; };
 		F433F5F8247F9A0500CAEE70 /* NumbersUpdatesViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5F7247F9A0500CAEE70 /* NumbersUpdatesViewControllerPresenter.swift */; };
 		F433F5FA247F9A2300CAEE70 /* NumbersUpdatesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5F9247F9A2300CAEE70 /* NumbersUpdatesInteractor.swift */; };
-		F433F5FE247F9C7A00CAEE70 /* CountryDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F5FC247F9C7A00CAEE70 /* CountryDataCell.swift */; };
-		F433F5FF247F9C7A00CAEE70 /* CountryDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F433F5FD247F9C7A00CAEE70 /* CountryDataCell.xib */; };
-		F433F601247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F600247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift */; };
 		F433F603247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F602247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift */; };
 		F443B6312485351000F2644E /* AboutUsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443B6302485351000F2644E /* AboutUsRouter.swift */; };
 		F443B6332485365400F2644E /* AboutUsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443B6322485365400F2644E /* AboutUsViewControllerPresenter.swift */; };
@@ -29,11 +26,6 @@
 		F443B64424863D8700F2644E /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F443B64224863D8700F2644E /* SettingsCell.xib */; };
 		F443B646248642FE00F2644E /* SettingScreenCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443B645248642FE00F2644E /* SettingScreenCases.swift */; };
 		F454FD66247E5939004EF907 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454FD65247E5939004EF907 /* FontStyle.swift */; };
-		F4576D31247FF11600911916 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4576D30247FF11600911916 /* CountryDetailsViewController.swift */; };
-		F4576D34247FF97D00911916 /* CounrtyDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4576D32247FF97D00911916 /* CounrtyDetailsCell.swift */; };
-		F4576D35247FF97D00911916 /* CounrtyDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4576D33247FF97D00911916 /* CounrtyDetailsCell.xib */; };
-		F4576D37247FFB6700911916 /* CountryDetailsViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4576D36247FFB6700911916 /* CountryDetailsViewControllerRouter.swift */; };
-		F4576D3A247FFB7600911916 /* CountryDetailsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4576D39247FFB7600911916 /* CountryDetailsViewControllerPresenter.swift */; };
 		F4576D3C248003AA00911916 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4576D3B248003AA00911916 /* CountryData.swift */; };
 		F45E5A4A247D4A6F008891B6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A49247D4A6F008891B6 /* NetworkManager.swift */; };
 		F45E5A4D247D4A76008891B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E5A4B247D4A76008891B6 /* HTTPMethod.swift */; };
@@ -124,9 +116,6 @@
 		F433F5F4247F97CE00CAEE70 /* CountyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyDataModel.swift; sourceTree = "<group>"; };
 		F433F5F7247F9A0500CAEE70 /* NumbersUpdatesViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUpdatesViewControllerPresenter.swift; sourceTree = "<group>"; };
 		F433F5F9247F9A2300CAEE70 /* NumbersUpdatesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUpdatesInteractor.swift; sourceTree = "<group>"; };
-		F433F5FC247F9C7A00CAEE70 /* CountryDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataCell.swift; sourceTree = "<group>"; };
-		F433F5FD247F9C7A00CAEE70 /* CountryDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryDataCell.xib; sourceTree = "<group>"; };
-		F433F600247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUpdatesViewControllerRouter.swift; sourceTree = "<group>"; };
 		F433F602247FB10B00CAEE70 /* StatisticsAPIEnvironmentPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsAPIEnvironmentPath.swift; sourceTree = "<group>"; };
 		F443B6302485351000F2644E /* AboutUsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsRouter.swift; sourceTree = "<group>"; };
 		F443B6322485365400F2644E /* AboutUsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewControllerPresenter.swift; sourceTree = "<group>"; };
@@ -137,11 +126,6 @@
 		F443B64224863D8700F2644E /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 		F443B645248642FE00F2644E /* SettingScreenCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreenCases.swift; sourceTree = "<group>"; };
 		F454FD65247E5939004EF907 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
-		F4576D30247FF11600911916 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
-		F4576D32247FF97D00911916 /* CounrtyDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounrtyDetailsCell.swift; sourceTree = "<group>"; };
-		F4576D33247FF97D00911916 /* CounrtyDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounrtyDetailsCell.xib; sourceTree = "<group>"; };
-		F4576D36247FFB6700911916 /* CountryDetailsViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewControllerRouter.swift; sourceTree = "<group>"; };
-		F4576D39247FFB7600911916 /* CountryDetailsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewControllerPresenter.swift; sourceTree = "<group>"; };
 		F4576D3B248003AA00911916 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
 		F45E5A49247D4A6F008891B6 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F45E5A4B247D4A76008891B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -273,22 +257,12 @@
 		F433F5EE247F947C00CAEE70 /* NumbersUpdates */ = {
 			isa = PBXGroup;
 			children = (
-				F49F97462487DE450032753E /* TableViewCell */,
-				F433F5EF247F948F00CAEE70 /* Router */,
 				F433F5F6247F99EB00CAEE70 /* Interactor */,
 				F433F5F1247F94B100CAEE70 /* Presenter */,
-				F433F5FB247F9C3900CAEE70 /* CollectionViewCell */,
+				F49F97462487DE450032753E /* TableViewCell */,
 				F433F5F0247F949500CAEE70 /* ViewController */,
 			);
 			path = NumbersUpdates;
-			sourceTree = "<group>";
-		};
-		F433F5EF247F948F00CAEE70 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				F433F600247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		F433F5F0247F949500CAEE70 /* ViewController */ = {
@@ -313,15 +287,6 @@
 				F433F5F9247F9A2300CAEE70 /* NumbersUpdatesInteractor.swift */,
 			);
 			path = Interactor;
-			sourceTree = "<group>";
-		};
-		F433F5FB247F9C3900CAEE70 /* CollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				F433F5FC247F9C7A00CAEE70 /* CountryDataCell.swift */,
-				F433F5FD247F9C7A00CAEE70 /* CountryDataCell.xib */,
-			);
-			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		F433F604247FB16000CAEE70 /* NewsAPI */ = {
@@ -373,50 +338,6 @@
 				F443B63B2486124100F2644E /* SettingsViewControllerPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		F4576D2B247FE5D600911916 /* CountryDetailsScreen */ = {
-			isa = PBXGroup;
-			children = (
-				F4576D2F247FE69200911916 /* Router */,
-				F4576D2E247FE68900911916 /* Presenter */,
-				F4576D2D247FE5EE00911916 /* TableViewCell */,
-				F4576D2C247FE5E700911916 /* ViewController */,
-			);
-			path = CountryDetailsScreen;
-			sourceTree = "<group>";
-		};
-		F4576D2C247FE5E700911916 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F4576D30247FF11600911916 /* CountryDetailsViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		F4576D2D247FE5EE00911916 /* TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				F4576D32247FF97D00911916 /* CounrtyDetailsCell.swift */,
-				F4576D33247FF97D00911916 /* CounrtyDetailsCell.xib */,
-			);
-			path = TableViewCell;
-			sourceTree = "<group>";
-		};
-		F4576D2E247FE68900911916 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				F4576D39247FFB7600911916 /* CountryDetailsViewControllerPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		F4576D2F247FE69200911916 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				F4576D36247FFB6700911916 /* CountryDetailsViewControllerRouter.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		F45E5A47247D4A52008891B6 /* Networking */ = {
@@ -844,7 +765,6 @@
 				F4C2BA6A247CE2DA00844D4E /* Base */,
 				F4BD1207247BC7BD00740150 /* News */,
 				F433F5EE247F947C00CAEE70 /* NumbersUpdates */,
-				F4576D2B247FE5D600911916 /* CountryDetailsScreen */,
 				F4AFAC562480D57B000EB979 /* COVID19Test */,
 				F464612B24867E3A003EEA67 /* COVID19TestResult */,
 				F4A83A6824825A8A004DBF7F /* More */,
@@ -1061,8 +981,6 @@
 				F4BD11EE247A467000740150 /* LaunchScreen.storyboard in Resources */,
 				F4EEFBC3247CB23300B1FA31 /* Cairo-ExtraLight.ttf in Resources */,
 				F471A9CA2482C2B1002D0BDE /* PreventionTipsCell.xib in Resources */,
-				F433F5FF247F9C7A00CAEE70 /* CountryDataCell.xib in Resources */,
-				F4576D35247FF97D00911916 /* CounrtyDetailsCell.xib in Resources */,
 				F4EEFBC4247CB23300B1FA31 /* Cairo-Bold.ttf in Resources */,
 				F464613124867E81003EEA67 /* COVID19TestResultViewController.xib in Resources */,
 				F4EEFBC2247CB23300B1FA31 /* Cairo-SemiBold.ttf in Resources */,
@@ -1152,22 +1070,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4576D31247FF11600911916 /* CountryDetailsViewController.swift in Sources */,
 				F4EEA5572484E16100AECA9C /* COVID19TestViewControllerPresenter.swift in Sources */,
 				F464613A24869DAC003EEA67 /* ResultScreenData.swift in Sources */,
 				F4EEA5502484D69400AECA9C /* CoronaTestModel.swift in Sources */,
 				F4C2BA88247D45CC00844D4E /* NewsViewControllerPresenter.swift in Sources */,
-				F4576D34247FF97D00911916 /* CounrtyDetailsCell.swift in Sources */,
 				F49F973E248796360032753E /* PreventionTipsInteractor.swift in Sources */,
 				F4EEA5592484E17A00AECA9C /* COVID19TestInteractor.swift in Sources */,
-				F433F601247FABB300CAEE70 /* NumbersUpdatesViewControllerRouter.swift in Sources */,
 				F443B6402486138100F2644E /* SettingsScreenTitles.swift in Sources */,
 				F443B63A2486118900F2644E /* SettingsViewController.swift in Sources */,
 				F4337B7C2488C20000AC5881 /* FlagsAPIEnvironmentPath.swift in Sources */,
 				F45E5A52247D4A7E008891B6 /* NewsAPIEnvironmentPath.swift in Sources */,
 				F4A83A8124829917004DBF7F /* MoreScreensData.swift in Sources */,
 				F4A83A5F24813EF4004DBF7F /* InfectionMethodsViewController.swift in Sources */,
-				F4576D37247FFB6700911916 /* CountryDetailsViewControllerRouter.swift in Sources */,
 				F4C2BA77247D100B00844D4E /* UIViewExtension.swift in Sources */,
 				F4ED7FE8247E69EC00DCA13B /* UIColor+Extension.swift in Sources */,
 				F4BD11E6247A466E00740150 /* NewsViewController.swift in Sources */,
@@ -1189,7 +1103,6 @@
 				F433F5E9247F851F00CAEE70 /* EmergencyContactsViewControllerRouter.swift in Sources */,
 				F443B6312485351000F2644E /* AboutUsRouter.swift in Sources */,
 				F471A9D12482DB8D002D0BDE /* AboutUsViewController.swift in Sources */,
-				F4576D3A247FFB7600911916 /* CountryDetailsViewControllerPresenter.swift in Sources */,
 				F4A83A6724825A31004DBF7F /* COVID19TestViewController.swift in Sources */,
 				F49F97402487965B0032753E /* PreventionTipsModel.swift in Sources */,
 				F4BD1200247BBFEB00740150 /* LocalizationSystem.swift in Sources */,
@@ -1217,7 +1130,6 @@
 				F4C2BA69247CDAA000844D4E /* BaseViewController.swift in Sources */,
 				F4A83A8324829C93004DBF7F /* MoreScreensCases.swift in Sources */,
 				F4A83A852482AE3B004DBF7F /* InfectionMethodsViewControllerPresenter.swift in Sources */,
-				F433F5FE247F9C7A00CAEE70 /* CountryDataCell.swift in Sources */,
 				F49F973B24877C2F0032753E /* InfectionMethodsModel.swift in Sources */,
 				F4A83A6324813F2C004DBF7F /* InfectionMethodCell.swift in Sources */,
 				F433F5FA247F9A2300CAEE70 /* NumbersUpdatesInteractor.swift in Sources */,

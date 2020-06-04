@@ -421,11 +421,11 @@
             </objects>
             <point key="canvasLocation" x="1915.9420289855075" y="-2267.4107142857142"/>
         </scene>
-        <!--Update-->
+        <!--Updates-->
         <scene sceneID="sLw-F3-75L">
             <objects>
                 <navigationController storyboardIdentifier="NumbersUpdatesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="E60-Hw-yLt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Update" image="numbers-updates" selectedImage="numbers-updates" id="B2c-x9-XZo"/>
+                    <tabBarItem key="tabBarItem" title="Updates" image="numbers-updates" selectedImage="numbers-updates" id="B2c-x9-XZo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tQQ-Jp-fyc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

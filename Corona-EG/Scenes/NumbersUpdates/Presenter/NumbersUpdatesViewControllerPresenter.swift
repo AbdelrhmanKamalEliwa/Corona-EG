@@ -47,17 +47,15 @@ protocol CountryDataCellView {
 class NumbersUpdatesViewControllerPresenter {
     private weak var view: NumbersUpdatesView?
     private let interactor: NumbersUpdatesInteractor
-    private let router: NumbersUpdatesViewControllerRouter
     private var countries: [CountryDataModel] = []
     private var filteredCountries: [CountryDataModel] = []
     private var searching = false
     private var isCollapce = false
     private var selectedIndex = -1
     
-    init(view: NumbersUpdatesView?, interactor: NumbersUpdatesInteractor, router: NumbersUpdatesViewControllerRouter) {
+    init(view: NumbersUpdatesView?, interactor: NumbersUpdatesInteractor) {
         self.view = view
         self.interactor = interactor
-        self.router = router
     }
     
     func viewDidLoad() {
