@@ -83,7 +83,7 @@ extension AboutUsViewController: AboutUsView {
 extension AboutUsViewController: MFMailComposeViewControllerDelegate {
     func sendEmail() {
         // Modify following variables with your text / recipient
-        let recipientEmail = "abdelrhmankamaleliwa@email.com"
+        let recipientEmail = "abdelrhmankamaleliwa@gmail.com"
         let subject = "Corona EG Feedback"
         let body = "Write your feedback"
 
@@ -94,7 +94,6 @@ extension AboutUsViewController: MFMailComposeViewControllerDelegate {
             mail.setToRecipients([recipientEmail])
             mail.setSubject(subject)
             mail.setMessageBody(body, isHTML: false)
-
             present(mail, animated: true)
 
         // Show third party email composer if default Mail app is not present

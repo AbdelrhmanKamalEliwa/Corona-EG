@@ -49,13 +49,14 @@ extension COVID19TestResultViewController: COVID19TestResultView {
         resultTitleLabel.text = title
         resultTitleLabel.textColor = UIColor(hex: color)
         
-//        UIView.animate(withDuration: 1, delay: 0, options: [.repeat], animations: { [weak self] in
+//        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseOut], animations: { [weak self] in
 //            self?.resultTitleLabel.font = UIFont.defaultFont(20, .Light)
 //            self?.view.layoutIfNeeded()
 //        }) { [weak self] (_) in
 //            self?.resultTitleLabel.font = UIFont.defaultFont(28, .Bold)
+//            self?.view.layoutIfNeeded()
 //        }
-        
+//        
     }
     
     func displayResultDescription(_ description: String) {
