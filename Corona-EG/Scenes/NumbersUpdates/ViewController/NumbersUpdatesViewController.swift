@@ -69,8 +69,6 @@ extension NumbersUpdatesViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     private func setupTableView() {
-        tableView.estimatedRowHeight = 400
-        tableView.rowHeight = UITableView.automaticDimension
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(
@@ -79,7 +77,7 @@ extension NumbersUpdatesViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        CGFloat((presenter?.heightForRow(at: indexPath.row)) ?? 0)
+        return CGFloat((presenter?.heightForRow(at: indexPath.row)) ?? 0)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,11 +93,11 @@ extension NumbersUpdatesViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! CountryDataTableViewCell
-        tableView.deselectRow(at: indexPath, animated: true)
-//        tableView.beginUpdates()
+//        tableView.deselectRow(at: indexPath, animated: true)
         presenter?.didSelectRow(cell: cell, at: indexPath.row)
+        tableView.beginUpdates()
         tableView.reloadRows(at: [indexPath], with: .none)
-//        tableView.endUpdates()
+        tableView.endUpdates()
     }
 }
 

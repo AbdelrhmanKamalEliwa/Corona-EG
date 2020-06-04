@@ -26,7 +26,7 @@ protocol CountryDataCellView {
     func displayDailyConfirmed(_ dailyConfirmedLabel: String, _ dailyConfirmedNumber: String?)
     func displayDailyDeaths(_ dailyDeathsLabel: String, _ dailyDeathsNumber: String?)
     func displayTotalCritical(_ totalCriticalLabel: String, _ totalCriticalNumber: String?)
-    func setBodyViewTopConstraint(_ constant: Int)
+    func arrowImage(_ imageName: String)
 }
 
 
@@ -37,7 +37,7 @@ class NumbersUpdatesViewControllerPresenter {
     private var filteredCountries: [CountryDataModel] = []
     private var searching = false
     private var isCollapce = false
-    private var selectedIndex = -1
+    private var selectedIndex = 0
     
     init(view: NumbersUpdatesView?, interactor: NumbersUpdatesInteractor) {
         self.view = view
@@ -142,15 +142,15 @@ class NumbersUpdatesViewControllerPresenter {
     func didSelectRow(cell: CountryDataCellView, at index: Int) {
         if selectedIndex == index {
             if isCollapce == false {
-                cell.setBodyViewTopConstraint(0)
                 isCollapce = true
+                cell.arrowImage("arrow.down.square.fill")
             } else {
-                cell.setBodyViewTopConstraint(130)
                 isCollapce = false
+                cell.arrowImage("arrow.right.square.fill")
             }
         } else {
-            cell.setBodyViewTopConstraint(0)
             isCollapce = true
+            cell.arrowImage("arrow.down.square.fill")
         }
         selectedIndex = index
     }
@@ -159,7 +159,7 @@ class NumbersUpdatesViewControllerPresenter {
         if selectedIndex == index && isCollapce == true {
             return 400
         } else {
-            return 145
+            return 50
         }
     }
 }

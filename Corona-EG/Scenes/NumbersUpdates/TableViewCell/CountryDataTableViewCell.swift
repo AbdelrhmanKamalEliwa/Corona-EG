@@ -11,12 +11,7 @@ import Kingfisher
 
 class CountryDataTableViewCell: UITableViewCell, CountryDataCellView {
     @IBOutlet private weak var containerView: UIView!
-    
-    @IBOutlet private weak var foregroundViewContryImage: UIImageView!
-    @IBOutlet private weak var foregroundViewCountryName: UILabel!
-    @IBOutlet private weak var foregroundViewTotalConfirmedNumber: UILabel!
-    @IBOutlet private weak var foregroundTotalConfirmedLabel: UILabel!
-    
+    @IBOutlet private weak var arrowImageView: UIImageView!
     @IBOutlet private weak var bodyViewCountryImage: UIImageView!
     @IBOutlet private weak var bodyViewCountryName: UILabel!
     @IBOutlet private weak var bodyViewTotalConfirmedNumber: UILabel!
@@ -34,27 +29,12 @@ class CountryDataTableViewCell: UITableViewCell, CountryDataCellView {
     @IBOutlet private weak var bodyViewTotalCriticalNumber: UILabel!
     @IBOutlet private weak var bodyViewTotalCriticalLabel: UILabel!
     
-    @IBOutlet private weak var bodyContainerTopConstraint: NSLayoutConstraint!
-    
-    
-    func setBodyViewTopConstraint(_ constant: Int) {
-        bodyContainerTopConstraint.constant = CGFloat(constant)
+    func arrowImage(_ imageName: String) {
+        arrowImageView.image = UIImage(systemName: imageName)
     }
     
     func displayCountryImage(_ countryImage: String?) {
         let url = EndPointRouter.getCountryFlag(countryCode: countryImage ?? "")
-        
-        foregroundViewContryImage.kf.indicatorType = .activity
-        foregroundViewContryImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (result) in
-            switch result {
-            case .success(let image):
-                self.foregroundViewContryImage.image = image.image
-            case .failure:
-                self.foregroundViewContryImage.image = UIImage(named: "AppIcon")?.imageFlippedForRightToLeftLayoutDirection()
-                return
-            }
-        }
-        
         bodyViewCountryImage.kf.indicatorType = .activity
         bodyViewCountryImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (result) in
             switch result {
@@ -65,17 +45,13 @@ class CountryDataTableViewCell: UITableViewCell, CountryDataCellView {
                 return
             }
         }
-        
     }
     
     func displyaCountryName(_ countryName: String) {
-        foregroundViewCountryName.text = countryName
         bodyViewCountryName.text = countryName
     }
     
     func displayTotalConfirmed(_ totalConfirmedLabel: String, _ totalConfirmedNumber: String?) {
-        foregroundTotalConfirmedLabel.text = totalConfirmedLabel
-        foregroundViewTotalConfirmedNumber.text = totalConfirmedNumber
         bodyViewTotalConfirmedLabel.text = totalConfirmedLabel
         bodyViewTotalConfirmedNumber.text = totalConfirmedNumber
     }
@@ -116,8 +92,8 @@ class CountryDataTableViewCell: UITableViewCell, CountryDataCellView {
         containerView.layer.shadowOffset = CGSize(width: 3, height: 3)
         containerView.layer.shadowColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         containerView.layer.shadowOpacity = 2
-        foregroundViewCountryName.backgroundColor = UIColor.mainColor
         bodyViewCountryName.backgroundColor = UIColor.mainColor
+        arrowImageView.image = UIImage(systemName: "arrow.right.square.fill")
     }
     
     override func awakeFromNib() {
