@@ -23,7 +23,6 @@ protocol NewsCellView {
 }
 
 class NewsViewControllerPresenter {
-    
     private weak var view: NewsView?
     private let interactor: NewsInteractor
     private var news: [Article] = []

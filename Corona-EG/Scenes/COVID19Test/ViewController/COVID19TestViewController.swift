@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SVProgressHUD
 
 class COVID19TestViewController: BaseViewController {
 
@@ -78,14 +77,6 @@ extension COVID19TestViewController: COVID19TestView {
         progressView.progress = number
     }
     
-    func showIndicator() {
-        SVProgressHUD.show()
-    }
-    
-    func hideIndicator() {
-        SVProgressHUD.dismiss()
-    }
-    
     func displayData(_ question: String, _ yesAnswerButtonTitle: String, _ noAnswerButtonTitle: String) {
         questionLabel.text = question
         yesAnswerButton.setTitle(yesAnswerButtonTitle, for: .normal)
@@ -95,7 +86,8 @@ extension COVID19TestViewController: COVID19TestView {
     func showError(error: String) {
         let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
         let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)
         }
     }

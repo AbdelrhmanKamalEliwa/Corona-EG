@@ -9,7 +9,6 @@
 import UIKit
 
 class SettingsCell: UITableViewCell, SettingsCellView {
-    
     @IBOutlet private weak var settingImageView: UIImageView!
     @IBOutlet private weak var settingTitleLabel: UILabel!
     

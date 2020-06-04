@@ -42,15 +42,16 @@ extension NewsViewController: NewsView {
     }
     
     func fetchDataSuccess() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
         }
     }
     
     func showError(error: String) {
         let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
         let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)
         }
     }

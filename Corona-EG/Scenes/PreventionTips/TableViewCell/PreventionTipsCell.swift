@@ -9,7 +9,6 @@
 import UIKit
 
 class PreventionTipsCell: UITableViewCell, PreventionTipsCellView {
-    
     @IBOutlet private weak var tipLabel: UILabel!
     
     func displayLabel(_ answer: String) {

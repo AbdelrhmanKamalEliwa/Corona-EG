@@ -10,8 +10,6 @@ import Foundation
 
 protocol COVID19TestView: class {
     var presenter: COVID19TestViewControllerPresenter? { get set }
-    func showIndicator()
-    func hideIndicator()
     func displayData(_ question: String, _ yesAnswerButtonTitle: String, _ noAnswerButtonTitle: String)
     func displayProgressView(_ number: Float)
     func showError(error: String)
@@ -20,7 +18,6 @@ protocol COVID19TestView: class {
 
 
 class COVID19TestViewControllerPresenter {
-    
     private weak var view: COVID19TestView?
     private let interactor: COVID19TestInteractor
     private var data: [CoronaTestModel] = []
@@ -48,10 +45,8 @@ class COVID19TestViewControllerPresenter {
     
     
     private func getData() {
-        view?.showIndicator()
         interactor.getData { [weak self] (data, error) in
             guard let self = self else { return }
-            self.view?.hideIndicator()
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {

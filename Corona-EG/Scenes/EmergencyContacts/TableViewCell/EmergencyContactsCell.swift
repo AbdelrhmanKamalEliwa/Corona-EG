@@ -9,7 +9,6 @@
 import UIKit
 
 class EmergencyContactsCell: UITableViewCell, EmergencyContactsCellView {
-    
     @IBOutlet private weak var contactName: UILabel!
     @IBOutlet private weak var contactNumber: UILabel!
     @IBOutlet private weak var containerView: UIView!
@@ -30,10 +29,6 @@ class EmergencyContactsCell: UITableViewCell, EmergencyContactsCellView {
         containerView.layer.shadowOpacity = 2
         contactName.textColor = UIColor.titleColor
     }
-    
-//    @objc func change() {
-//      containerView.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
-//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

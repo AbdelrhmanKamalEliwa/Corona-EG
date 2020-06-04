@@ -19,7 +19,6 @@ protocol MoreCellView {
 }
 
 class MoreViewControllerPresenter {
-    
     private weak var view: MoreView?
     private let router: MoreRouter
     private let screens = MoreScreensData().data

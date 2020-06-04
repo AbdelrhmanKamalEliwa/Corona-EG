@@ -10,8 +10,6 @@ import Foundation
 
 protocol InfectionMethodsView: class {
     var presenter: InfectionMethodsViewControllerPresenter? { get set }
-    func showIndicator()
-    func hideIndicator()
     func showError(_ error: String)
 }
 
@@ -37,10 +35,8 @@ class InfectionMethodsViewControllerPresenter {
     }
     
     private func getData() {
-        view?.showIndicator()
         interactor.getData { [weak self] (data, error) in
             guard let self = self else { return }
-            self.view?.hideIndicator()
             if let error = error {
                 self.view?.showError(error.localizedDescription)
             } else {

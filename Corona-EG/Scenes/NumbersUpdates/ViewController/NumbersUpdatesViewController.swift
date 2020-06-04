@@ -47,15 +47,16 @@ extension NumbersUpdatesViewController: NumbersUpdatesView {
     }
     
     func fetchDataSuccess() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
         }
     }
     
     func showError(error: String) {
         let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
         let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)
         }
     }
@@ -130,11 +131,11 @@ extension NumbersUpdatesViewController {
         if tableView.panGestureRecognizer.translation(in: self.view).y < 0 {
             searchBarTopConstraint.constant = 44
             navbar.isHidden = true
-            UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
+            UIView.animate(withDuration: 0.5) { [weak self] in self?.view.layoutIfNeeded() }
         } else {
             searchBarTopConstraint.constant = 88
             navbar.isHidden = false
-            UIView.animate(withDuration: 0.5) { self.view.layoutIfNeeded() }
+            UIView.animate(withDuration: 0.5) { [weak self] in self?.view.layoutIfNeeded() }
         }
     }
 }

@@ -20,7 +20,10 @@ class NewsCell: UITableViewCell, NewsCellView {
         if imageUrl != nil {
             guard let url = URL(string: imageUrl!) else { return }
             articleImage.kf.indicatorType = .activity
-            articleImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (result) in
+            articleImage.kf.setImage(
+            with: url, placeholder: nil,
+            options: nil, progressBlock: nil) { [weak self] (result) in
+                guard let self = self else { return }
                 switch result {
                 case .success(let image):
                     self.articleImage.image = image.image

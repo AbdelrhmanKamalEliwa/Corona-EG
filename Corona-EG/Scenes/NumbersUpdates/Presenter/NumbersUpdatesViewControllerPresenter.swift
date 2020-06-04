@@ -66,11 +66,9 @@ class NumbersUpdatesViewControllerPresenter {
     }
     
     func fetchSearch(_ searchText: String) {
-        view?.showIndicator()
         filteredCountries = countries.filter { (country) -> Bool in
             country.country!.lowercased().contains(searchText.lowercased())
         }
-        view?.hideIndicator()
         searching = true
         if searchText.isEmpty { searching = false }
         view?.fetchDataSuccess()

@@ -31,10 +31,8 @@ class EmergencyContactsViewControllerPresenter {
     
     func cellConfiguration(cell: EmergencyContactsCellView, for index: Int) {
         let contact = contacts[index]
-        
         let name = LocalizationSystem.sharedInstance.localizedStringForKey(key: contact.contactName, comment: "")
         cell.displayContactName(name)
-        
         let number = LocalizationSystem.sharedInstance.localizedStringForKey(key: contact.contactNumber, comment: "")
         cell.displayContactNumber(number)
     }

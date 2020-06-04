@@ -9,7 +9,6 @@
 import UIKit
 
 class EmergencyContactsViewController: BaseViewController, EmergencyContactsView {
-    
     internal var presenter: EmergencyContactsViewControllerPresenter?
     @IBOutlet private weak var tableView: UITableView!
     
@@ -19,11 +18,6 @@ class EmergencyContactsViewController: BaseViewController, EmergencyContactsView
         setupInnerScreensNavigationBar(navbarScreenTitle: .EmergencyContacts)
         presenter = EmergencyContactsViewControllerPresenter(view: self)
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        <#code#>
-//    }
-    
 }
 
 

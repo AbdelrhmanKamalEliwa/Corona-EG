@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import SVProgressHUD
 
 class PreventionTipsViewController: BaseViewController {
-    
     internal var presenter: PreventionTipsViewControllerPresenter?
     fileprivate let interactor = PreventionTipsInteractor()
     @IBOutlet private weak var tableView: UITableView!
@@ -26,18 +24,11 @@ class PreventionTipsViewController: BaseViewController {
 
 // MARK: - Presenter Delegate
 extension PreventionTipsViewController: PreventionTipsView {
-    func showIndicator() {
-        SVProgressHUD.show()
-    }
-    
-    func hideIndicator() {
-        SVProgressHUD.dismiss()
-    }
-    
     func showError(_ error: String) {
         let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
         let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)
         }
     }

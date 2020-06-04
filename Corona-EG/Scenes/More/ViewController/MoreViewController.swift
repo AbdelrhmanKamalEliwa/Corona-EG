@@ -9,7 +9,6 @@
 import UIKit
 
 class MoreViewController: BaseViewController {
-    
     @IBOutlet private weak var tableView: UITableView!
     internal var presenter: MoreViewControllerPresenter?
     fileprivate let router = MoreRouter()
@@ -64,9 +63,5 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.didSelectRow(at: indexPath.row)
-//        let aboutUsView = COVID19TestResultViewController()
-//        aboutUsView.modalPresentationStyle = .custom
-//        aboutUsView.modalTransitionStyle = .crossDissolve
-//        present(aboutUsView, animated: true, completion: nil)
     }
 }

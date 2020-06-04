@@ -36,7 +36,10 @@ class CountryDataTableViewCell: UITableViewCell, CountryDataCellView {
     func displayCountryImage(_ countryImage: String?) {
         let url = EndPointRouter.getCountryFlag(countryCode: countryImage ?? "")
         bodyViewCountryImage.kf.indicatorType = .activity
-        bodyViewCountryImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (result) in
+        bodyViewCountryImage.kf.setImage(
+        with: url, placeholder: nil,
+        options: nil, progressBlock: nil) { [weak self] (result) in
+            guard let self = self else { return }
             switch result {
             case .success(let image):
                 self.bodyViewCountryImage.image = image.image
