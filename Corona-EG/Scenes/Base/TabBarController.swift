@@ -17,7 +17,7 @@ class TabBarController: UITabBarController {
     }
     
     // MARK: - Methods
-    func setupTabBarController() {
+    fileprivate func setupTabBarController() {
         tabBar.cornerRadius = 20
         tabBar.barTintColor = UIColor.white
         tabBar.tintColor = UIColor.mainColor
