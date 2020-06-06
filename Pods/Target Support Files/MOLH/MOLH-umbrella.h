@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double FoldingCellVersionNumber;
-FOUNDATION_EXPORT const unsigned char FoldingCellVersionString[];
+FOUNDATION_EXPORT double MOLHVersionNumber;
+FOUNDATION_EXPORT const unsigned char MOLHVersionString[];
 

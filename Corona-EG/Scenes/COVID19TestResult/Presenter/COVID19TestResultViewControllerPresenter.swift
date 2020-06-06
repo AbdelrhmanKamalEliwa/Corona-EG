@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - COVID19 Test Result View Protocol
 protocol COVID19TestResultView: class {
     var presenter: COVID19TestResultViewControllerPresenter? { get set }
     func displayScreenTitle(_ title: String)
@@ -18,15 +19,19 @@ protocol COVID19TestResultView: class {
 
 
 class COVID19TestResultViewControllerPresenter {
+    
+    // MARK: - Properties
     private weak var view: COVID19TestResultView?
     private let resultData = ResultScreenData().data
     private let score: Int!
     
+    // MARK: - init
     init(view: COVID19TestResultView?, score: Int) {
         self.view = view
         self.score = score
     }
     
+    // MARK: - Methods
     func viewDidLoad() {
         displayData()
     }
@@ -44,19 +49,19 @@ class COVID19TestResultViewControllerPresenter {
     }
     
     private func setScreenTitle() {
-        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "screen_title", comment: "")
+        let title = "screen_title".localizedString()
         view?.displayScreenTitle(title)
     }
     
     private func setDoneButtonTitle() {
-        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "screen_result_button", comment: "")
+        let title = "screen_result_button".localizedString()
         view?.displayDoneButtonTitle(title)
     }
     
     private func setScreenData(at screenIndex: Int, color: String) {
-        let resultTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: resultData[screenIndex].title, comment: "")
+        let resultTitle = resultData[screenIndex].title.localizedString()
         view?.displayResultTitle(resultTitle, color: color)
-        let resultDescription = LocalizationSystem.sharedInstance.localizedStringForKey(key: resultData[screenIndex].description, comment: "")
+        let resultDescription = resultData[screenIndex].description.localizedString()
         view?.displayResultDescription(resultDescription)
     }
 }

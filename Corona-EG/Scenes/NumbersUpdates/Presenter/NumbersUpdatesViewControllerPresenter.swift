@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Numbers Updates View Protocol
 protocol NumbersUpdatesView: class {
     var presenter: NumbersUpdatesViewControllerPresenter? { get set }
     func showIndicator()
@@ -16,6 +17,7 @@ protocol NumbersUpdatesView: class {
     func showError(error: String)
 }
 
+// MARK: - Country Data Cell View Protocol
 protocol CountryDataCellView {
     func displyaCountryName(_ countryName: String)
     func displayCountryImage(_ countryImage: String?)
@@ -31,19 +33,23 @@ protocol CountryDataCellView {
 
 
 class NumbersUpdatesViewControllerPresenter {
+    
+    // MARK: - Properties
     private weak var view: NumbersUpdatesView?
     private let interactor: NumbersUpdatesInteractor
     private var countries: [CountryDataModel] = []
     private var filteredCountries: [CountryDataModel] = []
     private var searching = false
     private var isCollapce = false
-    private var selectedIndex = 0
+    private var selectedIndex = -1
     
+    // MARK: - init
     init(view: NumbersUpdatesView?, interactor: NumbersUpdatesInteractor) {
         self.view = view
         self.interactor = interactor
     }
     
+    // MARK: - Methods
     func viewDidLoad() {
         getCountriesData()
     }
@@ -80,31 +86,31 @@ class NumbersUpdatesViewControllerPresenter {
     
     
     private func getTotalConfirmedLabel() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "total_confirmed", comment: "")
+        return "total_confirmed".localizedString()
     }
     
     private func getTotalDeathsLabel() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "total_deaths", comment: "")
+        return "total_deaths".localizedString()
     }
     
     private func getTotalRecoverdLabel() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "total_recovered", comment: "")
+        return "total_recovered".localizedString()
     }
     
     private func getActiveCasesLabel() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "active_cases", comment: "")
+        return "active_cases".localizedString()
     }
     
     private func getDailyConfirmedLabel() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "daily_confirmed", comment: "")
+        return "daily_confirmed".localizedString()
     }
     
     private func getDailyDeathsLabel() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "daily_deaths", comment: "")
+        return "daily_deaths".localizedString()
     }
     
     private func getTotalCriticalLabel() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "total_critical", comment: "")
+        return "total_critical".localizedString()
     }
     
     private func ifSearching() -> [CountryDataModel] {
@@ -139,16 +145,19 @@ class NumbersUpdatesViewControllerPresenter {
     
     func didSelectRow(cell: CountryDataCellView, at index: Int) {
         if selectedIndex == index {
+            print("selectedIndex")
             if isCollapce == false {
                 isCollapce = true
-                cell.arrowImage("arrow.down.square.fill")
+//                cell.arrowImage("arrow.down.square.fill")
             } else {
                 isCollapce = false
-                cell.arrowImage("arrow.right.square.fill")
+//                cell.arrowImage("arrow.right.square.fill")
             }
+//            cell.arrowImage("arrow.right.square.fill")
         } else {
+            print("Not selected Index")
             isCollapce = true
-            cell.arrowImage("arrow.down.square.fill")
+//            cell.arrowImage("arrow.down.square.fill")
         }
         selectedIndex = index
     }
@@ -158,6 +167,14 @@ class NumbersUpdatesViewControllerPresenter {
             return 400
         } else {
             return 50
+        }
+    }
+    
+    func setArrowImage(cell: CountryDataCellView, rowHeight: Int) {
+        if rowHeight == 400 {
+            return cell.arrowImage("arrow.down.square.fill")
+        } else {
+            return cell.arrowImage("arrow.right.square.fill")
         }
     }
 }

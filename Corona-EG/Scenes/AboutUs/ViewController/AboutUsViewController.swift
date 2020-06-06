@@ -11,6 +11,7 @@ import MessageUI
 
 class AboutUsViewController: UIViewController {
     
+    // MARK: - Properties
     internal var presenter: AboutUsViewControllerPresenter?
     @IBOutlet private weak var facebookButton: UIButton!
     @IBOutlet private weak var twitterButton: UIButton!
@@ -19,6 +20,7 @@ class AboutUsViewController: UIViewController {
     @IBOutlet private weak var gmailButton: UIButton!
     @IBOutlet private weak var holderBackgroundView: UIView!
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = AboutUsViewControllerPresenter(view: self)
@@ -26,6 +28,7 @@ class AboutUsViewController: UIViewController {
         setupSocialMediaButtonsUI()
     }
     
+    // MARK: - Methods
     private func setupSocialMediaButtonsUI() {
         facebookButton.imageEdgeInsets = UIEdgeInsets(top: 42, left: 42, bottom: 42, right: 42)
         twitterButton.imageEdgeInsets = UIEdgeInsets(top: 42, left: 42, bottom: 42, right: 42)

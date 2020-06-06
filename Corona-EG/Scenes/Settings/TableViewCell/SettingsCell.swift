@@ -9,18 +9,22 @@
 import UIKit
 
 class SettingsCell: UITableViewCell, SettingsCellView {
+    
+    // MARK: - Properties
     @IBOutlet private weak var settingImageView: UIImageView!
     @IBOutlet private weak var settingTitleLabel: UILabel!
     
+    // MARK: - Life Cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    // MARK: - Methods
     func displaySettingIcon(_ iconName: String) {
         settingImageView.image = UIImage(named: iconName)
     }
     
     func displaySettingTitle(_ title: String) {
         settingTitleLabel.text = title
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
     }
 }

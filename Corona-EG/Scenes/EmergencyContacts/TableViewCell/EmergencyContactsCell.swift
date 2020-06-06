@@ -9,10 +9,19 @@
 import UIKit
 
 class EmergencyContactsCell: UITableViewCell, EmergencyContactsCellView {
+    
+    // MARK: - Properties
     @IBOutlet private weak var contactName: UILabel!
     @IBOutlet private weak var contactNumber: UILabel!
     @IBOutlet private weak var containerView: UIView!
     
+    // MARK: - Life Cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        displayCellUI()
+    }
+    
+    // MARK: - Methods
     func displayContactName(_ name: String) {
         contactName.text = name
     }
@@ -28,11 +37,6 @@ class EmergencyContactsCell: UITableViewCell, EmergencyContactsCellView {
         containerView.layer.shadowColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         containerView.layer.shadowOpacity = 2
         contactName.textColor = UIColor.titleColor
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        displayCellUI()
     }
     
 //    override func setSelected(_ selected: Bool, animated: Bool) {

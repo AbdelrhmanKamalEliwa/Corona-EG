@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        UITabBar.setupTabBar()
+        MOLH.shared.activate(true)
         return true
     }
 
@@ -42,5 +43,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+}
 
+// MARK: - MOLH Delegate
+extension AppDelegate: MOLHResetable {
+    func reset() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "TabBarController") as! UITabBarController
+        let rootviewcontroller: UIWindow = ((UIApplication.shared.delegate?.window)!)!
+        rootviewcontroller.rootViewController = vc
+    }
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - NewsView Protocol
 protocol NewsView: class {
     var presenter: NewsViewControllerPresenter? { get set }
     func showIndicator()
@@ -16,6 +17,7 @@ protocol NewsView: class {
     func showError(error: String)
 }
 
+// MARK: - News Cell View Protocol
 protocol NewsCellView {
     func displayArticleImage(_ imageUrl: String?)
     func displayArticleTitle(_ title: String)
@@ -23,17 +25,21 @@ protocol NewsCellView {
 }
 
 class NewsViewControllerPresenter {
+    
+    // MARK: - Properties
     private weak var view: NewsView?
     private let interactor: NewsInteractor
     private var news: [Article] = []
     private var pageIndex = 1
-    private let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
+    private let currentLanguage = "currentAppLanguage".localizedString()
     
+    // MARK: - init
     init(view: NewsView?, interactor: NewsInteractor) {
         self.view = view
         self.interactor = interactor
     }
     
+    // MARK: - Methods
     func viewDidLoad() {
         getNews()
     }
@@ -41,7 +47,6 @@ class NewsViewControllerPresenter {
     private func checkForEnglishLanguage(_ currentLanguage: String) -> Bool {
         if currentLanguage == "en" { return true } else { return false }
     }
-    
     
     private func getNews() {
         view?.showIndicator()
@@ -66,6 +71,7 @@ class NewsViewControllerPresenter {
                     }
                 }
                 self.news.append(contentsOf: safeNews)
+                print(self.news.count)
                 self.pageIndex += 1
                 self.view?.fetchDataSuccess()
             }

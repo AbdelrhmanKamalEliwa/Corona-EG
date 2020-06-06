@@ -10,10 +10,14 @@ import UIKit
 import SafariServices
 
 class SettingsViewController: BaseViewController {
+    
+    // MARK: - Properties
     internal var presenter: SettingsViewControllerPresenter?
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var doneButton: UIButton!
     @IBOutlet private weak var screenTitle: UILabel!
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SettingsViewControllerPresenter(view: self)
@@ -21,6 +25,7 @@ class SettingsViewController: BaseViewController {
         setupTableView()
     }
     
+    // MARK: - Methods
     @IBAction private func doneButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

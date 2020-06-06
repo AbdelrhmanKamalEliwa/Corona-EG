@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Settings View Protocol
 protocol SettingsView: class {
     var presenter: SettingsViewControllerPresenter? { get set }
     func changeCurrentLanguage(_ languageTitle: String, _ languageMessage: String, _ doneButtonTitle: String, _ cancelButtonTitle: String)
@@ -15,19 +16,24 @@ protocol SettingsView: class {
     func goToWebsite()
 }
 
+// MARK: - Settings Cell View Protocol
 protocol SettingsCellView {
     func displaySettingIcon(_ iconName: String)
     func displaySettingTitle(_ title: String)
 }
 
 class SettingsViewControllerPresenter {
+    
+    // MARK: - Properties
     private weak var view: SettingsView?
     private let settings = SettingsScreenTitles().titles
     
+    // MARK: - init
     init(view: SettingsView?) {
         self.view = view
     }
     
+    // MARK: - Methods
     func viewDidLoad() {
         view?.displayScreenNavBar(screenTitle(), buttonTitle: buttonTitle())
     }
@@ -40,7 +46,7 @@ class SettingsViewControllerPresenter {
         let setting = settings[index]
         let icon = setting.iconName
         cell.displaySettingIcon(icon)
-        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: setting.title, comment: "")
+        let title = setting.title.localizedString()
         cell.displaySettingTitle(title)
     }
     
@@ -61,26 +67,26 @@ class SettingsViewControllerPresenter {
     }
     
     private func screenTitle() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "settings_screen_title", comment: "")
+        return "settings_screen_title".localizedString()
     }
     
     private func buttonTitle() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "settings_screen_done_button_title", comment: "")
+        return "settings_screen_done_button_title".localizedString()
     }
     
     private func getLanguageTitle() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "change_language_title", comment: "")
+        return "change_language_title".localizedString()
     }
     
     private func getLanguageMessage() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "change_language_message", comment: "")
+        return "change_language_message".localizedString()
     }
     
     private func getDoneButtonTitle() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "chnage_language_done_button_title", comment: "")
+        return "chnage_language_done_button_title".localizedString()
     }
     
     private func getCancelButtonTitle() -> String {
-        return LocalizationSystem.sharedInstance.localizedStringForKey(key: "chnage_language_cancel_button_title", comment: "")
+        return "chnage_language_cancel_button_title".localizedString()
     }
 }

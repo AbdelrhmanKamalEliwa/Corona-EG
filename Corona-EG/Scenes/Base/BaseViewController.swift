@@ -7,25 +7,25 @@
 //
 
 import UIKit
+import MOLH
 
 // MARK: - Properities
 class BaseViewController: UIViewController {
-    final let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
+    final let currentLanguage = "currentAppLanguage".localizedString()
+    final var navbar: UINavigationBar {
+        return self.navigationController!.navigationBar
+    }
 }
 
 // MARK: - MainScreensNavigationBar
 extension BaseViewController {
-    final var navbar: UINavigationBar {
-        return self.navigationController!.navigationBar
-    }
-    
     func setupMainScreensNavigationBar(navbarTitle: MainScreens) {
         navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navbar.shadowImage = UIImage()
         navbar.barStyle = UIBarStyle.default
         navbar.prefersLargeTitles = false
         
-        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: navbarTitle.rawValue, comment: "")
+        let title = navbarTitle.rawValue.localizedString()
         let titleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.defaultFont(25, .Bold),
             .foregroundColor: UIColor.mainColor
@@ -54,7 +54,7 @@ extension BaseViewController {
 }
 
 
-// MARK: - MainScreensNavigationBar
+// MARK: - InnerScreensNavigationBar
 extension BaseViewController {
     func setupInnerScreensNavigationBar(navbarScreenTitle: InnerScreens?, navbarDefaultTitle: String = "") {
         let navbar = navigationController!.navigationBar
@@ -64,7 +64,7 @@ extension BaseViewController {
         navbar.prefersLargeTitles = true
         
         if let title = navbarScreenTitle {
-            navigationItem.title = LocalizationSystem.sharedInstance.localizedStringForKey(key: title.rawValue, comment: "")
+            navigationItem.title = title.rawValue.localizedString()
         } else {
             navigationItem.title = navbarDefaultTitle
         }
@@ -81,7 +81,7 @@ extension BaseViewController {
         
         // MARK: Letf Button
         let leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(named: "back"),
+            image: UIImage(named: "back")?.imageFlippedForRightToLeftLayoutDirection(),
             style: .done, target: self,
             action: #selector(innerLeftSideBarButtonItemTapped(_:)))
         navigationItem.leftBarButtonItem = leftBarButtonItem
@@ -103,16 +103,12 @@ extension BaseViewController {
     
     func changeLanguage() {
         if checkForEnglishLanguage(currentLanguage) {
-            LocalizationSystem.sharedInstance.setLanguage(languageCode: "ar")
-            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            MOLH.setLanguageTo("ar")
+            MOLH.reset()
         } else {
-            LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
-            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            MOLH.setLanguageTo("en")
+            MOLH.reset()
         }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "TabBarController") as! UITabBarController
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        appDelegate?.window?.rootViewController = vc
     }
 }
 

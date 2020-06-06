@@ -8,26 +8,32 @@
 
 import Foundation
 
+// MARK: - More View Protocol
 protocol MoreView: class {
     var presenter: MoreViewControllerPresenter? { get set }
     func presentAboutUsView()
 }
 
+// MARK: - More Cell View Protocol
 protocol MoreCellView {
     func displayScreenIcon(_ iconName: String)
     func displayScreenTitle(_ title: String)
 }
 
 class MoreViewControllerPresenter {
+    
+    // MARK: - Properties
     private weak var view: MoreView?
     private let router: MoreRouter
     private let screens = MoreScreensData().data
     
+    // MARK: - init
     init(view: MoreView?, router: MoreRouter) {
         self.view = view
         self.router = router
     }
     
+    // MARK: - Methods
     func getScreenCount() -> Int {
         screens.count
     }
@@ -36,7 +42,7 @@ class MoreViewControllerPresenter {
         let screen = screens[index]
         let icon = screen.iconName
         cell.displayScreenIcon(icon)
-        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: screen.screenTitle, comment: "")
+        let title = screen.screenTitle.localizedString()
         cell.displayScreenTitle(title)
     }
     

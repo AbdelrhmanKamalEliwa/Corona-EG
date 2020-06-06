@@ -10,10 +10,18 @@ import UIKit
 
 class MoreViewCell: UITableViewCell, MoreCellView {
     
+    // MARK: - Properties
     @IBOutlet private weak var screenIcon: UIImageView!
     @IBOutlet private weak var screenTitle: UILabel!
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet private weak var containerView: UIView!
     
+    // MARK: - Life Cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        displayCellUI()
+    }
+    
+    // MARK: - Methods
     func displayScreenIcon(_ iconName: String) {
         screenIcon.image = UIImage(named: iconName)
     }
@@ -29,10 +37,5 @@ class MoreViewCell: UITableViewCell, MoreCellView {
         containerView.layer.shadowColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         containerView.layer.shadowOpacity = 2
         screenTitle.textColor = UIColor.titleColor
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        displayCellUI()
     }
 }

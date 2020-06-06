@@ -9,9 +9,12 @@
 import UIKit
 
 class EmergencyContactsViewController: BaseViewController, EmergencyContactsView {
+    
+    // MARK: - Properties
     internal var presenter: EmergencyContactsViewControllerPresenter?
     @IBOutlet private weak var tableView: UITableView!
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()

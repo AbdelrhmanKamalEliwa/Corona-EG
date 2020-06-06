@@ -12,11 +12,13 @@ import SVProgressHUD
 
 class NewsViewController: BaseViewController {
     
+    // MARK: - Properties
     @IBOutlet private weak var tableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet private weak var tableView: UITableView!
     fileprivate let refreshControl = UIRefreshControl()
     internal var presenter: NewsViewControllerPresenter?
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMainScreensNavigationBar(navbarTitle: .NewsScreen)
@@ -48,8 +50,8 @@ extension NewsViewController: NewsView {
     }
     
     func showError(error: String) {
-        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
-        let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
+        let title = "error_title".localizedString()
+        let buttonTitle = "error_button".localizedString()
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)
@@ -58,7 +60,8 @@ extension NewsViewController: NewsView {
 }
 
 // MARK: - Setup TableView
-extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
+extension NewsViewController: UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
+    
     private enum Constants {
         static let nibName = "NewsCell"
         static let cellIdentifier = "NewsCell"
@@ -67,6 +70,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.prefetchDataSource = self
         tableView.register(
             UINib(nibName: Constants.nibName, bundle: nil),
             forCellReuseIdentifier: Constants.cellIdentifier)
@@ -89,9 +93,11 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         present(webViewController, animated: true, completion: nil)
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == (presenter?.getNewsCount() ?? 0) - 1 {
-            presenter?.viewDidLoad()
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        for indexPath in indexPaths {
+            if indexPath.row == (presenter?.getNewsCount() ?? 0) - 1 {
+//                presenter?.viewDidLoad()
+            }
         }
     }
 }
@@ -105,7 +111,7 @@ extension NewsViewController {
     }
     
     @objc private func refresh(_ sender: AnyObject) {
-        presenter?.viewDidLoad()
+//        presenter?.viewDidLoad()
         refreshControl.endRefreshing()
     }
 }

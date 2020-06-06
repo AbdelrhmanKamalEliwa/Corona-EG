@@ -9,10 +9,13 @@
 import UIKit
 
 class PreventionTipsViewController: BaseViewController {
+    
+    // MARK: - Properties
     internal var presenter: PreventionTipsViewControllerPresenter?
     fileprivate let interactor = PreventionTipsInteractor()
     @IBOutlet private weak var tableView: UITableView!
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = PreventionTipsViewControllerPresenter(view: self, interactor: interactor)
@@ -25,8 +28,8 @@ class PreventionTipsViewController: BaseViewController {
 // MARK: - Presenter Delegate
 extension PreventionTipsViewController: PreventionTipsView {
     func showError(_ error: String) {
-        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
-        let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
+        let title = "error_title".localizedString()
+        let buttonTitle = "error_button".localizedString()
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)

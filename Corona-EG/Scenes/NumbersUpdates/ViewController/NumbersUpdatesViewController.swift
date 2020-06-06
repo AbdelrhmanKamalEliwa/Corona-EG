@@ -10,6 +10,8 @@ import UIKit
 import SVProgressHUD
 
 class NumbersUpdatesViewController: BaseViewController {
+    
+    // MARK: - Properties
     @IBOutlet private weak var searchBarTopConstraint: NSLayoutConstraint!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
@@ -17,6 +19,7 @@ class NumbersUpdatesViewController: BaseViewController {
     fileprivate let interactor = NumbersUpdatesInteractor()
     fileprivate let refreshControl = UIRefreshControl()
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMainScreensNavigationBar(navbarTitle: .NumbersUpdatesScreen)
@@ -53,8 +56,8 @@ extension NumbersUpdatesViewController: NumbersUpdatesView {
     }
     
     func showError(error: String) {
-        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
-        let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
+        let title = "error_title".localizedString()
+        let buttonTitle = "error_button".localizedString()
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)
@@ -89,6 +92,7 @@ extension NumbersUpdatesViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! CountryDataTableViewCell
         cell.selectedBackgroundView = UIColor.selectedCellBackgroundColor()
         presenter?.cellConfiguration(cell: cell, for: indexPath.row)
+        presenter?.setArrowImage(cell: cell, rowHeight: presenter?.heightForRow(at: indexPath.row) ?? 0)
         return cell
     }
     
@@ -96,6 +100,7 @@ extension NumbersUpdatesViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! CountryDataTableViewCell
 //        tableView.deselectRow(at: indexPath, animated: true)
         presenter?.didSelectRow(cell: cell, at: indexPath.row)
+        presenter?.setArrowImage(cell: cell, rowHeight: presenter?.heightForRow(at: indexPath.row) ?? 0)
         tableView.beginUpdates()
         tableView.reloadRows(at: [indexPath], with: .none)
         tableView.endUpdates()
@@ -107,7 +112,7 @@ extension NumbersUpdatesViewController: UISearchBarDelegate {
     private func setupSearchBar() {
         searchBar.delegate = self
         searchBar.searchTextField.delegate = self
-        searchBar.placeholder = LocalizationSystem.sharedInstance.localizedStringForKey(key: "search", comment: "")
+        searchBar.placeholder = "search".localizedString()
         searchBar.backgroundColor = UIColor.white
     }
     

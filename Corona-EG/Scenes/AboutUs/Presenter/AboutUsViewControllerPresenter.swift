@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - About Us View Protocol
 protocol AboutUsView: class {
     var presenter: AboutUsViewControllerPresenter? { get set }
     func openFacebook()
@@ -18,12 +19,16 @@ protocol AboutUsView: class {
 }
 
 class AboutUsViewControllerPresenter {
+    
+    // MARK: - Properties
     private weak var view: AboutUsView?
     
+    // MARK: - init
     init(view: AboutUsView?) {
         self.view = view
     }
     
+    // MARK: - Methods
     func goToSocialMediaAccount(_ caseNumber: Int) {
         let button = SocialMediaCases(rawValue: caseNumber)
         switch button {

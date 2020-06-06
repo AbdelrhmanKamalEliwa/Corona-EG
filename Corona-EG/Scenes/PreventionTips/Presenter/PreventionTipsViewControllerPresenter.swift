@@ -8,22 +8,28 @@
 
 import Foundation
 
+// MARK: - Prevention Tips View Protocol
 protocol PreventionTipsView: class {
     var presenter: PreventionTipsViewControllerPresenter? { get set }
     func showError(_ error: String)
 }
 
+// MARK: - Prevention Tips Cell View Protocol
 protocol PreventionTipsCellView {
     func displayLabel(_ tip: String)
 }
 
+
 class PreventionTipsViewControllerPresenter {
+    
+    // MARK: - Properties
     private weak var view: PreventionTipsView?
     private let interactor: PreventionTipsInteractor
     private var preventionTipsModel: [PreventionTipsModel] = []
     private var preventionTips: [PreventionTip] = []
-    private let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
+    private let currentLanguage = "currentAppLanguage".localizedString()
     
+    // MARK: - init
     init(view: PreventionTipsView?, interactor: PreventionTipsInteractor) {
         self.view = view
         self.interactor = interactor

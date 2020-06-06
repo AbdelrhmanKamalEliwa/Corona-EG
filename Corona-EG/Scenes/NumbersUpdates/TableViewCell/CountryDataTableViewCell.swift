@@ -10,6 +10,8 @@ import UIKit
 import Kingfisher
 
 class CountryDataTableViewCell: UITableViewCell, CountryDataCellView {
+    
+    // MARK: - Properties
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var arrowImageView: UIImageView!
     @IBOutlet private weak var bodyViewCountryImage: UIImageView!
@@ -29,6 +31,13 @@ class CountryDataTableViewCell: UITableViewCell, CountryDataCellView {
     @IBOutlet private weak var bodyViewTotalCriticalNumber: UILabel!
     @IBOutlet private weak var bodyViewTotalCriticalLabel: UILabel!
     
+    // MARK: - Life Cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        displayCellUI()
+    }
+    
+    // MARK: - Methods
     func arrowImage(_ imageName: String) {
         arrowImageView.image = UIImage(systemName: imageName)
     }
@@ -97,10 +106,5 @@ class CountryDataTableViewCell: UITableViewCell, CountryDataCellView {
         containerView.layer.shadowOpacity = 2
         bodyViewCountryName.backgroundColor = UIColor.mainColor
         arrowImageView.image = UIImage(systemName: "arrow.right.square.fill")
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        displayCellUI()
     }
 }

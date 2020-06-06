@@ -8,28 +8,34 @@
 
 import Foundation
 
+// MARK: - Infection Methods View Protocol
 protocol InfectionMethodsView: class {
     var presenter: InfectionMethodsViewControllerPresenter? { get set }
     func showError(_ error: String)
 }
 
+// MARK: - Infection Methods Cell View Protocol
 protocol InfectionMethodsCellView {
     func displayQuestion(_ question: String)
     func displayAnswer(_ answer: String)
 }
 
 class InfectionMethodsViewControllerPresenter {
+    
+    // MARK: - Properties
     private weak var view: InfectionMethodsView?
     private let interactor: InfectionMethodsInteractor
     private var infectionMethods: [InfectionMethodsModel] = []
     private var infectionMethodsQuestions: [InfectionMethodQuestion] = []
-    private let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
+    private let currentLanguage = "currentAppLanguage".localizedString()
     
+    // MARK: - init
     init(view: InfectionMethodsView?, interactor: InfectionMethodsInteractor) {
         self.view = view
         self.interactor = interactor
     }
     
+    // MARK: - Methods
     func viewDidLoad() {
         getData()
     }

@@ -8,5 +8,6 @@ target 'Corona-EG' do
   # Pods for Corona-EG
   pod 'Kingfisher', '~> 5.0'
   pod 'SVProgressHUD'
+  pod 'MOLH', '~> 0.4'
 
 end

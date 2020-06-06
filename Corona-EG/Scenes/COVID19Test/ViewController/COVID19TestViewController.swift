@@ -10,6 +10,7 @@ import UIKit
 
 class COVID19TestViewController: BaseViewController {
 
+    // MARK: - Properties
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var questionLabel: UILabel!
     @IBOutlet private weak var yesAnswerButton: UIButton!
@@ -18,6 +19,7 @@ class COVID19TestViewController: BaseViewController {
     internal var presenter: COVID19TestViewControllerPresenter?
     private let interactor = COVID19TestInteractor()
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMainScreensNavigationBar(navbarTitle: .COVID19TestScreen)
@@ -29,10 +31,10 @@ class COVID19TestViewController: BaseViewController {
         presenter?.viewDidLoad()
     }
     
+    // MARK: - Methods
     @IBAction private func answerButtonTapped(_ sender: UIButton) {
         presenter?.answerButtonTapped(sender.tag)
     }
-    
     
     private func displayContainerViewUI() {
         containerView.layer.masksToBounds = false
@@ -84,8 +86,8 @@ extension COVID19TestViewController: COVID19TestView {
     }
     
     func showError(error: String) {
-        let title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_title", comment: "")
-        let buttonTitle = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error_button", comment: "")
+        let title = "error_title".localizedString()
+        let buttonTitle = "error_button".localizedString()
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.presentGenericAlert(viewController: self, title: title, message: error, doneButtonTitle: buttonTitle, dismissButtonTitle: nil)

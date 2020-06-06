@@ -11,11 +11,19 @@ import Kingfisher
 
 class NewsCell: UITableViewCell, NewsCellView {
     
-    @IBOutlet weak var containerView: UIView!
+    // MARK: - Properties
+    @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var articleImage: UIImageView!
     @IBOutlet private weak var articleTitle: UILabel!
     @IBOutlet private weak var articleDescription: UILabel!
     
+    // MARK: - Life Cycle
+       override func awakeFromNib() {
+           super.awakeFromNib()
+           displayCellUI()
+       }
+    
+    // MARK: - Methods
     func displayArticleImage(_ imageUrl: String?) {
         if imageUrl != nil {
             guard let url = URL(string: imageUrl!) else { return }
@@ -50,10 +58,4 @@ class NewsCell: UITableViewCell, NewsCellView {
         containerView.layer.shadowColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         containerView.layer.shadowOpacity = 2
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        displayCellUI()
-    }
-    
 }

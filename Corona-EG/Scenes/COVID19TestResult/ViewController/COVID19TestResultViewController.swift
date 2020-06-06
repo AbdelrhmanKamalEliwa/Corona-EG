@@ -10,6 +10,7 @@ import UIKit
 
 class COVID19TestResultViewController: UIViewController {
     
+    // MARK: - Properties
     internal var presenter: COVID19TestResultViewControllerPresenter?
     @IBOutlet private weak var screenTitleLabel: UILabel!
     @IBOutlet private weak var resultTitleLabel: UILabel!
@@ -17,12 +18,14 @@ class COVID19TestResultViewController: UIViewController {
     @IBOutlet private weak var doneButton: UIButton!
     @IBOutlet private weak var holderBackgroundView: UIView!
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCloseTouch()
         presenter?.viewDidLoad()
     }
     
+    // MARK: - Methods
     private func setupCloseTouch() {
         let closeTouch = UITapGestureRecognizer(target: self, action: #selector(self.closeTab(_:)))
         holderBackgroundView.addGestureRecognizer(closeTouch)

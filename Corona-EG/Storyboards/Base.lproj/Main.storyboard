@@ -78,58 +78,11 @@
                         <outlet property="searchBar" destination="UVP-00-l9n" id="jfc-5V-4Gx"/>
                         <outlet property="searchBarTopConstraint" destination="btp-oh-qvP" id="Zqz-WM-3gg"/>
                         <outlet property="tableView" destination="ioa-Vl-9Lx" id="umu-Lz-a9d"/>
-                        <segue destination="5bM-E1-5Tk" kind="presentation" id="jFB-2a-hNm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="br6-Uq-bYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="228.98550724637684" y="-717.1875"/>
-        </scene>
-        <!--Country Details View Controller-->
-        <scene sceneID="pQ4-pZ-OWv">
-            <objects>
-                <viewController storyboardIdentifier="CountryDetailsViewController" modalPresentationStyle="fullScreen" id="5bM-E1-5Tk" customClass="CountryDetailsViewController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tu4-Wn-Seo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XK4-SU-nXQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZl-DV-GnW">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="mFR-e2-Tx6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="20"/>
-                                <state key="normal" title="Show On Map">
-                                    <color key="titleColor" red="0.00058953653840000003" green="0.085794318600000002" blue="0.360501352" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="showOnMapButtonTapped:" destination="5bM-E1-5Tk" eventType="touchUpInside" id="Xim-Na-ao9"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="cKl-E7-NVP" firstAttribute="bottom" secondItem="MZl-DV-GnW" secondAttribute="bottom" id="Zoa-0J-EAa"/>
-                            <constraint firstItem="MZl-DV-GnW" firstAttribute="top" secondItem="XK4-SU-nXQ" secondAttribute="bottom" id="a2q-Xh-aaD"/>
-                            <constraint firstItem="XK4-SU-nXQ" firstAttribute="leading" secondItem="cKl-E7-NVP" secondAttribute="leading" id="b1p-xJ-8si"/>
-                            <constraint firstItem="XK4-SU-nXQ" firstAttribute="top" secondItem="cKl-E7-NVP" secondAttribute="top" id="bF8-mF-D66"/>
-                            <constraint firstItem="cKl-E7-NVP" firstAttribute="trailing" secondItem="XK4-SU-nXQ" secondAttribute="trailing" id="g8S-ik-3xM"/>
-                            <constraint firstItem="MZl-DV-GnW" firstAttribute="trailing" secondItem="cKl-E7-NVP" secondAttribute="trailing" id="joR-pd-Kza"/>
-                            <constraint firstItem="MZl-DV-GnW" firstAttribute="leading" secondItem="cKl-E7-NVP" secondAttribute="leading" id="sNM-l5-I5x"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="cKl-E7-NVP"/>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="XK4-SU-nXQ" id="WPW-ni-kQy"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EAd-sg-NS3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="228.98550724637684" y="22.767857142857142"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="jxn-dc-fhf">
@@ -329,7 +282,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="dfN-cy-3MO">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="4r7-x4-PL2" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="4r7-x4-PL2" customClass="TabBarController" customModule="Corona_EG" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nTw-Vk-yt1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -419,13 +372,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eh-IV-tOL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1915.9420289855075" y="-2267.4107142857142"/>
+            <point key="canvasLocation" x="1843" y="-2267"/>
         </scene>
         <!--Updates-->
         <scene sceneID="sLw-F3-75L">
             <objects>
                 <navigationController storyboardIdentifier="NumbersUpdatesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="E60-Hw-yLt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Updates" image="numbers-updates" selectedImage="numbers-updates" id="B2c-x9-XZo"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Updates" image="numbers-updates" selectedImage="numbers-updates" id="B2c-x9-XZo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tQQ-Jp-fyc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -444,7 +397,7 @@
         <scene sceneID="0ca-2c-fFP">
             <objects>
                 <navigationController storyboardIdentifier="COVID19TestVC" automaticallyAdjustsScrollViewInsets="NO" id="llY-XD-uOT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Corona Test" image="covid-19-test" selectedImage="covid-19-test" id="B49-nM-tjv"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Corona Test" image="covid-19-test" selectedImage="covid-19-test" id="B49-nM-tjv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v1x-gt-apd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -484,9 +437,9 @@
                     <navigationItem key="navigationItem" id="mKc-4f-L3X"/>
                     <connections>
                         <outlet property="tableView" destination="3gp-c2-VcN" id="Szf-h5-PD9"/>
-                        <segue destination="3QA-No-tVa" kind="presentation" id="YJK-yV-Ezc"/>
-                        <segue destination="b37-xh-7uN" kind="presentation" id="EI9-c3-3d1"/>
-                        <segue destination="1KA-uF-zaa" kind="presentation" id="F4Q-nj-Aor"/>
+                        <segue destination="3QA-No-tVa" kind="presentation" identifier="goToInfectionMethodsVC" id="YJK-yV-Ezc"/>
+                        <segue destination="b37-xh-7uN" kind="presentation" identifier="goToEmergencyContactsVC" id="EI9-c3-3d1"/>
+                        <segue destination="1KA-uF-zaa" kind="presentation" identifier="goToPreventionTipsVC" id="F4Q-nj-Aor"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E94-Ab-QEN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -497,7 +450,7 @@
         <scene sceneID="kCr-mY-3XE">
             <objects>
                 <navigationController storyboardIdentifier="MoreVC" automaticallyAdjustsScrollViewInsets="NO" id="Jrr-1C-XDT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" image="more" selectedImage="more" id="mJ9-IP-6at"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="More" image="more" selectedImage="more" id="mJ9-IP-6at"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aEF-Da-YUq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

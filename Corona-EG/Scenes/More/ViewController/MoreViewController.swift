@@ -9,10 +9,13 @@
 import UIKit
 
 class MoreViewController: BaseViewController {
+    
+    // MARK: - Properties
     @IBOutlet private weak var tableView: UITableView!
     internal var presenter: MoreViewControllerPresenter?
     fileprivate let router = MoreRouter()
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = MoreViewControllerPresenter(view: self, router: router)

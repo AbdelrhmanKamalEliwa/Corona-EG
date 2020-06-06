@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - COVID19 Test View Protocol
 protocol COVID19TestView: class {
     var presenter: COVID19TestViewControllerPresenter? { get set }
     func displayData(_ question: String, _ yesAnswerButtonTitle: String, _ noAnswerButtonTitle: String)
@@ -16,22 +17,25 @@ protocol COVID19TestView: class {
     func navigateToResultScreen(score: Int)
 }
 
-
 class COVID19TestViewControllerPresenter {
+    
+    // MARK: - Properties
     private weak var view: COVID19TestView?
     private let interactor: COVID19TestInteractor
     private var data: [CoronaTestModel] = []
     private var questions: [Question] = []
-    private let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
+    private let currentLanguage = "currentAppLanguage".localizedString()
     private var questionNumber = 0
     private var count = 0
     private var score = 0
     
+    // MARK: - init
     init(view: COVID19TestView?, interactor: COVID19TestInteractor) {
         self.view = view
         self.interactor = interactor
     }
     
+    // MARK: - Methods
     func viewDidLoad() {
         getData()
     }
