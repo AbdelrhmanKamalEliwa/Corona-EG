@@ -13,7 +13,6 @@ class CountryDataTableViewCell: UITableViewCell, CountryDataCellView {
     
     // MARK: - Properties
     @IBOutlet private weak var containerView: UIView!
-    @IBOutlet private weak var arrowImageView: UIImageView!
     @IBOutlet private weak var bodyViewCountryImage: UIImageView!
     @IBOutlet private weak var bodyViewCountryName: UILabel!
     @IBOutlet private weak var bodyViewTotalConfirmedNumber: UILabel!
@@ -38,10 +37,6 @@ class CountryDataTableViewCell: UITableViewCell, CountryDataCellView {
     }
     
     // MARK: - Methods
-    func arrowImage(_ imageName: String) {
-        arrowImageView.image = UIImage(systemName: imageName)
-    }
-    
     func displayCountryImage(_ countryImage: String?) {
         let url = EndPointRouter.getCountryFlag(countryCode: countryImage ?? "")
         bodyViewCountryImage.kf.indicatorType = .activity
@@ -105,6 +100,5 @@ class CountryDataTableViewCell: UITableViewCell, CountryDataCellView {
         containerView.layer.shadowColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         containerView.layer.shadowOpacity = 2
         bodyViewCountryName.backgroundColor = UIColor.mainColor
-        arrowImageView.image = UIImage(systemName: "arrow.right.square.fill")
     }
 }

@@ -92,16 +92,13 @@ extension NumbersUpdatesViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! CountryDataTableViewCell
         cell.selectedBackgroundView = UIColor.selectedCellBackgroundColor()
         presenter?.cellConfiguration(cell: cell, for: indexPath.row)
-        presenter?.setArrowImage(cell: cell, rowHeight: presenter?.heightForRow(at: indexPath.row) ?? 0)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! CountryDataTableViewCell
-//        tableView.deselectRow(at: indexPath, animated: true)
-        presenter?.didSelectRow(cell: cell, at: indexPath.row)
-        presenter?.setArrowImage(cell: cell, rowHeight: presenter?.heightForRow(at: indexPath.row) ?? 0)
+        let selectedCell = tableView.cellForRow(at: indexPath) as! CountryDataTableViewCell
         tableView.beginUpdates()
+        presenter?.didSelectRow(cell: selectedCell, at: indexPath.row)
         tableView.reloadRows(at: [indexPath], with: .none)
         tableView.endUpdates()
     }

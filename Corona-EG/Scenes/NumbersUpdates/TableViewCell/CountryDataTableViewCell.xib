@@ -178,19 +178,10 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GAU-3H-Sx7">
-                                <rect key="frame" x="260" y="5" width="30" height="30"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ocK-aF-Fat"/>
-                                    <constraint firstAttribute="width" constant="30" id="p4X-ra-8J6"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Toh-d4-kYr" firstAttribute="top" secondItem="Jgq-nO-963" secondAttribute="top" id="3UT-Qq-LQO"/>
                             <constraint firstAttribute="trailing" secondItem="TFN-0z-XXw" secondAttribute="trailing" constant="10" id="5Wd-Qs-Ddm"/>
-                            <constraint firstAttribute="trailing" secondItem="GAU-3H-Sx7" secondAttribute="trailing" constant="10" id="6vh-h9-u9M"/>
                             <constraint firstItem="pFP-w3-WV5" firstAttribute="top" secondItem="Jgq-nO-963" secondAttribute="top" id="AcW-tB-iWV"/>
                             <constraint firstItem="7IU-hC-YHU" firstAttribute="leading" secondItem="Jgq-nO-963" secondAttribute="leading" constant="10" id="ApZ-pR-U4t"/>
                             <constraint firstItem="eWz-Sc-DXy" firstAttribute="leading" secondItem="Jgq-nO-963" secondAttribute="leading" constant="10" id="CFy-eh-p0X"/>
@@ -207,7 +198,6 @@
                             <constraint firstItem="Toh-d4-kYr" firstAttribute="leading" secondItem="Jgq-nO-963" secondAttribute="leading" id="WB4-nE-cOn"/>
                             <constraint firstItem="p2t-S2-FBO" firstAttribute="top" secondItem="hzv-fk-KNs" secondAttribute="bottom" constant="10" id="WRP-nw-ikt"/>
                             <constraint firstAttribute="trailing" secondItem="Toh-d4-kYr" secondAttribute="trailing" id="X2y-En-7gc"/>
-                            <constraint firstItem="GAU-3H-Sx7" firstAttribute="centerY" secondItem="Toh-d4-kYr" secondAttribute="centerY" id="Y0h-ZE-amI"/>
                             <constraint firstItem="IWS-DB-bdA" firstAttribute="leading" secondItem="Jgq-nO-963" secondAttribute="leading" constant="10" id="Zlr-Sv-cbJ"/>
                             <constraint firstItem="2nG-gT-tU4" firstAttribute="top" secondItem="TFN-0z-XXw" secondAttribute="bottom" constant="10" id="a2Q-Un-Ii7"/>
                             <constraint firstItem="7IU-hC-YHU" firstAttribute="top" secondItem="Vt6-Sq-oVc" secondAttribute="bottom" constant="10" id="bIC-8t-J7z"/>
@@ -242,7 +232,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="arrowImageView" destination="GAU-3H-Sx7" id="ue9-3d-lvs"/>
                 <outlet property="bodyViewActiveCasesLabel" destination="Vt6-Sq-oVc" id="SKB-2t-oSG"/>
                 <outlet property="bodyViewActiveCasesNumber" destination="p2t-S2-FBO" id="FG5-qM-Sbj"/>
                 <outlet property="bodyViewCountryImage" destination="pFP-w3-WV5" id="m0O-rZ-MPF"/>

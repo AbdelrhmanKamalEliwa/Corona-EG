@@ -30,7 +30,7 @@ class NewsViewControllerPresenter {
     private weak var view: NewsView?
     private let interactor: NewsInteractor
     private var news: [Article] = []
-    private var pageIndex = 1
+    private var pageIndex: Int = 1
     private let currentLanguage = "currentAppLanguage".localizedString()
     
     // MARK: - init
@@ -40,15 +40,15 @@ class NewsViewControllerPresenter {
     }
     
     // MARK: - Methods
-    func viewDidLoad() {
-        getNews()
+    func viewDidLoad(withPagination: Bool = true) {
+        getNews(withPagination)
     }
     
     private func checkForEnglishLanguage(_ currentLanguage: String) -> Bool {
         if currentLanguage == "en" { return true } else { return false }
     }
     
-    private func getNews() {
+    private func getNews(_ pagination: Bool) {
         view?.showIndicator()
         var country: Countries?
         if checkForEnglishLanguage(currentLanguage) {
@@ -70,10 +70,23 @@ class NewsViewControllerPresenter {
                         safeNews.append(article)
                     }
                 }
-                self.news.append(contentsOf: safeNews)
-                print(self.news.count)
-                self.pageIndex += 1
+                if pagination {
+                    self.news.append(contentsOf: safeNews)
+                    print(self.news.count)
+                    self.pageIndex += 1
+                } else {
+                    self.news = safeNews
+                    self.pageIndex = 1
+                }
                 self.view?.fetchDataSuccess()
+            }
+        }
+    }
+    
+    func pagination(with indecies: [IndexPath]) {
+        for index in indecies {
+            if index.row == (news.count) - 1 {
+                viewDidLoad()
             }
         }
     }

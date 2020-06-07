@@ -28,7 +28,6 @@ protocol CountryDataCellView {
     func displayDailyConfirmed(_ dailyConfirmedLabel: String, _ dailyConfirmedNumber: String?)
     func displayDailyDeaths(_ dailyDeathsLabel: String, _ dailyDeathsNumber: String?)
     func displayTotalCritical(_ totalCriticalLabel: String, _ totalCriticalNumber: String?)
-    func arrowImage(_ imageName: String)
 }
 
 
@@ -145,19 +144,13 @@ class NumbersUpdatesViewControllerPresenter {
     
     func didSelectRow(cell: CountryDataCellView, at index: Int) {
         if selectedIndex == index {
-            print("selectedIndex")
             if isCollapce == false {
                 isCollapce = true
-//                cell.arrowImage("arrow.down.square.fill")
             } else {
                 isCollapce = false
-//                cell.arrowImage("arrow.right.square.fill")
             }
-//            cell.arrowImage("arrow.right.square.fill")
         } else {
-            print("Not selected Index")
             isCollapce = true
-//            cell.arrowImage("arrow.down.square.fill")
         }
         selectedIndex = index
     }
@@ -170,11 +163,4 @@ class NumbersUpdatesViewControllerPresenter {
         }
     }
     
-    func setArrowImage(cell: CountryDataCellView, rowHeight: Int) {
-        if rowHeight == 400 {
-            return cell.arrowImage("arrow.down.square.fill")
-        } else {
-            return cell.arrowImage("arrow.right.square.fill")
-        }
-    }
 }

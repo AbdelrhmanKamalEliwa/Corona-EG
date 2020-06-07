@@ -94,11 +94,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        for indexPath in indexPaths {
-            if indexPath.row == (presenter?.getNewsCount() ?? 0) - 1 {
-//                presenter?.viewDidLoad()
-            }
-        }
+            presenter?.pagination(with: indexPaths)
     }
 }
 
@@ -111,7 +107,7 @@ extension NewsViewController {
     }
     
     @objc private func refresh(_ sender: AnyObject) {
-//        presenter?.viewDidLoad()
+        presenter?.viewDidLoad(withPagination: false)
         refreshControl.endRefreshing()
     }
 }
