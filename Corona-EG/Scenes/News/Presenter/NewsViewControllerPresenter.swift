@@ -72,7 +72,6 @@ class NewsViewControllerPresenter {
                 }
                 if pagination {
                     self.news.append(contentsOf: safeNews)
-                    print(self.news.count)
                     self.pageIndex += 1
                 } else {
                     self.news = safeNews
